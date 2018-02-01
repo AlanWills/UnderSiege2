@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{E39A81C2-7F66-4C3B-A679-7D718CC938AE}</ProjectGuid>
+    <RootNamespace>UnderSiege</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(ProjectDir)..\..\CelesteEnginePlus\3rdParty\Lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)Headers;$(ProjectDir)..\..\CelesteEnginePlus\CelesteEnginePlus\Headers;$(ProjectDir)..\..\CelesteEnginePlus\3rdParty\Include;$(ProjectDir)..\..\CelesteEnginePlus\3rdParty\Include\freetype2;$(ProjectDir)..\..\3rdParty\Include\freetype2;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\CelesteEnginePlus\CelesteEnginePlus\bin\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CelesteEnginePlus.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;glew32.lib;opengl32.lib;glfw3dll.lib;freetype.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>call "$(ProjectDir)Build Events\CopyEngineDLLs.bat" "$(TargetDir)" $(Configuration)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers\UI\OptionsScreenUIManager.h" />
+    <ClInclude Include="Headers\UnderSiegeGame.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\UI\OptionsScreenUIManager.cpp" />
+    <ClCompile Include="Source\UnderSiegeGame.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Build Events\CopyEngineDLLs.bat" />
+    <None Include="Resources\Audio\Music\TheSwarmApproaches.wma" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resources\Audio\Music\Assimilator.mp3" />
+    <Media Include="Resources\Audio\Music\doodle_0.mp3" />
+    <Media Include="Resources\Audio\Music\Dream Raid.mp3" />
+    <Media Include="Resources\Audio\Music\DriftingThroughTheNebulaAmbient.wav" />
+    <Media Include="Resources\Audio\Music\Hope.mp3" />
+    <Media Include="Resources\Audio\Music\HorrorOfSelf.wav" />
+    <Media Include="Resources\Audio\Music\Imminent Threat.mp3" />
+    <Media Include="Resources\Audio\Music\Mechanolith.mp3" />
+    <Media Include="Resources\Audio\Music\Orbital Colossus.mp3" />
+    <Media Include="Resources\Audio\Music\ScifiAction.wav" />
+    <Media Include="Resources\Audio\Music\Space and Sorrow.mp3" />
+    <Media Include="Resources\Audio\Music\StartupMusic.wav" />
+    <Media Include="Resources\Audio\Music\The Fall of Arcana.mp3" />
+    <Media Include="Resources\Audio\Music\Wasteland Overdrive.mp3" />
+    <Media Include="Resources\Audio\SFX\BeamLaser.wav" />
+    <Media Include="Resources\Audio\SFX\ButtonHover.wav" />
+    <Media Include="Resources\Audio\SFX\ButtonClicked.wav" />
+    <Media Include="Resources\Audio\SFX\LaserFire.wav" />
+    <Media Include="Resources\Audio\SFX\LightThruster.wav" />
+    <Media Include="Resources\Audio\SFX\MissileLaunch.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Resources\Data\Screens\MainMenuScreen.xml" />
+    <Xml Include="Resources\Data\Screens\OptionsScreen.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Resources\Data\Screens\PersistentStartupAndMainMenu.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Resources\Data\Screens\SplashScreen.xml" />
+    <Xml Include="Resources\Data\Settings\Settings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\Fonts\Arial.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Textures\Backgrounds\MainMenuScreen.jpg" />
+    <Image Include="Resources\Textures\UI\ButtonDefault.png" />
+    <Image Include="Resources\Textures\UI\ButtonHighlighted.png" />
+    <Image Include="Resources\Textures\UI\ButtonClicked.png" />
+    <Image Include="Resources\Textures\UI\CelesteEngineLogo.png" />
+    <Image Include="Resources\Textures\UI\CelesteGamesLogo.png" />
+    <Image Include="Resources\Textures\UI\ProgressBar.png" />
+    <Image Include="Resources\Textures\UI\Rectangle.png" />
+    <Image Include="Resources\Textures\UI\UpDirectionIndicator.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
