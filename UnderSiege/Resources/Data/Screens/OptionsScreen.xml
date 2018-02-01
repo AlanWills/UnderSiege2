@@ -90,9 +90,9 @@
       <Components>
         <StackPanel orientation="vertical" vertical_alignment="centre" padding="50">
           <Children>
-            <Child name="MasterVolumeSlider"/>
-            <Child name="MusicVolumeSlider"/>
-            <Child name="SFXVolumeSlider"/>
+            <Child>MasterVolumeSlider</Child>
+            <Child>MusicVolumeSlider</Child>
+            <Child>SFXVolumeSlider</Child>
           </Children>
         </StackPanel>
       </Components>

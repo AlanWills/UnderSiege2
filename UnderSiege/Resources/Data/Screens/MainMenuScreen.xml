@@ -46,9 +46,9 @@
       <Components>
         <StackPanel orientation="vertical" vertical_alignment="centre" padding="20">
           <Children>
-            <Child name="PlayButton"/>
-            <Child name="OptionsButton"/>
-            <Child name="ExitButton"/>
+            <Child>PlayButton</Child>
+            <Child>OptionsButton</Child>
+            <Child>ExitButton</Child>
           </Children>
         </StackPanel>
       </Components>
