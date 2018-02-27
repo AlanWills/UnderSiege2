@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Screen name="GameplayScreen">
+  <GameObjects>
+    <GameObject layer="World" name="Background" size="1%,1%" position="0.5%,0.5%,-0.5">
+      <Components>
+        <SpriteRenderer/>
+      </Components>
+    </GameObject>
+    <GameObject layer="World" name="AsteroidSpawner">
+      <Components>
+        <AsteroidSpawner>
+          <Asteroids>
+            <Asteroid count="10">Asteroids\TinyAsteroid.xml</Asteroid>
+            <Asteroid count="7">Asteroids\SmallAsteroid.xml</Asteroid>
+            <Asteroid count="4">Asteroids\LargeAsteroid.xml</Asteroid>
+            <Asteroid count="2">Asteroids\HugeAsteroid.xml</Asteroid>
+          </Asteroids>
+        </AsteroidSpawner>
+      </Components>
+    </GameObject>
+  </GameObjects>
+</Screen>

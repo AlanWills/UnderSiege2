@@ -5,4 +5,4 @@ rem echo %OutputDir% > log.txt
 
 cd %OutputDir%
 
-(robocopy ..\..\..\..\..\CelesteEnginePlus\CelesteEnginePlus\bin\Win32\%Configuration%\ .\ /IS /IT) & exit 0
+(robocopy ..\..\..\..\..\CelesteEngine\CelesteEngine\bin\Win32\%Configuration%\ .\ /IS /IT) & exit 0

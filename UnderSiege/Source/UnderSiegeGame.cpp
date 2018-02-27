@@ -2,7 +2,7 @@
 
 #include "UnderSiegeGame.h"
 #include "Audio/AudioSource.h"
-#include "Settings/Settings.h"
+#include "Settings/GameSettings.h"
 #include "Screens/Loading/ScreenLoader.h"
 
 
@@ -13,11 +13,15 @@ namespace US
   {
     Inherited::onInitialize();
 
-    Settings settings;
-    settings.load(Path("Settings", "Settings.xml"));
-    getAudioManager()->setMasterVolume(settings.getSetting("MasterVolume", 1.0f));
-    getAudioManager()->setMusicVolume(settings.getSetting("MusicVolume", 1.0f));
-    getAudioManager()->setSFXVolume(settings.getSetting("SFXVolume", 1.0f));
+    std::unique_ptr<Settings::GameSettings> settings(ScriptableObject::load<Settings::GameSettings>(Path("Settings", "GameSettings.xml")));
+    if (settings == nullptr)
+    {
+      settings.reset(new Settings::GameSettings());
+    }
+
+    getAudioManager()->setMasterVolume(settings->getMasterVolume());
+    getAudioManager()->setMusicVolume(settings->getMusicVolume());
+    getAudioManager()->setSFXVolume(settings->getSFXVolume());
 
     ScreenLoader::load(Path(getResourceManager()->getDataDirectoryPath(), "Screens", "PersistentStartupAndMainMenu.xml"));
     ScreenLoader::load(Path(getResourceManager()->getDataDirectoryPath(), "Screens", "SplashScreen.xml"));

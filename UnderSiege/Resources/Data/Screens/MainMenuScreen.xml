@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Screen name="Main Menu">
   <GameObjects>
+    <GameObject layer="GUI" name="Background" position="0.5%, 0.5%, 0">
+      <Components>
+        <SpriteRenderer sprite="Backgrounds\MainMenuScreen.jpg" size="1%, 1%"/>
+      </Components>
+    </GameObject>
     <GameObject layer="GUI" name="Title" position="0.5%, 0.8%, 0">
       <Components>
         <TextRenderer font_height="32" horizontal_alignment="centre">
@@ -10,16 +15,13 @@
         </TextRenderer>
       </Components>
     </GameObject>
-    <GameObject layer="GUI" name="Background" position="0.5%, 0.5%, 0">
-      <Components>
-        <SpriteRenderer sprite="Backgrounds\MainMenuBackground.png"/>
-      </Components>
-    </GameObject>
     <GameObject layer="GUI" name="PlayButton">
       <Components>
         <Button text="Play" font_height="24">
           <LeftClickCallbacks>
             <Callback name="KillScreen" arg="PersistentStartupAndMainMenu"/>
+            <Callback name="KillOwnerScreen"/>
+            <Callback name="LoadLevel" arg="Levels\Level1.xml"/>
           </LeftClickCallbacks>
         </Button>
       </Components>
@@ -42,7 +44,7 @@
         </Button>
       </Components>
     </GameObject>
-    <GameObject layer="GUI" position="0.5%, 0" name="LayoutStackPanel">
+    <GameObject layer="GUI" position="0.5%, 0.5%, 0" name="LayoutStackPanel">
       <Components>
         <StackPanel orientation="vertical" vertical_alignment="centre" padding="20">
           <Children>

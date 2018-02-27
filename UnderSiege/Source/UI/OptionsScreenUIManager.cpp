@@ -7,7 +7,7 @@
 #include "UI/Button.h"
 #include "Rendering/TextRenderer.h"
 #include "Audio/AudioManager.h"
-#include "Settings/Settings.h"
+#include "Settings/GameSettings.h"
 #include "Resources/ResourceManager.h"
 
 using namespace CelesteEngine::UI;
@@ -102,11 +102,16 @@ namespace US
     button->subscribeLeftClickCallback([](EventArgs& e, const Handle<GameObject>& gameObject) -> void
     {
       // Save changes
-      Settings settings;
-      settings.setSetting("MasterVolume", getAudioManager()->getMasterVolume());
-      settings.setSetting("MusicVolume", getAudioManager()->getMusicVolume());
-      settings.setSetting("SFXVolume", getAudioManager()->getSFXVolume());
-      settings.save(Path(getResourceManager()->getDataDirectoryPath(), "Settings", "Settings.xml"));
+      std::unique_ptr<Settings::GameSettings> settings(ScriptableObject::load<Settings::GameSettings>(Path("Settings", "GameSettings.xml")));
+      if (settings == nullptr)
+      {
+        settings.reset(new Settings::GameSettings());
+      }
+
+      settings->setMasterVolume(getAudioManager()->getMasterVolume());
+      settings->setMusicVolume(getAudioManager()->getMusicVolume());
+      settings->setSFXVolume(getAudioManager()->getSFXVolume());
+      settings->save(Path(getResourceManager()->getDataDirectoryPath(), "Settings", "GameSettings.xml"));
     });
   }
 }

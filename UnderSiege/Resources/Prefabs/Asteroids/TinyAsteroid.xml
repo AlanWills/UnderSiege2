@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameObjects>
+  <GameObject layer="World" name="TinyAsteroid">
+    <Components>
+      <SpriteRenderer sprite="Asteroids\TinyAsteroid.png"/>
+      <RectangleCollider width="0" height="0"/>
+      <RigidBody2D/>
+    </Components>
+  </GameObject>
+</GameObjects>

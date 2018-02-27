@@ -73,7 +73,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>$(ProjectDir)..\..\CelesteEnginePlus\3rdParty\Lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(ProjectDir)..\..\CelesteEngine\3rdParty\Lib;$(LibraryPath)</LibraryPath>
     <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
@@ -82,11 +82,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)Headers;$(ProjectDir)..\..\CelesteEnginePlus\CelesteEnginePlus\Headers;$(ProjectDir)..\..\CelesteEnginePlus\3rdParty\Include;$(ProjectDir)..\..\CelesteEnginePlus\3rdParty\Include\freetype2;$(ProjectDir)..\..\3rdParty\Include\freetype2;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Headers;$(ProjectDir)..\..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)..\..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\..\CelesteEngine\3rdParty\Include\freetype2;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\..\CelesteEnginePlus\CelesteEnginePlus\bin\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>CelesteEnginePlus.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;glew32.lib;opengl32.lib;glfw3dll.lib;freetype.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\..\CelesteEngine\CelesteEngine\bin\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CelesteEngine.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;glew32.lib;opengl32.lib;glfw3dll.lib;freetype.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
       <Command>call "$(ProjectDir)Build Events\CopyEngineDLLs.bat" "$(TargetDir)" $(Configuration)</Command>
@@ -126,11 +126,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Headers\Callbacks\LoadLevelCallback.h" />
+    <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.h" />
+    <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidSpawnerElementDataConverter.h" />
+    <ClInclude Include="Headers\GraphicalFX\AsteroidSpawner.h" />
+    <ClInclude Include="Headers\Level\Level.h" />
+    <ClInclude Include="Headers\Ships\Ship.h" />
+    <ClInclude Include="Headers\Ships\ShipManager.h" />
     <ClInclude Include="Headers\UI\OptionsScreenUIManager.h" />
     <ClInclude Include="Headers\UnderSiegeGame.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Callbacks\LoadLevelCallback.cpp" />
+    <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.cpp" />
+    <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidSpawnerElementDataConverter.cpp" />
+    <ClCompile Include="Source\GraphicalFX\AsteroidSpawner.cpp" />
+    <ClCompile Include="Source\Level\Level.cpp" />
     <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\Ships\Ship.cpp" />
+    <ClCompile Include="Source\Ships\ShipManager.cpp" />
     <ClCompile Include="Source\UI\OptionsScreenUIManager.cpp" />
     <ClCompile Include="Source\UnderSiegeGame.cpp" />
   </ItemGroup>
@@ -161,6 +175,15 @@
     <Media Include="Resources\Audio\SFX\MissileLaunch.wav" />
   </ItemGroup>
   <ItemGroup>
+    <Xml Include="Resources\Data\Levels\Level1.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Resources\Data\Player\PlayerShip.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="Resources\Data\Screens\GameplayScreen.xml">
+      <SubType>Designer</SubType>
+    </Xml>
     <Xml Include="Resources\Data\Screens\MainMenuScreen.xml" />
     <Xml Include="Resources\Data\Screens\OptionsScreen.xml">
       <SubType>Designer</SubType>
@@ -169,13 +192,27 @@
       <SubType>Designer</SubType>
     </Xml>
     <Xml Include="Resources\Data\Screens\SplashScreen.xml" />
-    <Xml Include="Resources\Data\Settings\Settings.xml" />
+    <Xml Include="Resources\Data\Settings\GameSettings.xml" />
+    <Xml Include="Resources\Prefabs\Asteroids\HugeAsteroid.xml" />
+    <Xml Include="Resources\Prefabs\Asteroids\LargeAsteroid.xml" />
+    <Xml Include="Resources\Prefabs\Asteroids\SmallAsteroid.xml" />
+    <Xml Include="Resources\Prefabs\Asteroids\TinyAsteroid.xml" />
+    <Xml Include="Resources\Prefabs\Ships\PlayerShip.xml">
+      <SubType>Designer</SubType>
+    </Xml>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Resources\Fonts\Arial.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Resources\Textures\Asteroids\HugeAsteroid.png" />
+    <Image Include="Resources\Textures\Asteroids\LargeAsteroid.png" />
+    <Image Include="Resources\Textures\Asteroids\SmallAsteroid.png" />
+    <Image Include="Resources\Textures\Asteroids\TinyAsteroid.png" />
+    <Image Include="Resources\Textures\Backgrounds\Level1Background.jpg" />
     <Image Include="Resources\Textures\Backgrounds\MainMenuScreen.jpg" />
+    <Image Include="Resources\Textures\Shields\Shield.png" />
+    <Image Include="Resources\Textures\Ships\Fiirkan.png" />
     <Image Include="Resources\Textures\UI\ButtonDefault.png" />
     <Image Include="Resources\Textures\UI\ButtonHighlighted.png" />
     <Image Include="Resources\Textures\UI\ButtonClicked.png" />

@@ -80,13 +80,13 @@
       <Components>
         <TextRenderer font_height="16" horizontal_alignment="right">
           <Lines>
-            <Line>SFX Volume"</Line>
+            <Line>SFX Volume</Line>
           </Lines>
         </TextRenderer>
       </Components>
     </GameObject>
     <!--Volume Grouper-->
-    <GameObject layer="GUI" name="VolumeStackPanel" position="0.5%">
+    <GameObject layer="GUI" name="VolumeStackPanel" position="0.5%,0.5%,0">
       <Components>
         <StackPanel orientation="vertical" vertical_alignment="centre" padding="50">
           <Children>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameObjects>
+  <GameObject layer="World" name="Player" position="0.5%,0.5%">
+    <Components>
+      <SpriteRenderer sprite="Ships\Fiirkan.png"/>
+      <RigidBody2D/>
+      <KeyboardRigidBody2DController/>
+    </Components>
+  </GameObject>
+  <GameObject layer="World" name="PlayerShield" parent="Player">
+    <Components>
+      <SpriteRenderer sprite="Shields\Shield.png"/>
+      <OpacityLerper min_opacity="0.2" lerp_up_time="1" lerp_down_time="1"/>
+    </Components>
+  </GameObject>
+</GameObjects>

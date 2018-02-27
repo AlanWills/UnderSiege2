@@ -21,6 +21,27 @@
     <ClInclude Include="Headers\UI\OptionsScreenUIManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\GraphicalFX\AsteroidSpawner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidSpawnerElementDataConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Ships\Ship.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Level\Level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Ships\ShipManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Callbacks\LoadLevelCallback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\UnderSiegeGame.cpp">
@@ -30,6 +51,27 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\UI\OptionsScreenUIManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GraphicalFX\AsteroidSpawner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidSpawnerElementDataConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Ships\Ship.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Level\Level.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Callbacks\LoadLevelCallback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Ships\ShipManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -86,7 +128,15 @@
     <Xml Include="Resources\Data\Screens\OptionsScreen.xml" />
     <Xml Include="Resources\Data\Screens\SplashScreen.xml" />
     <Xml Include="Resources\Data\Screens\PersistentStartupAndMainMenu.xml" />
-    <Xml Include="Resources\Data\Settings\Settings.xml" />
+    <Xml Include="Resources\Prefabs\Asteroids\TinyAsteroid.xml" />
+    <Xml Include="Resources\Data\Screens\GameplayScreen.xml" />
+    <Xml Include="Resources\Prefabs\Asteroids\SmallAsteroid.xml" />
+    <Xml Include="Resources\Prefabs\Asteroids\LargeAsteroid.xml" />
+    <Xml Include="Resources\Prefabs\Asteroids\HugeAsteroid.xml" />
+    <Xml Include="Resources\Prefabs\Ships\PlayerShip.xml" />
+    <Xml Include="Resources\Data\Settings\GameSettings.xml" />
+    <Xml Include="Resources\Data\Player\PlayerShip.xml" />
+    <Xml Include="Resources\Data\Levels\Level1.xml" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Resources\Fonts\Arial.ttf" />
@@ -117,6 +167,27 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Textures\Backgrounds\MainMenuScreen.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Asteroids\HugeAsteroid.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Asteroids\LargeAsteroid.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Asteroids\SmallAsteroid.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Asteroids\TinyAsteroid.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Backgrounds\Level1Background.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Ships\Fiirkan.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Shields\Shield.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
