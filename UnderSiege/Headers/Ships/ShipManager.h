@@ -12,6 +12,7 @@ class ShipManager : public ScriptableObject
   DECLARE_SCRIPTABLE_OBJECT(ShipManager)
 
   public:
+    ShipManager() { }
 
   private:
 

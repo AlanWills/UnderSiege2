@@ -5,6 +5,7 @@
 #include "Resources/ResourceManager.h"
 #include "Resources/Prefab.h"
 #include "Registries/ScriptableObjectRegistry.h"
+#include "Rendering/SpriteRenderer.h"
 
 
 namespace US
@@ -13,6 +14,7 @@ namespace US
 
   //------------------------------------------------------------------------------------------------
   Ship::Ship() :
+    m_texture(createHandleField<Texture2D>("texture")),
     m_hullStrength(createValueField<float>("hull_strength")),
     m_gameObject()
   {
@@ -36,6 +38,8 @@ namespace US
     }
 
     m_gameObject = prefab->instantiate(screen);
+    m_gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(getTexture());
+
     return m_gameObject;                                                                                                                                                                                                                                                                                                                                                                                                                 
   }
 }

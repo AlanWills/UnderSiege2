@@ -4,6 +4,7 @@
 #include "Audio/AudioSource.h"
 #include "Settings/GameSettings.h"
 #include "Screens/Loading/ScreenLoader.h"
+#include "Registries/ScriptableObjectRegistry.h"
 
 
 namespace US

@@ -2,7 +2,7 @@
 <GameObjects>
   <GameObject layer="World" name="Player" position="0.5%,0.5%">
     <Components>
-      <SpriteRenderer sprite="Ships\Fiirkan.png"/>
+      <SpriteRenderer/>
       <RigidBody2D/>
       <KeyboardRigidBody2DController/>
     </Components>

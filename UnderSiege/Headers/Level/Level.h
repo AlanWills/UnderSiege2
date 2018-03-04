@@ -34,8 +34,6 @@ class Level : public ScriptableObject
 
     // Ensure we are forced through the singleton
     Level();
-    Level(const Level&) = default;
-    Level& operator=(const Level&) = default;
 
     void setBackground() const;
     void setPlayer() const;
