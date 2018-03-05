@@ -8,6 +8,5 @@ using BindingsLib;
 namespace US
 {
 	public class ShipManager : ScriptableObject
-	{
-	}
+	{	}
 }

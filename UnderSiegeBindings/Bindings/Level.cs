@@ -9,9 +9,15 @@ namespace US
 {
 	public class Level : ScriptableObject
 	{
-		public string screen_file_path { get; set; } = "";
-		public string background_file_path { get; set; } = "";
-		public Vector2 player_spawn_position { get; set; } = new Vector2(0.000000f, 0.000000f);
+		[XmlAttributeName("screen_file_path"), DisplayName("Screen File Path")]
+		public string ScreenFilePath { get; set; } = "";
+
+		[XmlAttributeName("background_file_path"), DisplayName("Background File Path")]
+		public string BackgroundFilePath { get; set; } = "";
+
+		[XmlAttributeName("player_spawn_position"), DisplayName("Player Spawn Position")]
+		public Vector2 PlayerSpawnPosition { get; set; } = new Vector2(0.000000f, 0.000000f);
+
 		public ShipManager ShipManager { get; set; }
 	}
 }

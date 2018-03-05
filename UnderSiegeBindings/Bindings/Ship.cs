@@ -9,7 +9,10 @@ namespace US
 {
 	public class Ship : ScriptableObject
 	{
-		public Texture2D texture { get; set; }
-		public float hull_strength { get; set; } = 0.000000f;
+		[XmlAttributeName("texture"), DisplayName("Texture")]
+		public Texture2D Texture { get; set; }
+
+		[XmlAttributeName("hull_strength"), DisplayName("Hull Strength")]
+		public float HullStrength { get; set; } = 0.000000f;
 	}
 }

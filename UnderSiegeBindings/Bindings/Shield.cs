@@ -9,9 +9,16 @@ namespace US
 {
 	public class Shield : ScriptableObject
 	{
-		public int strength { get; set; } = 100;
-		public int recharge_per_second { get; set; } = 1;
-		public Texture2D texture { get; set; }
-		public Vector3 colour { get; set; } = new Vector3(1.000000f, 1.000000f, 1.000000f);
+		[XmlAttributeName("strength"), DisplayName("Strength")]
+		public int Strength { get; set; } = 100;
+
+		[XmlAttributeName("recharge_per_second"), DisplayName("Recharge Per Second")]
+		public int RechargePerSecond { get; set; } = 1;
+
+		[XmlAttributeName("texture"), DisplayName("Texture")]
+		public Texture2D Texture { get; set; }
+
+		[XmlAttributeName("colour"), DisplayName("Colour")]
+		public Vector3 Colour { get; set; } = new Vector3(1.000000f, 1.000000f, 1.000000f);
 	}
 }
