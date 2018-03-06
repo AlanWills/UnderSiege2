@@ -17,7 +17,7 @@ namespace US
   Level::Level() :
     Inherited(),
     m_screen(),
-    m_shipManager(createScriptableObject<ShipManager>("ShipManager")),
+    m_shipManager(createScriptableObject<ShipManager>("Ship Manager")),
     m_playerShip(),
     m_screenFilePath(createReferenceField("screen_file_path", Path(""))),
     m_backgroundFilePath(createReferenceField("background_file_path", Path(""))),
