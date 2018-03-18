@@ -91,12 +91,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\CelesteEngine\BindingsGenerator\Headers;$(ProjectDir)..\..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)Headers;$(ProjectDir)..\..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\..\CelesteEngine\3rdParty\Include\freetype2</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\CelesteEngine\BindingsGenerator\Headers;$(ProjectDir)..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)Headers;$(ProjectDir)..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\CelesteEngine\3rdParty\Include\freetype2</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\..\CelesteEngine\3rdParty\Lib;$(OutDir);$(ProjectDir)..\UnderSiege\obj\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\CelesteEngine\3rdParty\Lib;$(OutDir);$(ProjectDir)..\UnderSiege\obj\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
       <AdditionalDependencies>Level.obj;ShipManager.obj;Ship.obj;Shield.obj;opengl32.lib;freetype.lib;glew32.lib;glfw3dll.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;CelesteEngine.lib;BindingsGenerator.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
