@@ -57,7 +57,7 @@
     <Compile Include="Bindings\Shield.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CelesteEngine\BindingsLib\BindingsLib.csproj">
+    <ProjectReference Include="..\CelesteEngine\BindingsLib\BindingsLib.csproj">
       <Project>{cbd493a8-dfc5-444a-9bc6-ca02ccd76410}</Project>
       <Name>BindingsLib</Name>
     </ProjectReference>

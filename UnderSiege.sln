@@ -8,23 +8,23 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnderSiege", "UnderSiege\Un
 		{E9980A8D-828E-44F0-978E-A57ABC348F47} = {E9980A8D-828E-44F0-978E-A57ABC348F47}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CelesteEngine", "..\CelesteEngine\CelesteEngine\CelesteEngine.vcxproj", "{E9980A8D-828E-44F0-978E-A57ABC348F47}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CelesteEngine", "CelesteEngine\CelesteEngine\CelesteEngine.vcxproj", "{E9980A8D-828E-44F0-978E-A57ABC348F47}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CelesteEngineTestUtils", "..\CelesteEngine\CelesteEngineTestUtils\CelesteEngineTestUtils.vcxproj", "{BB04BA24-E88D-4697-B55C-7C518AFD6BF8}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CelesteEngineTestUtils", "CelesteEngine\CelesteEngineTestUtils\CelesteEngineTestUtils.vcxproj", "{BB04BA24-E88D-4697-B55C-7C518AFD6BF8}"
 	ProjectSection(ProjectDependencies) = postProject
 		{7F06E53E-178C-4E7E-8F24-061F18AA402A} = {7F06E53E-178C-4E7E-8F24-061F18AA402A}
 		{E9980A8D-828E-44F0-978E-A57ABC348F47} = {E9980A8D-828E-44F0-978E-A57ABC348F47}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestUtils", "..\CelesteEngine\TestUtils\TestUtils.vcxproj", "{7F06E53E-178C-4E7E-8F24-061F18AA402A}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestUtils", "CelesteEngine\TestUtils\TestUtils.vcxproj", "{7F06E53E-178C-4E7E-8F24-061F18AA402A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCelesteEngine", "..\CelesteEngine\TestCelesteEngine\TestCelesteEngine.vcxproj", "{E07541B6-55FF-4134-B937-1C62821EE5FB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCelesteEngine", "CelesteEngine\TestCelesteEngine\TestCelesteEngine.vcxproj", "{E07541B6-55FF-4134-B937-1C62821EE5FB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GuidGenerator", "..\CelesteEngine\GuidGenerator\GuidGenerator.vcxproj", "{436C70CD-BE9B-4511-83A6-CA2197493182}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GuidGenerator", "CelesteEngine\GuidGenerator\GuidGenerator.vcxproj", "{436C70CD-BE9B-4511-83A6-CA2197493182}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelesteEngineEditor", "..\CelesteEngine\CelesteEngineEditor\CelesteEngineEditor.csproj", "{525AC921-E6CB-473F-AC93-45E5E732C97E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelesteEngineEditor", "CelesteEngine\CelesteEngineEditor\CelesteEngineEditor.csproj", "{525AC921-E6CB-473F-AC93-45E5E732C97E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CelesteEngineBindingsGenerator", "..\CelesteEngine\CelesteEngineBindingsGenerator\CelesteEngineBindingsGenerator.vcxproj", "{D4115E49-BB86-4AEA-B112-E83EB954B224}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CelesteEngineBindingsGenerator", "CelesteEngine\CelesteEngineBindingsGenerator\CelesteEngineBindingsGenerator.vcxproj", "{D4115E49-BB86-4AEA-B112-E83EB954B224}"
 	ProjectSection(ProjectDependencies) = postProject
 		{F357C745-6FAA-49A8-A895-0D4D35374929} = {F357C745-6FAA-49A8-A895-0D4D35374929}
 		{E9980A8D-828E-44F0-978E-A57ABC348F47} = {E9980A8D-828E-44F0-978E-A57ABC348F47}
@@ -36,13 +36,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dev Tools", "Dev Tools", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{B12E0E43-6BCD-45AC-9CB1-C886022B601F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelesteEngineBindings", "..\CelesteEngine\CelesteEngineBindings\CelesteEngineBindings.csproj", "{666C6C00-C233-40C4-957F-3338666B228A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelesteEngineBindings", "CelesteEngine\CelesteEngineBindings\CelesteEngineBindings.csproj", "{666C6C00-C233-40C4-957F-3338666B228A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bindings", "Bindings", "{4E9CB4B7-097A-44F7-B771-084B4B83F770}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingsLib", "..\CelesteEngine\BindingsLib\BindingsLib.csproj", "{CBD493A8-DFC5-444A-9BC6-CA02CCD76410}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingsLib", "CelesteEngine\BindingsLib\BindingsLib.csproj", "{CBD493A8-DFC5-444A-9BC6-CA02CCD76410}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BindingsGenerator", "..\CelesteEngine\BindingsGenerator\BindingsGenerator.vcxproj", "{F357C745-6FAA-49A8-A895-0D4D35374929}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BindingsGenerator", "CelesteEngine\BindingsGenerator\BindingsGenerator.vcxproj", "{F357C745-6FAA-49A8-A895-0D4D35374929}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E9980A8D-828E-44F0-978E-A57ABC348F47} = {E9980A8D-828E-44F0-978E-A57ABC348F47}
 	EndProjectSection
@@ -57,6 +57,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnderSiegeBindingsGenerator
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderSiegeBindings", "UnderSiegeBindings\UnderSiegeBindings.csproj", "{06BCE8A1-1F32-42BC-A5C3-F4D817399628}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelesteEngineBindingsLib", "CelesteEngine\CelesteEngineBindingsLib\CelesteEngineBindingsLib.csproj", "{5D848227-6467-45C7-B9F7-E34C1A2F7A78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -290,6 +292,24 @@ Global
 		{06BCE8A1-1F32-42BC-A5C3-F4D817399628}.Testing|x64.Build.0 = Release|Any CPU
 		{06BCE8A1-1F32-42BC-A5C3-F4D817399628}.Testing|x86.ActiveCfg = Release|Any CPU
 		{06BCE8A1-1F32-42BC-A5C3-F4D817399628}.Testing|x86.Build.0 = Release|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Debug|x64.Build.0 = Debug|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Debug|x86.Build.0 = Debug|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Release|x64.ActiveCfg = Release|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Release|x64.Build.0 = Release|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Release|x86.ActiveCfg = Release|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Release|x86.Build.0 = Release|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Testing|Any CPU.Build.0 = Release|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Testing|x64.ActiveCfg = Release|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Testing|x64.Build.0 = Release|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Testing|x86.ActiveCfg = Release|Any CPU
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78}.Testing|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -308,6 +328,7 @@ Global
 		{F357C745-6FAA-49A8-A895-0D4D35374929} = {4E9CB4B7-097A-44F7-B771-084B4B83F770}
 		{CC9BFB7D-921B-48B7-BCB5-43BFA668FD7D} = {F4C70DBC-4ED7-4386-AE1A-3F8C4365EC7F}
 		{06BCE8A1-1F32-42BC-A5C3-F4D817399628} = {F4C70DBC-4ED7-4386-AE1A-3F8C4365EC7F}
+		{5D848227-6467-45C7-B9F7-E34C1A2F7A78} = {CD53E458-12AA-467C-BFEF-9A3DFCDCC2CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {76215A38-E8DF-4F75-B14D-8AE12D34B248}
