@@ -1,21 +1,21 @@
 #include "stdafx.h"
 
-#include "DataConverters/GraphicalFX/AsteroidSpawnerElementDataConverter.h"
+#include "DataConverters/GraphicalFX/AsteroidDataConverter.h"
 
 
 namespace US
 {
   //------------------------------------------------------------------------------------------------
-  AsteroidSpawnerElementDataConverter::AsteroidSpawnerElementDataConverter(const ElementName& elementName) :
+  AsteroidDataConverter::AsteroidDataConverter(const std::string& elementName) :
     Inherited(elementName),
     m_prefabPath(),
-    m_count(AttributeName("count"), 0, kRequired)
+    m_count("count", 0, kRequired)
   {
-    addAttribute(&m_count);
+    addData(&m_count);
   }
 
   //------------------------------------------------------------------------------------------------
-  bool AsteroidSpawnerElementDataConverter::doConvertFromXML(const XMLElement* element)
+  bool AsteroidDataConverter::doConvertFromXML(const XMLElement* element)
   {
     const char* elementText = element->GetText();
     if (elementText == nullptr)

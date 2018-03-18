@@ -2,8 +2,8 @@
 
 #include "DataConverters/Objects/ComponentDataConverter.h"
 #include "GraphicalFX/AsteroidSpawner.h"
-#include "XML/Elements/ListElement.h"
-#include "DataConverters/GraphicalFX/AsteroidSpawnerElementDataConverter.h"
+#include "XML/Elements/ComponentDataConverterListElement.h"
+#include "DataConverters/GraphicalFX/AsteroidDataConverter.h"
 
 
 namespace US
@@ -11,19 +11,24 @@ namespace US
 
 class AsteroidSpawnerDataConverter : public CelesteEngine::ComponentDataConverter
 {
-  DECLARE_COMPONENT_DATA_CONVERTER(AsteroidSpawner)
+  DECLARE_COMPONENT_DATA_CONVERTER(AsteroidSpawnerDataConverter, AsteroidSpawner)
 
   public:
-    AsteroidSpawnerDataConverter(const ElementName& elementName = AsteroidSpawner::name());
+    AsteroidSpawnerDataConverter(const std::string& elementName = AsteroidSpawner::type_name());
+    AsteroidSpawnerDataConverter(const AsteroidSpawnerDataConverter&) = delete;
+    AsteroidSpawnerDataConverter& operator=(const AsteroidSpawnerDataConverter&) = delete;
+    ~AsteroidSpawnerDataConverter();
 
-    const std::vector<AsteroidSpawnerElementDataConverter>& getAsteroids() const { return m_asteroids.getChildren(); }
-    const std::string& getAsteroidsXMLName() const { return m_asteroids.getElementName(); }
-    const std::string& getAsteroidXMLName() const { return m_asteroids.getChildElementName(); }
+    const std::vector<AsteroidDataConverter*>& getAsteroids() const { return m_asteroids; }
+    std::string getAsteroidXMLName() const { return "Asteroid"; }
+
+  protected:
+    bool doConvertFromXML(const XMLElement* objectElement) override;
 
   private:
     typedef CelesteEngine::ComponentDataConverter Inherited;
 
-    ListElement<AsteroidSpawnerElementDataConverter> m_asteroids;
+    std::vector<AsteroidDataConverter*> m_asteroids;
 };
 
 }

@@ -27,9 +27,6 @@
     <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidSpawnerElementDataConverter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Headers\Ships\Ship.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -43,6 +40,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Shields\Shield.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidDataConverter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,9 +62,6 @@
     <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidSpawnerElementDataConverter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Ships\Ship.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -78,6 +75,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\Shield\Shield.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidDataConverter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

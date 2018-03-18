@@ -2,16 +2,15 @@
 
 #include "DataConverters/DataConverter.h"
 #include "XML/Attributes/DataAttribute.h"
-#include "XML/Elements/StringElement.h"
 
 
 namespace US
 {
 
-class AsteroidSpawnerElementDataConverter : public CelesteEngine::DataConverter
+class AsteroidDataConverter : public CelesteEngine::DataConverter
 {
   public:
-    AsteroidSpawnerElementDataConverter(const ElementName& elementName = ElementName("AsteroidSpawner"));
+    AsteroidDataConverter(const std::string& elementName = "AsteroidSpawner");
 
     const std::string& getPrefabPath() const { return m_prefabPath; }
 

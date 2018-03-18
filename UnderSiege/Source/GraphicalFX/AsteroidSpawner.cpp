@@ -82,29 +82,29 @@ namespace US
       return;
     }
 
-    const GameObjectDataConverter& gameObject = prefab->getGameObjects()[0];
-    const std::vector<ComponentDataConverterElement>& components = gameObject.getComponents();
+    const GameObjectDataConverter* gameObject = prefab->getGameObjects()[0];
+    const std::vector<ComponentDataConverter*>& components = gameObject->getComponents();
     
     // Check the asteroid has a sprite renderer
-    ASSERT(std::find_if(components.begin(), components.end(), [](const ComponentDataConverterElement& element) -> bool
+    ASSERT(std::find_if(components.begin(), components.end(), [](const ComponentDataConverter* element) -> bool
     {
-      return element.getElementName() == SpriteRenderer::name();
+      return element->getElementName() == SpriteRenderer::type_name();
     }) != components.end());
 
     // Check the asteroid has a rectangle collider
-    ASSERT(std::find_if(components.begin(), components.end(), [](const ComponentDataConverterElement& element) -> bool
+    ASSERT(std::find_if(components.begin(), components.end(), [](const ComponentDataConverter* element) -> bool
     {
-      return element.getElementName() == RectangleCollider::name();
+      return element->getElementName() == RectangleCollider::type_name();
     }) != components.end());
 
     // Check the asteroid has a rigid body 2D
-    ASSERT(std::find_if(components.begin(), components.end(), [](const ComponentDataConverterElement& element) -> bool
+    ASSERT(std::find_if(components.begin(), components.end(), [](const ComponentDataConverter* element) -> bool
     {
-      return element.getElementName() == RigidBody2D::name();
+      return element->getElementName() == RigidBody2D::type_name();
     }) != components.end());
 
     // Check the asteroid is in the world layer
-    ASSERT(gameObject.getLayer() == kWorld);
+    ASSERT(gameObject->getLayer() == kWorld);
 
     const glm::vec2& viewportDimensions = getViewportDimensions();
 
