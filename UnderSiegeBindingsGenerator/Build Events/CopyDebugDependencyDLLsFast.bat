@@ -1,0 +1,1 @@
+call .\CopyDependencyDLLs.bat ..\bin\Win32\Debug\ Debug

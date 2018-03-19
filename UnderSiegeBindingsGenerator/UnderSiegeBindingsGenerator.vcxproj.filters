@@ -34,5 +34,8 @@
     <None Include="Build Events\CopyDependencyDLLs.bat">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="Build Events\CopyDebugDependencyDLLsFast.bat">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

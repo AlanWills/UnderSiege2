@@ -164,6 +164,7 @@
     <ClCompile Include="Source\UnderSiegeBindingsGenerator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Build Events\CopyDebugDependencyDLLsFast.bat" />
     <None Include="Build Events\CopyDependencyDLLs.bat" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

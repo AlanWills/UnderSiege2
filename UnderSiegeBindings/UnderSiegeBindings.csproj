@@ -33,6 +33,7 @@
     <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,19 +48,19 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent />
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CelesteEngine\BindingsKernel\BindingsKernel.csproj">
+      <Project>{cbd493a8-dfc5-444a-9bc6-ca02ccd76410}</Project>
+      <Name>BindingsKernel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Compile Include="Bindings\Level.cs" />
     <Compile Include="Bindings\ShipManager.cs" />
     <Compile Include="Bindings\Ship.cs" />
     <Compile Include="Bindings\Shield.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CelesteEngine\BindingsLib\BindingsLib.csproj">
-      <Project>{cbd493a8-dfc5-444a-9bc6-ca02ccd76410}</Project>
-      <Name>BindingsLib</Name>
-    </ProjectReference>
   </ItemGroup>
 </Project>
