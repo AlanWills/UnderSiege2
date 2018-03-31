@@ -10,7 +10,6 @@ using BindingsKernel;
 
 namespace US
 {
-[Serializable]
 	public class Shield : ScriptableObject
 	{
 		[Serialize, DisplayPriority(1)]
