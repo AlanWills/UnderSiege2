@@ -1,4 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Root>
-    <GameSettings guid="be39a7c9-eeeb-4d1e-90a4-677029f40e2f" name="GameSettings" master_volume="0.000000" music_volume="0.000000" sfx_volume="0.000000"/>
-    <ScriptableObjects/>
+  <GameSettings master_volume="1" music_volume="0" sfx_volume="0" name="GameSettings" guid="ae27395b-ecd3-46e2-9f31-433eba45c42a" />
 </Root>
