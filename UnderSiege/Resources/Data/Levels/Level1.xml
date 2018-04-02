@@ -6,7 +6,5 @@
          player_spawn_position="100,100">
     <ShipManager name="ShipManager">b63d5da3-edc1-4540-9a34-7dd49aa51632</ShipManager>
   </Level>
-  <ScriptableObjects>
-    <ShipManager name="ShipManager" guid="b63d5da3-edc1-4540-9a34-7dd49aa51632"/>
-  </ScriptableObjects>
+  <ShipManager name="ShipManager" guid="b63d5da3-edc1-4540-9a34-7dd49aa51632"/>
 </Root>
