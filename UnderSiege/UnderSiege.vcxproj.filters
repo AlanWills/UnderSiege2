@@ -140,9 +140,9 @@
     <Xml Include="Resources\Prefabs\Asteroids\LargeAsteroid.xml" />
     <Xml Include="Resources\Prefabs\Asteroids\HugeAsteroid.xml" />
     <Xml Include="Resources\Prefabs\Ships\PlayerShip.xml" />
-    <Xml Include="Resources\Data\Settings\GameSettings.xml" />
     <Xml Include="Resources\Data\Player\PlayerShip.xml" />
-    <Xml Include="Resources\Data\Levels\Level1.xml" />
+    <Xml Include="Resources\Data\Levels\Level1.asset" />
+    <Xml Include="Resources\Data\Settings\GameSettings.asset" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Resources\Fonts\Arial.ttf" />

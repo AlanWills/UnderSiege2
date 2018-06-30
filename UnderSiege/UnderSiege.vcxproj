@@ -177,7 +177,7 @@
     <Media Include="Resources\Audio\SFX\MissileLaunch.wav" />
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="Resources\Data\Levels\Level1.xml">
+    <Xml Include="Resources\Data\Levels\Level1.asset">
       <SubType>Designer</SubType>
     </Xml>
     <Xml Include="Resources\Data\Player\PlayerShip.xml">
@@ -194,7 +194,7 @@
       <SubType>Designer</SubType>
     </Xml>
     <Xml Include="Resources\Data\Screens\SplashScreen.xml" />
-    <Xml Include="Resources\Data\Settings\GameSettings.xml" />
+    <Xml Include="Resources\Data\Settings\GameSettings.asset" />
     <Xml Include="Resources\Prefabs\Asteroids\HugeAsteroid.xml" />
     <Xml Include="Resources\Prefabs\Asteroids\LargeAsteroid.xml" />
     <Xml Include="Resources\Prefabs\Asteroids\SmallAsteroid.xml" />

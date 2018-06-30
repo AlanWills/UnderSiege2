@@ -64,6 +64,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Editor", "Editor", "{788839
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelesteEngineEditorLibrary", "CelesteEngine\CelesteEngineEditorLibrary\CelesteEngineEditorLibrary.csproj", "{B2B41924-FF3D-451F-8A37-7B078053E910}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CelTestSharp", "CelesteEngine\CelTestSharp\CelTestSharp.csproj", "{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -332,6 +334,24 @@ Global
 		{B2B41924-FF3D-451F-8A37-7B078053E910}.Testing|x64.Build.0 = Release|Any CPU
 		{B2B41924-FF3D-451F-8A37-7B078053E910}.Testing|x86.ActiveCfg = Release|Any CPU
 		{B2B41924-FF3D-451F-8A37-7B078053E910}.Testing|x86.Build.0 = Release|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Debug|x64.Build.0 = Debug|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Debug|x86.Build.0 = Debug|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Release|x64.ActiveCfg = Release|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Release|x64.Build.0 = Release|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Release|x86.ActiveCfg = Release|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Release|x86.Build.0 = Release|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Testing|Any CPU.Build.0 = Release|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Testing|x64.ActiveCfg = Release|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Testing|x64.Build.0 = Release|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Testing|x86.ActiveCfg = Release|Any CPU
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}.Testing|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -352,6 +372,7 @@ Global
 		{06BCE8A1-1F32-42BC-A5C3-F4D817399628} = {4E9CB4B7-097A-44F7-B771-084B4B83F770}
 		{5D848227-6467-45C7-B9F7-E34C1A2F7A78} = {4E9CB4B7-097A-44F7-B771-084B4B83F770}
 		{B2B41924-FF3D-451F-8A37-7B078053E910} = {788839DD-1027-454F-AF3F-BAC33D414107}
+		{779DB648-8CB6-4F92-98E6-E58F3CB56DF9} = {B12E0E43-6BCD-45AC-9CB1-C886022B601F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {76215A38-E8DF-4F75-B14D-8AE12D34B248}
