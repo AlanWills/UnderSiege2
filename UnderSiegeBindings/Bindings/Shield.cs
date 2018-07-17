@@ -20,9 +20,9 @@ namespace US
 		[XmlAttribute("recharge_per_second"), DisplayName("Recharge Per Second")]
 		public int RechargePerSecond { get; set; } = 1;
 
-		[Serialize, DisplayPriority(3)]
-		[XmlAttribute("texture"), DisplayName("Texture")]
-		public Texture2D Texture { get; set; }
+        [Serialize, DisplayPriority(3)]
+        [XmlAttribute("texture"), DisplayName("Texture")]
+        public Texture2D Texture { get; set; }
 
 		[Serialize, DisplayPriority(4)]
 		[XmlAttribute("colour"), DisplayName("Colour")]

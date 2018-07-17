@@ -86,6 +86,7 @@
     <None Include="Build Events\CopyDependencyDLLs.bat">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="Resources\Data\Shields\BasicShield.asset" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />

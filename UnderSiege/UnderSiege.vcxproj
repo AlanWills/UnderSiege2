@@ -153,6 +153,7 @@
   <ItemGroup>
     <None Include="Build Events\CopyDependencyDLLs.bat" />
     <None Include="Resources\Audio\Music\TheSwarmApproaches.wma" />
+    <None Include="Resources\Data\Shields\BasicShield.asset" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />
