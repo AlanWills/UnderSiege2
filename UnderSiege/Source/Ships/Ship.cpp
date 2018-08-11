@@ -16,6 +16,7 @@ namespace US
   Ship::Ship() :
     m_texture(createHandleField<Texture2D>("texture")),
     m_hullStrength(createValueField<float>("hull_strength")),
+	m_shield(createScriptableObject<Shield>("shield")),
     m_gameObject()
   {
   }

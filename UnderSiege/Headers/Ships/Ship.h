@@ -2,6 +2,7 @@
 
 #include "Objects/ScriptableObject.h"
 #include "Resources/Texture2D.h"
+#include "Shields/Shield.h"
 
 
 namespace CelesteEngine
@@ -27,6 +28,7 @@ class Ship : public CelesteEngine::ScriptableObject
   private:
     HandleField<Texture2D>* m_texture;
     ValueField<float>* m_hullStrength;
+	Shield* m_shield;
 
     Handle<GameObject> m_gameObject;
 };

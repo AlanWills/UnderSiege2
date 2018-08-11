@@ -19,5 +19,9 @@ namespace US
 		[Serialize, DisplayPriority(2)]
 		[XmlAttribute("hull_strength"), DisplayName("Hull Strength")]
 		public float HullStrength { get; set; } = 0.000000f;
+
+		[Serialize, DisplayPriority(3)]
+		[DisplayName("shield")]
+		public Shield Shield { get; set; }
 	}
 }
