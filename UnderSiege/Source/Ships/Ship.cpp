@@ -40,6 +40,7 @@ namespace US
 
     m_gameObject = prefab->instantiate(screen);
     m_gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(getTexture());
+	m_gameObject->findChildGameObject("PlayerShield")->findComponent<Rendering::SpriteRenderer>()->setTexture(m_shield->getTexture());
 
     return m_gameObject;                                                                                                                                                                                                                                                                                                                                                                                                                 
   }

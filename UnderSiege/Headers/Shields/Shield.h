@@ -13,6 +13,8 @@ class Shield : public CelesteEngine::ScriptableObject
   public:
     Shield();
 
+	const Handle<Texture2D>& getTexture() const { return m_texture->getValue(); }
+
   private:
     ValueField<int>* m_strength;
     ValueField<int>* m_rechargePerSecond;

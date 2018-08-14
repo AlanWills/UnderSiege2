@@ -9,7 +9,7 @@
   </GameObject>
   <GameObject layer="World" name="PlayerShield" parent="Player">
     <Components>
-      <SpriteRenderer sprite="Shields\Shield.png"/>
+      <SpriteRenderer />
       <OpacityLerper min_opacity="0.2" lerp_up_time="1" lerp_down_time="1"/>
     </Components>
   </GameObject>
