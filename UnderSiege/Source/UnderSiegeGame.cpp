@@ -14,7 +14,7 @@ namespace US
   {
     Inherited::onInitialize();
 
-    std::unique_ptr<Settings::GameSettings> settings(ScriptableObject::load<Settings::GameSettings>(Path("Settings", "GameSettings.xml")));
+    std::unique_ptr<Settings::GameSettings> settings(ScriptableObject::load<Settings::GameSettings>(Path("Settings", "GameSettings.asset")));
     if (settings == nullptr)
     {
       settings.reset(new Settings::GameSettings());

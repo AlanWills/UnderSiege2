@@ -21,7 +21,7 @@
           <LeftClickCallbacks>
             <Callback name="KillScreen" arg="PersistentStartupAndMainMenu"/>
             <Callback name="KillOwnerScreen"/>
-            <Callback name="LoadLevel" arg="Levels\Level1.xml"/>
+            <Callback name="LoadLevel" arg="Levels\Level1.asset"/>
           </LeftClickCallbacks>
         </Button>
       </Components>
