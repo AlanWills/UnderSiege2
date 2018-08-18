@@ -48,6 +48,9 @@
     <ClInclude Include="Headers\Turrets\Turret.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\UnderSiegeDllExport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\UnderSiegeGame.cpp">

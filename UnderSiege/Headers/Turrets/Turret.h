@@ -1,12 +1,13 @@
 #pragma once
 
+#include "UnderSiegeDllExport.h"
 #include "Objects/ScriptableObject.h"
 
 
 namespace US
 {
 
-class Turret : public CelesteEngine::ScriptableObject
+class UnderSiegeDllExport Turret : public CelesteEngine::ScriptableObject
 {
   DECLARE_SCRIPTABLE_OBJECT(Turret)
 
@@ -19,7 +20,7 @@ class Turret : public CelesteEngine::ScriptableObject
     ValueField<int>* m_damage;
     ValueField<int>* m_fireRate;
     HandleField<Texture2D>* m_idleTexture;
-    ReferenceField<std::vector<Texture2D>>* m_firingAnimationFrames;
+    ReferenceField<std::vector<Handle<Texture2D>>>* m_firingAnimationFrames;
 };
 
 }

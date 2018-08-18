@@ -92,6 +92,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)Headers;$(ProjectDir)..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\CelesteEngine\3rdParty\Include\freetype2;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_UNDER_SIEGE_DLL;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(ProjectDir)..\CelesteEngine\CelesteEngine\bin\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -111,6 +112,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)Headers;$(ProjectDir)..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\CelesteEngine\3rdParty\Include\freetype2;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_UNDER_SIEGE_DLL;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(ProjectDir)..\CelesteEngine\CelesteEngine\bin\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -161,6 +163,7 @@
     <ClInclude Include="Headers\Ships\ShipManager.h" />
     <ClInclude Include="Headers\Turrets\Turret.h" />
     <ClInclude Include="Headers\UI\OptionsScreenUIManager.h" />
+    <ClInclude Include="Headers\UnderSiegeDllExport.h" />
     <ClInclude Include="Headers\UnderSiegeGame.h" />
   </ItemGroup>
   <ItemGroup>
