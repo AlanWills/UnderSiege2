@@ -45,6 +45,9 @@
     <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidDataConverter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Turrets\Turret.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\UnderSiegeGame.cpp">
@@ -78,6 +81,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidDataConverter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Turrets\Turret.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

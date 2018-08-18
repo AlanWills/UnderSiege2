@@ -159,6 +159,7 @@
     <ClInclude Include="Headers\Shields\Shield.h" />
     <ClInclude Include="Headers\Ships\Ship.h" />
     <ClInclude Include="Headers\Ships\ShipManager.h" />
+    <ClInclude Include="Headers\Turrets\Turret.h" />
     <ClInclude Include="Headers\UI\OptionsScreenUIManager.h" />
     <ClInclude Include="Headers\UnderSiegeGame.h" />
   </ItemGroup>
@@ -172,6 +173,7 @@
     <ClCompile Include="Source\Shield\Shield.cpp" />
     <ClCompile Include="Source\Ships\Ship.cpp" />
     <ClCompile Include="Source\Ships\ShipManager.cpp" />
+    <ClCompile Include="Source\Turrets\Turret.cpp" />
     <ClCompile Include="Source\UI\OptionsScreenUIManager.cpp" />
     <ClCompile Include="Source\UnderSiegeGame.cpp" />
   </ItemGroup>
