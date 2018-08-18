@@ -31,7 +31,7 @@ namespace US
       m_gameObject.reset();
     }
 
-    const Handle<Prefab>& prefab = getResourceManager()->load<Prefab>(Path("Ships", "PlayerShip.xml"));
+    const Handle<Prefab>& prefab = getResourceManager()->load<Prefab>(Path("Prefabs", "Ships", "PlayerShip.asset"));
     if (prefab.is_null())
     {
       ASSERT_FAIL();

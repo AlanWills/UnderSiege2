@@ -102,7 +102,7 @@ namespace US
     button->subscribeLeftClickCallback([](EventArgs& e, const Handle<GameObject>& gameObject) -> void
     {
       // Save changes
-      Path settingsPath(getResourcesDirectory(), "Data", "Settings", "GameSettings.xml");
+      Path settingsPath(getResourcesDirectory(), "Data", "Settings", "GameSettings.asset");
       std::unique_ptr<Settings::GameSettings> settings(ScriptableObject::load<Settings::GameSettings>(settingsPath));
       if (settings == nullptr)
       {

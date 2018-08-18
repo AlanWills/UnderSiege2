@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GameObjects>
-  <GameObject layer="World" name="TinyAsteroid">
+  <GameObject layer="World" name="LargeAsteroid">
     <Components>
-      <SpriteRenderer sprite="Asteroids\TinyAsteroid.png"/>
+      <SpriteRenderer sprite="Textures\Asteroids\LargeAsteroid.png"/>
       <RectangleCollider width="0" height="0"/>
       <RigidBody2D/>
     </Components>

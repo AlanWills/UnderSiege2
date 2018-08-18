@@ -9,12 +9,10 @@
     <GameObject layer="World" name="AsteroidSpawner">
       <Components>
         <AsteroidSpawner>
-          <Asteroids>
-            <Asteroid count="10">Asteroids\TinyAsteroid.xml</Asteroid>
-            <Asteroid count="7">Asteroids\SmallAsteroid.xml</Asteroid>
-            <Asteroid count="4">Asteroids\LargeAsteroid.xml</Asteroid>
-            <Asteroid count="2">Asteroids\HugeAsteroid.xml</Asteroid>
-          </Asteroids>
+          <Asteroid count="10">Prefabs\Asteroids\TinyAsteroid.asset</Asteroid>
+          <Asteroid count="7">Prefabs\Asteroids\SmallAsteroid.asset</Asteroid>
+          <Asteroid count="4">Prefabs\Asteroids\LargeAsteroid.asset</Asteroid>
+          <Asteroid count="2">Prefabs\Asteroids\HugeAsteroid.asset</Asteroid>
         </AsteroidSpawner>
       </Components>
     </GameObject>

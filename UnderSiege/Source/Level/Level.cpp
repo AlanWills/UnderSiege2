@@ -60,7 +60,7 @@ namespace US
   //------------------------------------------------------------------------------------------------
   void Level::setPlayer() const
   {
-    m_current->m_playerShip.reset(ScriptableObject::load<Ship>(Path("Player", "PlayerShip.xml")));
+    m_current->m_playerShip.reset(ScriptableObject::load<Ship>(Path("Data", "Player", "PlayerShip.asset")));
     ASSERT(m_current->m_playerShip.get());
 
     // Create the player game object

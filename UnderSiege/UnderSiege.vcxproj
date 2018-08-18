@@ -206,26 +206,26 @@
     <Xml Include="Resources\Data\Levels\Level1.asset">
       <SubType>Designer</SubType>
     </Xml>
-    <Xml Include="Resources\Data\Player\PlayerShip.xml">
+    <Xml Include="Resources\Data\Player\PlayerShip.asset">
       <SubType>Designer</SubType>
     </Xml>
-    <Xml Include="Resources\Data\Screens\GameplayScreen.xml">
+    <Xml Include="Resources\Data\Screens\GameplayScreen.asset">
       <SubType>Designer</SubType>
     </Xml>
-    <Xml Include="Resources\Data\Screens\MainMenuScreen.xml" />
-    <Xml Include="Resources\Data\Screens\OptionsScreen.xml">
+    <Xml Include="Resources\Data\Screens\MainMenuScreen.asset" />
+    <Xml Include="Resources\Data\Screens\OptionsScreen.asset">
       <SubType>Designer</SubType>
     </Xml>
-    <Xml Include="Resources\Data\Screens\PersistentStartupAndMainMenu.xml">
+    <Xml Include="Resources\Data\Screens\PersistentStartupAndMainMenu.asset">
       <SubType>Designer</SubType>
     </Xml>
-    <Xml Include="Resources\Data\Screens\SplashScreen.xml" />
+    <Xml Include="Resources\Data\Screens\SplashScreen.asset" />
     <Xml Include="Resources\Data\Settings\GameSettings.asset" />
-    <Xml Include="Resources\Prefabs\Asteroids\HugeAsteroid.xml" />
-    <Xml Include="Resources\Prefabs\Asteroids\LargeAsteroid.xml" />
-    <Xml Include="Resources\Prefabs\Asteroids\SmallAsteroid.xml" />
-    <Xml Include="Resources\Prefabs\Asteroids\TinyAsteroid.xml" />
-    <Xml Include="Resources\Prefabs\Ships\PlayerShip.xml">
+    <Xml Include="Resources\Prefabs\Asteroids\HugeAsteroid.asset" />
+    <Xml Include="Resources\Prefabs\Asteroids\LargeAsteroid.asset" />
+    <Xml Include="Resources\Prefabs\Asteroids\SmallAsteroid.asset" />
+    <Xml Include="Resources\Prefabs\Asteroids\TinyAsteroid.asset" />
+    <Xml Include="Resources\Prefabs\Ships\PlayerShip.asset">
       <SubType>Designer</SubType>
     </Xml>
   </ItemGroup>

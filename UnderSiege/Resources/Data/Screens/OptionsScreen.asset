@@ -13,7 +13,7 @@
     <!--Master Volume-->
     <GameObject layer="GUI" name="MasterVolumeSlider">
       <Components>
-        <SpriteRenderer sprite="UI\Rectangle.png" size="400,30"/>
+        <SpriteRenderer sprite="Textures\UI\Rectangle.png" size="400,30"/>
         <Slider min="0" max="1" value="1"/>
       </Components>
     </GameObject>
@@ -38,7 +38,7 @@
     <!--Music Volume-->
     <GameObject layer="GUI" name="MusicVolumeSlider">
       <Components>
-        <SpriteRenderer sprite="UI\Rectangle.png" size="400,30"/>
+        <SpriteRenderer sprite="Textures\UI\Rectangle.png" size="400,30"/>
         <Slider min="0" max="1" value="0"/>
       </Components>
     </GameObject>
@@ -63,7 +63,7 @@
     <!--SFX Volume-->
     <GameObject layer="GUI" name="SFXVolumeSlider">
       <Components>
-        <SpriteRenderer sprite="UI\Rectangle.png" size="400,30"/>
+        <SpriteRenderer sprite="Textures\UI\Rectangle.png" size="400,30"/>
         <Slider min="0" max="1" value="0"/>
       </Components>
     </GameObject>
@@ -101,7 +101,7 @@
       <Components>
         <Button text="Close" font_height="20">
           <LeftClickCallbacks>
-            <Callback name="TransitionToScreen" arg="Screens\MainMenuScreen.xml"/>
+            <Callback name="TransitionToScreen" arg="Data\Screens\MainMenuScreen.asset"/>
           </LeftClickCallbacks>
         </Button>
       </Components>

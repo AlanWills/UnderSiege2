@@ -24,7 +24,7 @@ namespace US
     getAudioManager()->setMusicVolume(settings->getMusicVolume());
     getAudioManager()->setSFXVolume(settings->getSFXVolume());
 
-    ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "PersistentStartupAndMainMenu.xml"));
-    ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "SplashScreen.xml"));
+    ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "PersistentStartupAndMainMenu.asset"));
+    ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "SplashScreen.asset"));
   }
 }
