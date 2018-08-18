@@ -23,7 +23,7 @@ namespace US
       return;
     }
 
-    Path levelFile(getResourceManager()->getDataDirectoryPath(), arg);
+    Path levelFile(getResourcesDirectory(), arg);
     if (!File::exists(levelFile))
     {
       ASSERT_FAIL();

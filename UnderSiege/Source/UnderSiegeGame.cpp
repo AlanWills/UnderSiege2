@@ -14,7 +14,7 @@ namespace US
   {
     Inherited::onInitialize();
 
-    std::unique_ptr<Settings::GameSettings> settings(ScriptableObject::load<Settings::GameSettings>(Path("Settings", "GameSettings.asset")));
+    std::unique_ptr<Settings::GameSettings> settings(ScriptableObject::load<Settings::GameSettings>(Path("Data", "Settings", "GameSettings.asset")));
     if (settings == nullptr)
     {
       settings.reset(new Settings::GameSettings());
@@ -24,7 +24,7 @@ namespace US
     getAudioManager()->setMusicVolume(settings->getMusicVolume());
     getAudioManager()->setSFXVolume(settings->getSFXVolume());
 
-    ScreenLoader::load(Path(getResourceManager()->getDataDirectoryPath(), "Screens", "PersistentStartupAndMainMenu.xml"));
-    ScreenLoader::load(Path(getResourceManager()->getDataDirectoryPath(), "Screens", "SplashScreen.xml"));
+    ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "PersistentStartupAndMainMenu.xml"));
+    ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "SplashScreen.xml"));
   }
 }

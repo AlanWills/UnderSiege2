@@ -102,7 +102,8 @@ namespace US
     button->subscribeLeftClickCallback([](EventArgs& e, const Handle<GameObject>& gameObject) -> void
     {
       // Save changes
-      std::unique_ptr<Settings::GameSettings> settings(ScriptableObject::load<Settings::GameSettings>(Path("Settings", "GameSettings.xml")));
+      Path settingsPath(getResourcesDirectory(), "Data", "Settings", "GameSettings.xml");
+      std::unique_ptr<Settings::GameSettings> settings(ScriptableObject::load<Settings::GameSettings>(settingsPath));
       if (settings == nullptr)
       {
         settings.reset(new Settings::GameSettings());
@@ -111,7 +112,7 @@ namespace US
       settings->setMasterVolume(getAudioManager()->getMasterVolume());
       settings->setMusicVolume(getAudioManager()->getMusicVolume());
       settings->setSFXVolume(getAudioManager()->getSFXVolume());
-      settings->save(Path(getResourceManager()->getDataDirectoryPath(), "Settings", "GameSettings.xml"));
+      settings->save(settingsPath);
     });
   }
 }
