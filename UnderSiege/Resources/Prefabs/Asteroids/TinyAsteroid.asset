@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GameObjects>
-  <GameObject layer="World" name="TinyAsteroid">
-    <Components>
-      <SpriteRenderer sprite="Textures\Asteroids\TinyAsteroid.png"/>
-      <RectangleCollider width="0" height="0"/>
-      <RigidBody2D/>
-    </Components>
-  </GameObject>
-</GameObjects>
+<Root>
+  <Prefab name="Tiny Asteroid" guid="3612e4fb-535b-4c95-a0aa-915e523396e1">
+    <GameObjects>
+      <GameObject layer="World" name="TinyAsteroid">
+        <Components>
+          <SpriteRenderer sprite="Textures\Asteroids\TinyAsteroid.png"/>
+          <RectangleCollider width="0" height="0"/>
+          <RigidBody2D/>
+        </Components>
+      </GameObject>
+    </GameObjects>
+  </Prefab>
+</Root>

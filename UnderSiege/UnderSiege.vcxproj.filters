@@ -22,6 +22,7 @@
   <ItemGroup>
     <None Include="Resources\Audio\Music\TheSwarmApproaches.wma" />
     <None Include="Resources\Data\Shields\BasicShield.asset" />
+    <None Include="Resources\Data\Turrets\BasicTurret.asset" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />

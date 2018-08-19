@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Root>
-  <Screen name="Main Menu">
+  <Screen name="Main Menu" guid="7d5623bd-af84-468a-bf94-44b2400de483">
     <GameObjects>
       <GameObject layer="GUI" name="Background" position="0.5%, 0.5%, 0">
         <Components>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Root>
-  <Turret damage="0" fire_rate="1" name="">
+  <Turret name="Basic Turret" guid="0f178b9b-026f-48a8-b616-18f5ba48499e" damage="0" fire_rate="1">
     <firing_animation_frames />
   </Turret>
 </Root>

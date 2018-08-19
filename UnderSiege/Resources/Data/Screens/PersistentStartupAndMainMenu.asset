@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Root>
-  <Screen name="PersistentStartupAndMainMenu">
+  <Screen name="PersistentStartupAndMainMenu" guid="47ddc39e-3daf-4f3b-8eb9-59637e771b06">
     <GameObjects>
       <GameObject layer="GUI" name="Audio">
         <Components>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Root>
-  <Screen name="Options">
+  <Screen name="Options" guid="224eef51-326c-4fc1-829d-2715c0362643">
     <GameObjects>
       <GameObject layer="GUI" position="0.5%, 0.8%, 0" name="Title">
         <Components>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Root>
-  <Screen name="Splash">
+  <Screen name="Splash" guid="61a34bb6-809c-4b7d-867b-97939a06cb42">
     <Resources>
       <Texture2Ds>
         <Texture2D>Textures\UI\CelesteGamesLogo.png</Texture2D>

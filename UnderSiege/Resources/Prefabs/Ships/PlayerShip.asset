@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GameObjects>
-  <GameObject layer="World" name="Player" position="0.5%,0.5%">
-    <Components>
-      <SpriteRenderer/>
-      <RigidBody2D/>
-      <KeyboardRigidBody2DController/>
-    </Components>
-  </GameObject>
-  <GameObject layer="World" name="PlayerShield" parent="Player">
-    <Components>
-      <SpriteRenderer />
-      <OpacityLerper min_opacity="0.2" lerp_up_time="1" lerp_down_time="1"/>
-    </Components>
-  </GameObject>
-</GameObjects>
+<Root>
+  <Prefab name="Ship" guid="c8f35eaf-ad63-49b6-97b2-845b1d5f996d">
+    <GameObjects>
+      <GameObject layer="World" name="Player" position="0.5%,0.5%">
+        <Components>
+          <SpriteRenderer/>
+          <RigidBody2D/>
+          <KeyboardRigidBody2DController/>
+        </Components>
+      </GameObject>
+      <GameObject layer="World" name="PlayerShield" parent="Player">
+        <Components>
+          <SpriteRenderer />
+          <OpacityLerper min_opacity="0.2" lerp_up_time="1" lerp_down_time="1"/>
+        </Components>
+      </GameObject>
+    </GameObjects>
+  </Prefab>
+</Root>
