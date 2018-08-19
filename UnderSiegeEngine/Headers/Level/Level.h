@@ -22,7 +22,7 @@ class UnderSiegeEngineDllExport Level : public ScriptableObject
 
   public:
     static Level* current() { return m_current.get(); }
-    static Level* initialize(const Path& levelFilePath);
+    void makeCurrent();
 
     ShipManager* getShipManager() const { return m_shipManager; }
     Ship* getPlayerShip() const { return m_playerShip.get(); }
@@ -37,7 +37,7 @@ class UnderSiegeEngineDllExport Level : public ScriptableObject
     Level();
 
     void setBackground() const;
-    void setPlayer() const;
+    void setPlayer() const; 
 
     static std::unique_ptr<Level> m_current;
 

@@ -99,7 +99,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)..\CelesteEngine\3rdParty\Lib\$(Platform);$(OutDir);$(ProjectDir)..\UnderSiege\obj\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;freetype.lib;glew32.lib;glfw3dll.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;CelesteEngine.lib;BindingsGenerator.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;freetype.lib;glew32.lib;glfw3dll.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
     </Link>
     <PreBuildEvent>
@@ -122,7 +122,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)..\CelesteEngine\3rdParty\Lib\$(Platform);$(OutDir);</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;freetype.lib;glew32.lib;glfw3dll.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;CelesteEngine.lib;BindingsGenerator.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;freetype.lib;glew32.lib;glfw3dll.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
     </Link>
     <PreBuildEvent>
@@ -184,6 +184,12 @@
     <None Include="Build Events\CopyDependencyDLLs.bat" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CelesteEngine\BindingsGenerator\BindingsGenerator.vcxproj">
+      <Project>{f357c745-6faa-49a8-a895-0d4d35374929}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CelesteEngine\CelesteEngine\CelesteEngine.vcxproj">
+      <Project>{e9980a8d-828e-44f0-978e-a57abc348f47}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\UnderSiegeEngine\UnderSiegeEngine.vcxproj">
       <Project>{fd856473-f15e-4488-931d-071d6d3074ea}</Project>
     </ProjectReference>

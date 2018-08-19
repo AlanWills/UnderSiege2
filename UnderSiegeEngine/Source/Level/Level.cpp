@@ -26,10 +26,10 @@ namespace US
   }
 
   //------------------------------------------------------------------------------------------------
-  Level* Level::initialize(const Path& levelFilePath)
+  void Level::makeCurrent()
   {
     // Load the level
-    m_current.reset(ScriptableObject::load<Level>(levelFilePath));
+    m_current.reset(this);
     ASSERT(m_current.get());
 
     if (m_current.get() != nullptr)
@@ -43,8 +43,6 @@ namespace US
       // Now load the current player ship configuration
       m_current->setPlayer();
     }
-
-    return current();
   }
 
   //------------------------------------------------------------------------------------------------

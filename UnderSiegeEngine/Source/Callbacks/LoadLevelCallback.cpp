@@ -30,6 +30,7 @@ namespace US
       return;
     }
 
-    Level::initialize(levelFile);
+    Level* level = ScriptableObject::load<Level>(levelFile);
+    level->makeCurrent();
   }
 }
