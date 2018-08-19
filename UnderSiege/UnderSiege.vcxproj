@@ -105,6 +105,9 @@
     <PostBuildEvent>
       <Command>call "$(ProjectDir)Build Events\CopyDependencyDLLs.bat" "$(TargetDir)" $(Configuration) $(Platform)</Command>
     </PostBuildEvent>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -125,6 +128,9 @@
     <PostBuildEvent>
       <Command>call "$(ProjectDir)Build Events\CopyDependencyDLLs.bat" "$(TargetDir)" $(Configuration) $(Platform)</Command>
     </PostBuildEvent>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>

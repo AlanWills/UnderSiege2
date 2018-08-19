@@ -99,11 +99,15 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)..\CelesteEngine\3rdParty\Lib\$(Platform);$(OutDir);$(ProjectDir)..\UnderSiege\obj\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Turret.obj;UnderSiege.lib;opengl32.lib;freetype.lib;glew32.lib;glfw3dll.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;CelesteEngine.lib;BindingsGenerator.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Turret.obj;opengl32.lib;freetype.lib;glew32.lib;glfw3dll.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;CelesteEngine.lib;BindingsGenerator.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
     </Link>
     <PreBuildEvent>
       <Command>call "$(ProjectDir)Build Events\CopyDependencyDLLs.bat" "$(TargetDir)" $(Configuration) $(Platform)</Command>
     </PreBuildEvent>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -118,11 +122,15 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)..\CelesteEngine\3rdParty\Lib\$(Platform);$(OutDir);$(ProjectDir)..\UnderSiege\obj\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Turret.obj;UnderSiege.lib;opengl32.lib;freetype.lib;glew32.lib;glfw3dll.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;CelesteEngine.lib;BindingsGenerator.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Turret.obj;opengl32.lib;freetype.lib;glew32.lib;glfw3dll.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;CelesteEngine.lib;BindingsGenerator.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
     </Link>
     <PreBuildEvent>
       <Command>call "$(ProjectDir)Build Events\CopyDependencyDLLs.bat" "$(TargetDir)" $(Configuration) $(Platform)</Command>
     </PreBuildEvent>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -174,6 +182,11 @@
   <ItemGroup>
     <None Include="Build Events\CopyDebugDependencyDLLsFast.bat" />
     <None Include="Build Events\CopyDependencyDLLs.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnderSiege\UnderSiege.vcxproj">
+      <Project>{e39a81c2-7f66-4c3b-a679-7d718cc938ae}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

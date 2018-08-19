@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Screen name="PersistentStartupAndMainMenu">
-  <GameObjects>
-    <GameObject layer="GUI" name="Audio">
-      <Components>
-        <AudioSource sound="Audio\Music\DriftingThroughTheNebulaAmbient.wav" is_playing="true" is_looping="true" volume="1" audio_type="Music"/>
-      </Components>
-    </GameObject>
-  </GameObjects>
-</Screen>
+<Root>
+  <Screen name="PersistentStartupAndMainMenu">
+    <GameObjects>
+      <GameObject layer="GUI" name="Audio">
+        <Components>
+          <AudioSource sound="Audio\Music\DriftingThroughTheNebulaAmbient.wav" is_playing="true" is_looping="true" volume="1" audio_type="Music"/>
+        </Components>
+      </GameObject>
+    </GameObjects>
+  </Screen>
+</Root>
