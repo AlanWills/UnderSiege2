@@ -91,7 +91,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)Headers;$(ProjectDir)..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\CelesteEngine\3rdParty\Include\freetype2;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Headers;$(ProjectDir)..\UnderSiegeEngine\Headers;$(ProjectDir)..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\CelesteEngine\3rdParty\Include\freetype2;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>BUILDING_UNDER_SIEGE_DLL;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -114,8 +114,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)Headers;$(ProjectDir)..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\CelesteEngine\3rdParty\Include\freetype2;</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>BUILDING_UNDER_SIEGE_DLL;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)Headers;$(ProjectDir)..\UnderSiegeEngine\Headers;$(ProjectDir)..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\CelesteEngine\3rdParty\Include\freetype2;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(ProjectDir)..\CelesteEngine\CelesteEngine\bin\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -159,35 +159,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Headers\Callbacks\LoadLevelCallback.h" />
-    <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.h" />
-    <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidDataConverter.h" />
-    <ClInclude Include="Headers\GraphicalFX\AsteroidSpawner.h" />
-    <ClInclude Include="Headers\Level\Level.h" />
-    <ClInclude Include="Headers\Shields\Shield.h" />
-    <ClInclude Include="Headers\Ships\Ship.h" />
-    <ClInclude Include="Headers\Ships\ShipManager.h" />
-    <ClInclude Include="Headers\Turrets\Turret.h" />
-    <ClInclude Include="Headers\UI\OptionsScreenUIManager.h" />
-    <ClInclude Include="Headers\UnderSiegeDllExport.h" />
-    <ClInclude Include="Headers\UnderSiegeGame.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Source\Callbacks\LoadLevelCallback.cpp" />
-    <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.cpp" />
-    <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidDataConverter.cpp" />
-    <ClCompile Include="Source\GraphicalFX\AsteroidSpawner.cpp" />
-    <ClCompile Include="Source\Level\Level.cpp" />
     <ClCompile Include="Source\Main.cpp" />
-    <ClCompile Include="Source\Shield\Shield.cpp" />
-    <ClCompile Include="Source\Ships\Ship.cpp" />
-    <ClCompile Include="Source\Ships\ShipManager.cpp" />
-    <ClCompile Include="Source\Turrets\Turret.cpp" />
-    <ClCompile Include="Source\UI\OptionsScreenUIManager.cpp" />
-    <ClCompile Include="Source\UnderSiegeGame.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Build Events\CopyDependencyDLLs.bat" />
+    <CustomBuild Include="Build Events\CopyDependencyDLLs.bat">
+      <FileType>Document</FileType>
+    </CustomBuild>
     <None Include="Resources\Audio\Music\TheSwarmApproaches.wma" />
     <None Include="Resources\Data\Shields\BasicShield.asset" />
   </ItemGroup>
@@ -260,6 +237,11 @@
     <Image Include="Resources\Textures\UI\ProgressBar.png" />
     <Image Include="Resources\Textures\UI\Rectangle.png" />
     <Image Include="Resources\Textures\UI\UpDirectionIndicator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnderSiegeEngine\UnderSiegeEngine.vcxproj">
+      <Project>{fd856473-f15e-4488-931d-071d6d3074ea}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -58,5 +58,12 @@
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Bindings\"/>
+        <Compile Include="Bindings\Level.cs"/>
+        <Compile Include="Bindings\Shield.cs"/>
+        <Compile Include="Bindings\Turret.cs"/>
+        <Compile Include="Bindings\Ship.cs"/>
+        <Compile Include="Bindings\ShipManager.cs"/>
+        <Compile Include="Bindings\AsteroidSpawner.cs"/>
+        <Compile Include="Bindings\OptionsScreenUIManager.cs"/>
     </ItemGroup>
 </Project>

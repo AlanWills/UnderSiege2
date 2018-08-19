@@ -1,12 +1,13 @@
 #pragma once
 
+#include "UnderSiegeEngineDllExport.h"
 #include "Objects/Script.h"
 
 
 namespace US
 {
 
-class AsteroidSpawner : public CelesteEngine::Script 
+class UnderSiegeEngineDllExport AsteroidSpawner : public CelesteEngine::Script
 {
   DECLARE_SCRIPT(AsteroidSpawner)
 

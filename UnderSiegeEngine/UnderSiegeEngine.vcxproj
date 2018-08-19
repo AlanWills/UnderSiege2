@@ -20,37 +20,39 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{CC9BFB7D-921B-48B7-BCB5-43BFA668FD7D}</ProjectGuid>
-    <Keyword>Win32Proj</Keyword>
-    <RootNamespace>UnderSiegeBindingsGenerator</RootNamespace>
+    <ProjectGuid>{fd856473-f15e-4488-931d-071d6d3074ea}</ProjectGuid>
+    <RootNamespace>UnderSiegeEngine</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -71,122 +73,122 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(ProjectDir)..\CelesteEngine\3rdParty\Lib\$(Platform);$(LibraryPath)</LibraryPath>
     <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
     <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>$(ProjectDir)..\CelesteEngine\3rdParty\Lib\$(Platform);$(LibraryPath)</LibraryPath>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\CelesteEngine\BindingsGenerator\Headers;$(ProjectDir)..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)Headers;$(ProjectDir)..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\CelesteEngine\3rdParty\Include\freetype2</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Headers;$(ProjectDir)..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\CelesteEngine\3rdParty\Include\freetype2;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_UNDER_SIEGE_DLL;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\CelesteEngine\3rdParty\Lib\$(Platform);$(OutDir);$(ProjectDir)..\UnderSiege\obj\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;freetype.lib;glew32.lib;glfw3dll.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;CelesteEngine.lib;BindingsGenerator.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\CelesteEngine\CelesteEngine\bin\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CelesteEngine.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;glew32.lib;opengl32.lib;glfw3dll.lib;freetype.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>call "$(ProjectDir)Build Events\CopyDependencyDLLs.bat" "$(TargetDir)" $(Configuration) $(Platform)</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call "$(ProjectDir)Build Events\CopyDependencyDLLs.bat" "$(TargetDir)" $(Configuration) $(Platform)</Command>
+    </PostBuildEvent>
     <ProjectReference>
       <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\CelesteEngine\BindingsGenerator\Headers;$(ProjectDir)..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)Headers;$(ProjectDir)..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\CelesteEngine\3rdParty\Include\freetype2</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Headers;$(ProjectDir)..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\CelesteEngine\3rdParty\Include\freetype2;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_UNDER_SIEGE_ENGINE_DLL;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\CelesteEngine\3rdParty\Lib\$(Platform);$(OutDir);</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;freetype.lib;glew32.lib;glfw3dll.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;CelesteEngine.lib;BindingsGenerator.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\CelesteEngine\CelesteEngine\bin\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CelesteEngine.lib;tinyxml2.lib;alut.lib;OpenAL32.lib;SOIL.lib;glew32.lib;opengl32.lib;glfw3dll.lib;freetype.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>call "$(ProjectDir)Build Events\CopyDependencyDLLs.bat" "$(TargetDir)" $(Configuration) $(Platform)</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>call "$(ProjectDir)Build Events\CopyDependencyDLLs.bat" "$(TargetDir)" $(Configuration) $(Platform)</Command>
+    </PostBuildEvent>
     <ProjectReference>
       <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Headers\stdafx.h" />
-    <ClInclude Include="Headers\targetver.h" />
+    <CustomBuild Include="Build Events\CopyDependencyDLLs.bat">
+      <FileType>Document</FileType>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="Source\UnderSiegeBindingsGenerator.cpp" />
+    <ClInclude Include="Headers\Callbacks\LoadLevelCallback.h" />
+    <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidDataConverter.h" />
+    <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.h" />
+    <ClInclude Include="Headers\GraphicalFX\AsteroidSpawner.h" />
+    <ClInclude Include="Headers\Level\Level.h" />
+    <ClInclude Include="Headers\Shields\Shield.h" />
+    <ClInclude Include="Headers\Ships\Ship.h" />
+    <ClInclude Include="Headers\Ships\ShipManager.h" />
+    <ClInclude Include="Headers\Turrets\Turret.h" />
+    <ClInclude Include="Headers\UI\OptionsScreenUIManager.h" />
+    <ClInclude Include="Headers\UnderSiegeEngineDllExport.h" />
+    <ClInclude Include="Headers\UnderSiegeGame.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Build Events\CopyDebugDependencyDLLsFast.bat" />
-    <None Include="Build Events\CopyDependencyDLLs.bat" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\UnderSiegeEngine\UnderSiegeEngine.vcxproj">
-      <Project>{fd856473-f15e-4488-931d-071d6d3074ea}</Project>
-    </ProjectReference>
+    <ClCompile Include="Source\Callbacks\LoadLevelCallback.cpp" />
+    <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidDataConverter.cpp" />
+    <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.cpp" />
+    <ClCompile Include="Source\GraphicalFX\AsteroidSpawner.cpp" />
+    <ClCompile Include="Source\Level\Level.cpp" />
+    <ClCompile Include="Source\Shield\Shield.cpp" />
+    <ClCompile Include="Source\Ships\Ship.cpp" />
+    <ClCompile Include="Source\Ships\ShipManager.cpp" />
+    <ClCompile Include="Source\Turrets\Turret.cpp" />
+    <ClCompile Include="Source\UI\OptionsScreenUIManager.cpp" />
+    <ClCompile Include="Source\UnderSiegeGame.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

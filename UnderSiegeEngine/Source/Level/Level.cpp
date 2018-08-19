@@ -26,7 +26,7 @@ namespace US
   }
 
   //------------------------------------------------------------------------------------------------
-  Level* Level::load(const Path& levelFilePath)
+  Level* Level::initialize(const Path& levelFilePath)
   {
     // Load the level
     m_current.reset(ScriptableObject::load<Level>(levelFilePath));

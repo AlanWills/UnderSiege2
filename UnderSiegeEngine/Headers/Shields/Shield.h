@@ -1,12 +1,13 @@
 #pragma once
 
+#include "UnderSiegeEngineDllExport.h"
 #include "Objects/ScriptableObject.h"
 
 
 namespace US
 {
 
-class Shield : public CelesteEngine::ScriptableObject
+class UnderSiegeEngineDllExport Shield : public CelesteEngine::ScriptableObject
 {
   DECLARE_SCRIPTABLE_OBJECT(Shield)
 

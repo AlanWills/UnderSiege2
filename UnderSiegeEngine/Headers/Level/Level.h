@@ -1,5 +1,6 @@
 #pragma once
 
+#include "UnderSiegeEngineDllExport.h"
 #include "FileSystem/Path.h"
 #include "Ships/ShipManager.h"
 
@@ -15,13 +16,13 @@ namespace CelesteEngine
 namespace US
 {
 
-class Level : public ScriptableObject
+class UnderSiegeEngineDllExport Level : public ScriptableObject
 {
   DECLARE_SCRIPTABLE_OBJECT(Level)
 
   public:
     static Level* current() { return m_current.get(); }
-    static Level* load(const Path& levelFilePath);
+    static Level* initialize(const Path& levelFilePath);
 
     ShipManager* getShipManager() const { return m_shipManager; }
     Ship* getPlayerShip() const { return m_playerShip.get(); }

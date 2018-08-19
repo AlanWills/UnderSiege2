@@ -30,6 +30,6 @@ namespace US
       return;
     }
 
-    Level::load(levelFile);
+    Level::initialize(levelFile);
   }
 }

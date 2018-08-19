@@ -1,5 +1,6 @@
 #pragma once
 
+#include "UnderSiegeEngineDllExport.h"
 #include "Objects/ScriptableObject.h"
 #include "Resources/Texture2D.h"
 #include "Shields/Shield.h"
@@ -13,7 +14,7 @@ namespace CelesteEngine
 namespace US
 {
 
-class Ship : public CelesteEngine::ScriptableObject
+class UnderSiegeEngineDllExport Ship : public CelesteEngine::ScriptableObject
 {
   DECLARE_SCRIPTABLE_OBJECT(Ship)
 

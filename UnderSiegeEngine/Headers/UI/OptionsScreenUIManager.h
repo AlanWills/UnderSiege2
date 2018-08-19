@@ -1,5 +1,6 @@
 #pragma once
 
+#include "UnderSiegeEngineDllExport.h"
 #include "Objects/Script.h"
 
 
@@ -11,7 +12,7 @@ namespace CelesteEngine
 namespace US
 {
 
-class OptionsScreenUIManager : public CelesteEngine::Script 
+class UnderSiegeEngineDllExport OptionsScreenUIManager : public CelesteEngine::Script
 {
   DECLARE_SCRIPT(OptionsScreenUIManager)
 
