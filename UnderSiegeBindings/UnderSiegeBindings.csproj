@@ -58,6 +58,5 @@
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Bindings\"/>
-        <Compile Include="Bindings\Turret.cs"/>
     </ItemGroup>
 </Project>
