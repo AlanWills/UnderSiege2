@@ -104,7 +104,7 @@ namespace US
     }) != components.end());
 
     // Check the asteroid is in the world layer
-    ASSERT(gameObject->getLayer() == kWorld);
+    ASSERT(gameObject->getLayer() == Layer::kWorld);
 
     const glm::vec2& viewportDimensions = getViewportDimensions();
 
