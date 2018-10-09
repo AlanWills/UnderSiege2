@@ -9,7 +9,7 @@ namespace US
   AsteroidDataConverter::AsteroidDataConverter(const std::string& elementName) :
     Inherited(elementName),
     m_prefabPath(),
-    m_count("count", 0, kRequired)
+    m_count("count", 0, DeserializationRequirement::kRequired)
   {
     addData(&m_count);
   }
