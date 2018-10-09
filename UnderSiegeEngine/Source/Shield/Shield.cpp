@@ -2,6 +2,7 @@
 
 #include "Shields/Shield.h"
 #include "Registries/ScriptableObjectRegistry.h"
+#include "Serialization/MathsSerializers.h"
 
 
 namespace US

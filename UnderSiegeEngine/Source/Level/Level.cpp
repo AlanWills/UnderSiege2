@@ -5,6 +5,7 @@
 #include "Screens/Loading/ScreenLoader.h"
 #include "Rendering/SpriteRenderer.h"
 #include "Registries/ScriptableObjectRegistry.h"
+#include "Serialization/MathsSerializers.h"
 
 
 namespace US
