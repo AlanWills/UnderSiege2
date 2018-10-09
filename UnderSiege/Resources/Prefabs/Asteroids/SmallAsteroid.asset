@@ -5,7 +5,7 @@
       <GameObject layer="World" name="SmallAsteroid">
         <Components>
           <SpriteRenderer sprite="Textures\Asteroids\SmallAsteroid.png"/>
-          <RectangleCollider width="0" height="0"/>
+          <RectangleCollider dimensions="0"/>
           <RigidBody2D/>
         </Components>
       </GameObject>
