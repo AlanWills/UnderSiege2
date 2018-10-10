@@ -6,13 +6,12 @@
         <Components>
           <SpriteRenderer/>
           <RigidBody2D/>
-          <KeyboardRigidBody2DController 
-            decrease_angular_velocity_key="A"
-            increase_angular_velocity_key="D"
-            angular_velocity_delta="0.01"
-            increase_y_linear_velocity_key="W" 
-            decrease_y_linear_velocity_key="S"
-            linear_velocity_delta="0,1"/>
+          <KeyboardTranslator
+            move_left_key="A"
+            move_right_key="D"
+            move_up_key="W" 
+            move_down_key="S"
+            pan_speed="100"/>
         </Components>
       </GameObject>
       <GameObject layer="World" name="PlayerShield" parent="Player">

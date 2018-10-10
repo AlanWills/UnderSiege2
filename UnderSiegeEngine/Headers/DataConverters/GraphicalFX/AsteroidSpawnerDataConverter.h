@@ -14,7 +14,6 @@ class AsteroidSpawnerDataConverter : public CelesteEngine::ComponentDataConverte
   DECLARE_COMPONENT_DATA_CONVERTER(AsteroidSpawnerDataConverter, AsteroidSpawner)
 
   public:
-    AsteroidSpawnerDataConverter(const std::string& elementName = AsteroidSpawner::type_name());
     AsteroidSpawnerDataConverter(const AsteroidSpawnerDataConverter&) = delete;
     AsteroidSpawnerDataConverter& operator=(const AsteroidSpawnerDataConverter&) = delete;
     ~AsteroidSpawnerDataConverter();
