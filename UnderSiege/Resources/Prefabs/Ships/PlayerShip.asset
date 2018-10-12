@@ -7,12 +7,12 @@
           <SpriteRenderer/>
           <RigidBody2D/>
           <KeyboardTransformer
-            translate_left_key="A"
-            translate_right_key="D"
-            rotate_left_key="Q"
-            rotate_right_key="E"
-            translation_speed="100"
-            rotation_speed="0.1"/>
+            translate_up_key="W"
+            translate_down_key="S"
+            rotate_left_key="A"
+            rotate_right_key="D"
+            translation_speed="400"
+            rotation_speed="1"/>
         </Components>
       </GameObject>
       <GameObject layer="World" name="PlayerShield" parent="Player">
