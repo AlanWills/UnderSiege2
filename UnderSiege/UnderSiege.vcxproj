@@ -238,6 +238,20 @@
     <Image Include="Resources\Textures\UI\ProgressBar.png" />
     <Image Include="Resources\Textures\UI\Rectangle.png" />
     <Image Include="Resources\Textures\UI\UpDirectionIndicator.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_00.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_01.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_02.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_03.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_04.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_05.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_06.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_07.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_08.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_09.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_10.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_11.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_12.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_13.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CelesteEngine\CelesteEngine\CelesteEngine.vcxproj">

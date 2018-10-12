@@ -133,6 +133,48 @@
     <Image Include="Resources\Textures\Shields\Shield.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_00.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_01.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_02.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_03.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_04.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_05.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_06.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_07.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_08.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_09.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_10.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_11.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_12.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_13.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Build Events\CopyDependencyDLLs.bat">
