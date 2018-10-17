@@ -6,6 +6,7 @@
 #include "Animation/Animation.h"
 #include "Screens/Screen.h"
 #include "Physics/RigidBody2D.h"
+#include "Turrets/Turret.h"
 
 
 namespace US
@@ -14,8 +15,9 @@ namespace US
 
   //------------------------------------------------------------------------------------------------
   TurretController::TurretController() :
+    m_turret(nullptr),
     m_turretAnimation(),
-    m_currentFireTimer(1)
+    m_currentFireTimer(0)
   {
   }
 
@@ -41,7 +43,7 @@ namespace US
     {
       m_turretAnimation->resume();
 
-      if (m_currentFireTimer >= 1)
+      if (m_currentFireTimer >= m_turret->getFireRate())
       {
         const Handle<GameObject>& bullet = getGameObject()->getOwnerScreen()->allocateGameObject(CelesteEngine::Layer::kWorld);
         bullet->getTransform()->setTranslation(getTransform()->getWorldTranslation());
