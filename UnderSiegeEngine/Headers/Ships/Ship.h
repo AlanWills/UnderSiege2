@@ -29,7 +29,7 @@ class UnderSiegeEngineDllExport Ship : public CelesteEngine::ScriptableObject
   private:
     HandleField<Texture2D>* m_texture;
     ValueField<float>* m_hullStrength;
-	Shield* m_shield;
+	  Shield* m_shield;
 
     Handle<GameObject> m_gameObject;
 };

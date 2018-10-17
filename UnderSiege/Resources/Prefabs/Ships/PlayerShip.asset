@@ -42,6 +42,7 @@
               <Frame>uw_shredder_13.png</Frame>
             </Frames>
           </Animation>
+          <TurretController/>
         </Components>
       </GameObject>
     </GameObjects>

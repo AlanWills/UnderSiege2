@@ -175,6 +175,9 @@
     <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_13.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Textures\Bullets\shell_small.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Build Events\CopyDependencyDLLs.bat">

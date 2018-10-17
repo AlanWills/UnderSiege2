@@ -228,6 +228,7 @@
     <Image Include="Resources\Textures\Asteroids\TinyAsteroid.png" />
     <Image Include="Resources\Textures\Backgrounds\Level1Background.jpg" />
     <Image Include="Resources\Textures\Backgrounds\MainMenuScreen.jpg" />
+    <Image Include="Resources\Textures\Bullets\shell_small.png" />
     <Image Include="Resources\Textures\Shields\Shield.png" />
     <Image Include="Resources\Textures\Ships\Fiirkan.png" />
     <Image Include="Resources\Textures\UI\ButtonDefault.png" />
