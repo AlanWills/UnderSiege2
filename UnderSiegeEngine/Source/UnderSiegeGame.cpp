@@ -26,10 +26,11 @@ namespace US
     getAudioManager()->setMusicVolume(settings->getMusicVolume());
     getAudioManager()->setSFXVolume(settings->getSFXVolume());
 
-    ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "PersistentStartupAndMainMenu.asset"));
-    ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "SplashScreen.asset"));
+    CelesteEngine::Lua::LuaState::instance().script_file("C:\\Repos\\UnderSiege2\\UnderSiege\\bin\\x64\\Debug\\script.lua");
 
-    luaL_dofile(CelesteEngine::Lua::LuaState::instance(), "C:\\Repos\\UnderSiege2\\UnderSiege\\bin\\x64\\Debug\\script.lua");
-    lua_pcall(CelesteEngine::Lua::LuaState::instance(), 0, 0, 0);
+    ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "PersistentStartupAndMainMenu.asset"));
+    Handle<Screen> screen = ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "SplashScreen.asset"));
+    Handle<GameObject> gameObject = screen->allocateGameObject(Layer::kGUI);
+    Handle<Lua::LuaComponent> luaComponent = Lua::LuaManifest::getInstance().addComponent("Test", gameObject);
   }
 }
