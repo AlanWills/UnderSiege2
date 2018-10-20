@@ -31,6 +31,6 @@ namespace US
     ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "PersistentStartupAndMainMenu.asset"));
     Handle<Screen> screen = ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "SplashScreen.asset"));
     Handle<GameObject> gameObject = screen->allocateGameObject(Layer::kGUI);
-    Handle<Lua::LuaComponent> luaComponent = Lua::LuaManifest::getInstance().addComponent("Test", gameObject);
+    Handle<Lua::LuaComponent> luaComponent = Lua::LuaManifest::addComponent("Test", gameObject);
   }
 }
