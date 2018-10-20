@@ -29,7 +29,6 @@ namespace US
     ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "PersistentStartupAndMainMenu.asset"));
     ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "SplashScreen.asset"));
 
-    CelesteEngine::Lua::LuaManifest::instance();
     luaL_dofile(CelesteEngine::Lua::LuaState::instance(), "C:\\Repos\\UnderSiege2\\UnderSiege\\bin\\x64\\Debug\\script.lua");
     lua_pcall(CelesteEngine::Lua::LuaState::instance(), 0, 0, 0);
   }

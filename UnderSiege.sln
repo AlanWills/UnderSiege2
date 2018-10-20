@@ -66,6 +66,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CelTestSharp", "CelesteEngine\CelTestSharp\CelTestSharp.csproj", "{779DB648-8CB6-4F92-98E6-E58F3CB56DF9}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnderSiegeEngine", "UnderSiegeEngine\UnderSiegeEngine.vcxproj", "{FD856473-F15E-4488-931D-071D6D3074EA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E9980A8D-828E-44F0-978E-A57ABC348F47} = {E9980A8D-828E-44F0-978E-A57ABC348F47}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
