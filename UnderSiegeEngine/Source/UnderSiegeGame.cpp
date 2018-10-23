@@ -1,10 +1,8 @@
 #include "stdafx.h"
 
 #include "UnderSiegeGame.h"
-#include "Audio/AudioSource.h"
 #include "Settings/GameSettings.h"
 #include "Screens/Loading/ScreenLoader.h"
-#include "Registries/ScriptableObjectRegistry.h"
 #include "Lua/LuaState.h"
 #include "Lua/LuaManifest.h"
 
@@ -22,9 +20,12 @@ namespace US
       settings.reset(new Settings::GameSettings());
     }
 
-    getAudioManager()->setMasterVolume(settings->getMasterVolume());
-    getAudioManager()->setMusicVolume(settings->getMusicVolume());
-    getAudioManager()->setSFXVolume(settings->getSFXVolume());
+    if (!Lua::LuaState::script(Path(getResourcesDirectory(), "Scripts", "Core", "FileSystem", "Path.lua")))
+    {
+      ASSERT_FAIL();
+    }
+
+    Lua::LuaState::script(Path(getResourcesDirectory(), "Scripts", "Game.lua"));
 
     ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "PersistentStartupAndMainMenu.asset"));
     ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "SplashScreen.asset"));

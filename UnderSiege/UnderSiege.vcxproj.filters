@@ -25,6 +25,8 @@
     <None Include="Resources\Data\Turrets\BasicTurret.asset" />
     <None Include="Resources\Prefabs\Bullets\SmallBullet.asset" />
     <None Include="Resources\Prefabs\Turrets\BasicTurret.asset" />
+    <None Include="Resources\Scripts\Game.lua" />
+    <None Include="Resources\Scripts\Core\FileSystem\Path.lua" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />
