@@ -26,8 +26,5 @@ namespace US
     }
 
     Lua::LuaState::script(Path(getResourcesDirectory(), "Scripts", "Game.lua"));
-
-    ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "PersistentStartupAndMainMenu.asset"));
-    ScreenLoader::load(Path(getResourcesDirectory(), "Data", "Screens", "SplashScreen.asset"));
   }
 }
