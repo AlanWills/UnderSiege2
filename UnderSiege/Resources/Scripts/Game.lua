@@ -1,9 +1,15 @@
-local test = path.combine("Test", "Path")
-log(test)
+package.path = package.path .. ";" .. getResourcesDirectory() .. "\\?.lua"
+local path = require "Scripts.Core.FileSystem.Path"
 
-setMasterVolume(0.5)
-setMusicVolume(0.5)
-setSFXVolume(0.5)
+function test()
+	local settings = instantiateScriptableObject("GameSettings");
 
-loadScreen(path.combine(getResourcesDirectory(), "Data", "Screens", "PersistentStartupAndMainMenu.asset"));
-loadScreen(path.combine(getResourcesDirectory(), "Data", "Screens", "SplashScreen.asset"));
+	setMasterVolume(0.5)
+	setMusicVolume(0.5)
+	setSFXVolume(0.5)
+
+	deleteScriptableObject(settings)
+
+	loadScreen(path.combine(getResourcesDirectory(), "Data", "Screens", "PersistentStartupAndMainMenu.asset"));
+	loadScreen(path.combine(getResourcesDirectory(), "Data", "Screens", "SplashScreen.asset"));
+end

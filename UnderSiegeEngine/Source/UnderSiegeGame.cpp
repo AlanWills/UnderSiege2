@@ -14,17 +14,6 @@ namespace US
   {
     Inherited::onInitialize();
 
-    std::unique_ptr<Settings::GameSettings> settings(ScriptableObject::load<Settings::GameSettings>(Path("Data", "Settings", "GameSettings.asset")));
-    if (settings == nullptr)
-    {
-      settings.reset(new Settings::GameSettings());
-    }
-
-    if (!Lua::LuaState::script(Path(getResourcesDirectory(), "Scripts", "Core", "FileSystem", "Path.lua")))
-    {
-      ASSERT_FAIL();
-    }
-
     Lua::LuaState::script(Path(getResourcesDirectory(), "Scripts", "Game.lua"));
   }
 }
