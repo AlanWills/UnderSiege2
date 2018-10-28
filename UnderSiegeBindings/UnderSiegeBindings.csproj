@@ -64,6 +64,7 @@
         <Compile Include="Bindings\Ship.cs"/>
         <Compile Include="Bindings\ShipManager.cs"/>
         <Compile Include="Bindings\AsteroidSpawner.cs"/>
+        <Compile Include="Bindings\TurretController.cs"/>
         <Compile Include="Bindings\OptionsScreenUIManager.cs"/>
     </ItemGroup>
 </Project>

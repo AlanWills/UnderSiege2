@@ -18,11 +18,11 @@ namespace US
 
 		[Serialize, DisplayPriority(2)]
 		[XmlAttribute("fire_rate"), DisplayName("Fire Rate")]
-		public int FireRate { get; set; } = 1;
+		public float FireRate { get; set; } = 1.000000f;
 
 		[Serialize, DisplayPriority(3)]
-		[XmlAttribute("idle_texture"), DisplayName("Idle Texture")]
-		public Texture2D IdleTexture { get; set; }
+		[XmlAttribute("bullet"), DisplayName("Bullet")]
+		public string Bullet { get; set; } = "";
 
 		[Serialize, DisplayPriority(4)]
 		[XmlAttribute("firing_animation_frames"), DisplayName("Firing Animation Frames")]
