@@ -2,7 +2,7 @@ package.path = package.path .. ";" .. getResourcesDirectory() .. "\\?.lua"
 local path = require "Scripts.Core.FileSystem.Path"
 
 local settingsPath = path.combine(getResourcesDirectory(), "Data", "Settings", "GameSettings.asset")
-local settings = loadScriptableObject(settingsPath, "GameSettings");
+local settings = loadScriptableObject("GameSettings", settingsPath);
 
 setMasterVolume(settings:getMasterVolume())
 setMusicVolume(settings:getMusicVolume())
