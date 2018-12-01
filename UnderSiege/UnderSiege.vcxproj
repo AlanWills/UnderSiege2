@@ -184,6 +184,8 @@
     </None>
     <None Include="Resources\Scripts\Core\FileSystem\Path.lua" />
     <None Include="Resources\Scripts\Game.lua" />
+    <None Include="Resources\Shaders\Model.frag" />
+    <None Include="Resources\Shaders\Model.vert" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />
