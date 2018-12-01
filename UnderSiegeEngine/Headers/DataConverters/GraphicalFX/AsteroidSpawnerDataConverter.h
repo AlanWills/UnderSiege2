@@ -2,7 +2,7 @@
 
 #include "DataConverters/Objects/ComponentDataConverter.h"
 #include "GraphicalFX/AsteroidSpawner.h"
-#include "XML/Elements/ComponentDataConverterListElement.h"
+#include "XML/Elements/DataConverterListElement.h"
 #include "DataConverters/GraphicalFX/AsteroidDataConverter.h"
 
 
