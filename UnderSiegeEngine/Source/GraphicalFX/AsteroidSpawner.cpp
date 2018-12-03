@@ -1,7 +1,7 @@
 #include "stdafx.h"
 
 #include "GraphicalFX/AsteroidSpawner.h"
-#include "Resources/Prefab.h"
+#include "Resources/Data/Prefab.h"
 #include "Physics/RectangleCollider.h"
 #include "Screens/ScreenUtils.h"
 #include "Resources/ResourceManager.h"

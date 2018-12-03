@@ -2,7 +2,7 @@
 
 #include "UnderSiegeEngineDllExport.h"
 #include "Objects/ScriptableObject.h"
-#include "Resources/Texture2D.h"
+#include "Resources/2D/Texture2D.h"
 #include "Shields/Shield.h"
 
 

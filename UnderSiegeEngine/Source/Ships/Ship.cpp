@@ -3,7 +3,7 @@
 #include "Ships/Ship.h"
 #include "Screens/Screen.h"
 #include "Resources/ResourceManager.h"
-#include "Resources/Prefab.h"
+#include "Resources/Data/Prefab.h"
 #include "Registries/ScriptableObjectRegistry.h"
 #include "Rendering/SpriteRenderer.h"
 
