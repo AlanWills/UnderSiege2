@@ -36,7 +36,7 @@ namespace US
     if (m_current.get() != nullptr)
     {
       // Load the screen file for this level
-      m_current->m_screen = ScreenLoader::load(Path(getResourcesDirectory(), m_current->getScreenFilePath()));
+      m_current->m_screen = ScreenLoader::load(Path(Resources::getResourcesDirectory(), m_current->getScreenFilePath()));
 
       // Set up the background
       m_current->setBackground();

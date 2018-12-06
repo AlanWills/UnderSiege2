@@ -21,13 +21,13 @@ class UnderSiegeEngineDllExport Ship : public CelesteEngine::ScriptableObject
   public:
     Ship();
 
-    const Handle<Texture2D>& getTexture() const { return m_texture->getValue(); }
+    const Handle<Resources::Texture2D>& getTexture() const { return m_texture->getValue(); }
     float getHullStrength() const { return m_hullStrength->getValue(); }
 
     Handle<GameObject> create(const Handle<Screen>& screen);
 
   private:
-    HandleField<Texture2D>* m_texture;
+    HandleField<Resources::Texture2D>* m_texture;
     ValueField<float>* m_hullStrength;
 	  Shield* m_shield;
 

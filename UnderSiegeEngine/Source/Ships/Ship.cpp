@@ -7,6 +7,8 @@
 #include "Registries/ScriptableObjectRegistry.h"
 #include "Rendering/SpriteRenderer.h"
 
+using namespace CelesteEngine::Resources;
+
 
 namespace US
 {
@@ -14,7 +16,7 @@ namespace US
 
   //------------------------------------------------------------------------------------------------
   Ship::Ship() :
-    m_texture(createHandleField<Texture2D>("texture")),
+    m_texture(createHandleField<Resources::Texture2D>("texture")),
     m_hullStrength(createValueField<float>("hull_strength")),
 	  m_shield(createScriptableObject<Shield>("shield")),
     m_gameObject()

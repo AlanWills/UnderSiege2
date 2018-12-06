@@ -11,6 +11,7 @@
 #include "Time/TimeUtils.h"
 
 using namespace CelesteEngine::Physics;
+using namespace CelesteEngine::Resources;
 
 
 namespace US

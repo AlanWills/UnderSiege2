@@ -14,12 +14,12 @@ class UnderSiegeEngineDllExport Shield : public CelesteEngine::ScriptableObject
   public:
     Shield();
 
-	const Handle<Texture2D>& getTexture() const { return m_texture->getValue(); }
+	const Handle<Resources::Texture2D>& getTexture() const { return m_texture->getValue(); }
 
   private:
     ValueField<int>* m_strength;
     ValueField<int>* m_rechargePerSecond;
-    HandleField<Texture2D>* m_texture;
+    HandleField<Resources::Texture2D>* m_texture;
     ReferenceField<glm::vec3>* m_colour;
 };
 
