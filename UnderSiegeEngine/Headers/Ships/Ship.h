@@ -24,6 +24,7 @@ namespace US
 
       const Handle<Resources::Texture2D>& getTexture() const { return m_texture->getValue(); }
       float getHullStrength() const { return m_hullStrength->getValue(); }
+      const std::vector<Turret*>& getTurrets() const { return m_turrets; }
 
       Handle<GameObject> create(const Handle<Screen>& screen);
 
@@ -34,7 +35,7 @@ namespace US
     private:
       HandleField<Resources::Texture2D>* m_texture;
       ValueField<float>* m_hullStrength;
-	  Shield* m_shield;
+	    Shield* m_shield;
       std::vector<Turret*> m_turrets;
 
       Handle<GameObject> m_gameObject;

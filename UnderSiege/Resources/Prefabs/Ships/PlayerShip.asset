@@ -21,30 +21,6 @@
           <OpacityLerper min_opacity="0.2" lerp_up_time="1" lerp_down_time="1"/>
         </Components>
       </GameObject>
-      <GameObject layer="World" name="PlayerTurret" parent="Player">
-        <Components>
-          <SpriteRenderer sprite="Textures\Weapons\Shredder\uw_shredder_00.png"/>
-          <Animation looping="true" seconds_per_frame="0.03" frames_directory="Textures\Weapons\Shredder">
-            <Frames>
-              <Frame>uw_shredder_00.png</Frame>
-              <Frame>uw_shredder_01.png</Frame>
-              <Frame>uw_shredder_02.png</Frame>
-              <Frame>uw_shredder_03.png</Frame>
-              <Frame>uw_shredder_04.png</Frame>
-              <Frame>uw_shredder_05.png</Frame>
-              <Frame>uw_shredder_06.png</Frame>
-              <Frame>uw_shredder_07.png</Frame>
-              <Frame>uw_shredder_08.png</Frame>
-              <Frame>uw_shredder_09.png</Frame>
-              <Frame>uw_shredder_10.png</Frame>
-              <Frame>uw_shredder_11.png</Frame>
-              <Frame>uw_shredder_12.png</Frame>
-              <Frame>uw_shredder_13.png</Frame>
-            </Frames>
-          </Animation>
-          <TurretController/>
-        </Components>
-      </GameObject>
     </GameObjects>
   </Prefab>
 </Root>

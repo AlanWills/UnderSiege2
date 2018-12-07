@@ -16,4 +16,10 @@ namespace US
     m_firingAnimationFrames()
   {
   }
+
+  //------------------------------------------------------------------------------------------------
+  Handle<GameObject> Turret::create(const Handle<Screen>& screen)
+  {
+
+  }
 }

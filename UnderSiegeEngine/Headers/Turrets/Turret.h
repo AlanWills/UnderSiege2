@@ -16,6 +16,8 @@ class UnderSiegeEngineDllExport Turret : public CelesteEngine::ScriptableObject
 
     float getFireRate() const { return m_fireRate->getValue(); }
 
+    Handle<GameObject> create(const Handle<Screen>& screen);
+
   private:
     ValueField<int>* m_damage;
     ValueField<float>* m_fireRate;

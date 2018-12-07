@@ -20,7 +20,7 @@ namespace US
   Ship::Ship() :
     m_texture(createHandleField<Resources::Texture2D>("texture")),
     m_hullStrength(createValueField<float>("hull_strength")),
-	m_shield(createScriptableObject<Shield>("shield")),
+	  m_shield(createScriptableObject<Shield>("shield")),
     m_gameObject()
   {
   }
@@ -75,7 +75,7 @@ namespace US
 
     m_gameObject = prefab->instantiate(screen);
     m_gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(getTexture());
-	m_gameObject->findChildGameObject("PlayerShield")->findComponent<Rendering::SpriteRenderer>()->setTexture(m_shield->getTexture());
+	  m_gameObject->findChildGameObject("PlayerShield")->findComponent<Rendering::SpriteRenderer>()->setTexture(m_shield->getTexture());
 
     return m_gameObject;                                                                                                                                                                                                                                                                                                                                                                                                                 
   }
