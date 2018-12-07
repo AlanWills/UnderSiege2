@@ -6,6 +6,8 @@
 #include "Resources/Data/Prefab.h"
 #include "Registries/ScriptableObjectRegistry.h"
 #include "Rendering/SpriteRenderer.h"
+#include "Shields/Shield.h"
+#include "Turrets/Turret.h"
 
 using namespace CelesteEngine::Resources;
 
@@ -18,8 +20,39 @@ namespace US
   Ship::Ship() :
     m_texture(createHandleField<Resources::Texture2D>("texture")),
     m_hullStrength(createValueField<float>("hull_strength")),
-	  m_shield(createScriptableObject<Shield>("shield")),
+	m_shield(createScriptableObject<Shield>("shield")),
     m_gameObject()
+  {
+  }
+
+  //------------------------------------------------------------------------------------------------
+  bool Ship::doDeserialize(const tinyxml2::XMLElement* element)
+  {
+    const tinyxml2::XMLElement* turretsElement = element->FirstChildElement("Turrets");
+    if (turretsElement == nullptr)
+    {
+      // This is not an error - the ship simply has no turrets at this point
+      return true;
+    }
+
+    for (auto turretElement : children(turretsElement))
+    {
+      const char* elementText = turretElement->GetText();
+      if (elementText != nullptr)
+      {
+        Turret* turret = ScriptableObject::load<Turret>(elementText);
+        if (turret != nullptr)
+        {
+          m_turrets.push_back(turret);
+        }
+      }
+    }
+
+    return true;
+  }
+  
+  //------------------------------------------------------------------------------------------------
+  void Ship::doSerialize(tinyxml2::XMLElement* element) const
   {
   }
 
@@ -42,7 +75,7 @@ namespace US
 
     m_gameObject = prefab->instantiate(screen);
     m_gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(getTexture());
-	  m_gameObject->findChildGameObject("PlayerShield")->findComponent<Rendering::SpriteRenderer>()->setTexture(m_shield->getTexture());
+	m_gameObject->findChildGameObject("PlayerShield")->findComponent<Rendering::SpriteRenderer>()->setTexture(m_shield->getTexture());
 
     return m_gameObject;                                                                                                                                                                                                                                                                                                                                                                                                                 
   }

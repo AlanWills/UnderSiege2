@@ -20,7 +20,8 @@ class UnderSiegeEngineDllExport Turret : public CelesteEngine::ScriptableObject
     ValueField<int>* m_damage;
     ValueField<float>* m_fireRate;
     ReferenceField<std::string>* m_bullet;
-    ReferenceField<std::vector<Handle<Resources::Texture2D>>>* m_firingAnimationFrames;
+    
+    std::vector<Handle<Resources::Texture2D>> m_firingAnimationFrames;
 };
 
 }
