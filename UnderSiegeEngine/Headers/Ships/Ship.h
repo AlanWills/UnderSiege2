@@ -35,7 +35,9 @@ namespace US
     private:
       HandleField<Resources::Texture2D>* m_texture;
       ValueField<float>* m_hullStrength;
+      ReferenceField<Path>* m_shieldAsset;
       ReferenceField<Path>* m_shipPrefab;
+
 	    Shield* m_shield;
       std::vector<Turret*> m_turrets;
   };

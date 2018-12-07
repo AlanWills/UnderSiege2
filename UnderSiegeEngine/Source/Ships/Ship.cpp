@@ -20,8 +20,9 @@ namespace US
   Ship::Ship() :
     m_texture(createHandleField<Resources::Texture2D>("texture")),
     m_hullStrength(createValueField<float>("hull_strength")),
+    m_shieldAsset(createReferenceField<Path>("shield")),
     m_shipPrefab(createReferenceField<Path>("ship_prefab")),
-	  m_shield(createScriptableObject<Shield>("shield"))
+	  m_shield(nullptr)
   {
   }
 
@@ -48,6 +49,8 @@ namespace US
       }
     }
 
+    m_shield = ScriptableObject::load<Shield>(m_shieldAsset->getValue());
+
     return true;
   }
   
@@ -73,6 +76,12 @@ namespace US
     {
       const Handle<GameObject>& turretGameObject = turret->create(screen);
       turretGameObject->setParent(gameObject);
+    }
+
+    if (m_shield != nullptr)
+    {
+      const Handle<GameObject>& shieldGameObject = m_shield->create(screen);
+      shieldGameObject->setParent(gameObject);
     }
 
     return gameObject;
