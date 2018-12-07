@@ -172,13 +172,15 @@
       <FileType>Document</FileType>
     </CustomBuild>
     <None Include="Resources\Audio\Music\TheSwarmApproaches.wma" />
+    <None Include="Resources\Data\Bullets\SmallBullet.asset" />
     <None Include="Resources\Data\Shields\BasicShield.asset" />
     <None Include="Resources\Data\Turrets\BasicTurret.asset" />
-    <None Include="Resources\Prefabs\Bullets\SmallBullet.asset">
+    <None Include="Resources\Prefabs\Shields\BasicShield.prefab" />
+    <None Include="Resources\Prefabs\Bullets\SmallBullet.prefab">
       <SubType>
       </SubType>
     </None>
-    <None Include="Resources\Prefabs\Turrets\BasicTurret.asset">
+    <None Include="Resources\Prefabs\Turrets\BasicTurret.prefab">
       <SubType>
       </SubType>
     </None>
@@ -228,11 +230,11 @@
     </Xml>
     <Xml Include="Resources\Data\Screens\SplashScreen.asset" />
     <Xml Include="Resources\Data\Settings\GameSettings.asset" />
-    <Xml Include="Resources\Prefabs\Asteroids\HugeAsteroid.asset" />
-    <Xml Include="Resources\Prefabs\Asteroids\LargeAsteroid.asset" />
-    <Xml Include="Resources\Prefabs\Asteroids\SmallAsteroid.asset" />
-    <Xml Include="Resources\Prefabs\Asteroids\TinyAsteroid.asset" />
-    <Xml Include="Resources\Prefabs\Ships\PlayerShip.asset">
+    <Xml Include="Resources\Prefabs\Asteroids\HugeAsteroid.prefab" />
+    <Xml Include="Resources\Prefabs\Asteroids\LargeAsteroid.prefab" />
+    <Xml Include="Resources\Prefabs\Asteroids\SmallAsteroid.prefab" />
+    <Xml Include="Resources\Prefabs\Asteroids\TinyAsteroid.prefab" />
+    <Xml Include="Resources\Prefabs\Ships\PlayerShip.prefab">
       <SubType>Designer</SubType>
     </Xml>
   </ItemGroup>

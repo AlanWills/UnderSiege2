@@ -15,12 +15,6 @@
             rotation_speed="1"/>
         </Components>
       </GameObject>
-      <GameObject layer="World" name="PlayerShield" parent="Player">
-        <Components>
-          <SpriteRenderer />
-          <OpacityLerper min_opacity="0.2" lerp_up_time="1" lerp_down_time="1"/>
-        </Components>
-      </GameObject>
     </GameObjects>
   </Prefab>
 </Root>

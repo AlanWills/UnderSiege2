@@ -18,8 +18,8 @@ namespace US
     DECLARE_SCRIPT(TurretController)
 
     public:
-      Turret* getTurret() const { return m_turret; }
-      void setTurret(Turret* turret) { m_turret = turret; }
+      const Turret* getTurret() const { return m_turret; }
+      void setTurret(const Turret* turret) { m_turret = turret; }
 
     protected:
       void onSetGameObject(const Handle<GameObject>& gameObject) override;
@@ -30,7 +30,7 @@ namespace US
     private:
       using Inherited = CelesteEngine::Script;
 
-      Turret* m_turret;
+      const Turret* m_turret;
       Handle<Animation> m_turretAnimation;
       float m_currentFireTimer;
   };

@@ -20,8 +20,8 @@ namespace US
   Ship::Ship() :
     m_texture(createHandleField<Resources::Texture2D>("texture")),
     m_hullStrength(createValueField<float>("hull_strength")),
-	  m_shield(createScriptableObject<Shield>("shield")),
-    m_gameObject()
+    m_shipPrefab(createReferenceField<Path>("ship_prefab")),
+	  m_shield(createScriptableObject<Shield>("shield"))
   {
   }
 
@@ -57,26 +57,24 @@ namespace US
   }
 
   //------------------------------------------------------------------------------------------------
-  Handle<GameObject> Ship::create(const Handle<Screen>& screen)
+  Handle<GameObject> Ship::create(const Handle<Screen>& screen) const
   {
-    if (!m_gameObject.is_null())
-    {
-      // If the game object for this ship is already allocated, we need to immediately deallocate it
-      m_gameObject->deallocate();
-      m_gameObject.reset();
-    }
-
-    const Handle<Prefab>& prefab = getResourceManager()->load<Prefab>(Path("Prefabs", "Ships", "PlayerShip.asset"));
+    const Handle<Prefab>& prefab = getResourceManager()->load<Prefab>(m_shipPrefab->getValue());
     if (prefab.is_null())
     {
       ASSERT_FAIL();
-      return m_gameObject;
+      return Handle<GameObject>();
     }
 
-    m_gameObject = prefab->instantiate(screen);
-    m_gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(getTexture());
-	  m_gameObject->findChildGameObject("PlayerShield")->findComponent<Rendering::SpriteRenderer>()->setTexture(m_shield->getTexture());
+    Handle<GameObject> gameObject = prefab->instantiate(screen);
+    gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(getTexture());
 
-    return m_gameObject;                                                                                                                                                                                                                                                                                                                                                                                                                 
+    for (Turret* turret : m_turrets)
+    {
+      const Handle<GameObject>& turretGameObject = turret->create(screen);
+      turretGameObject->setParent(gameObject);
+    }
+
+    return gameObject;
   }
 }

@@ -166,6 +166,7 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Headers\Bullets\Bullet.h" />
     <ClInclude Include="Headers\Callbacks\LoadLevelCallback.h" />
     <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidDataConverter.h" />
     <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.h" />
@@ -181,6 +182,7 @@
     <ClInclude Include="Headers\UnderSiegeGame.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Bullets\Bullet.cpp" />
     <ClCompile Include="Source\Callbacks\LoadLevelCallback.cpp" />
     <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidDataConverter.cpp" />
     <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.cpp" />

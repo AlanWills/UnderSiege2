@@ -2,11 +2,10 @@
 <Root>
   <Prefab>
     <GameObjects>
-      <GameObject layer="World" name="Turret">
+      <GameObject layer="World" name="Bullet">
         <Components>
           <SpriteRenderer/>
-          <Animation/>
-          <TurretController/>
+          <RigidBody2D/>
         </Components>
       </GameObject>
     </GameObjects>

@@ -7,6 +7,7 @@
 #include "Screens/Screen.h"
 #include "Physics/RigidBody2D.h"
 #include "Turrets/Turret.h"
+#include "Bullets/Bullet.h"
 
 
 namespace US
@@ -45,16 +46,15 @@ namespace US
 
       if (m_currentFireTimer >= m_turret->getFireRate())
       {
-        const Handle<GameObject>& bullet = getGameObject()->getOwnerScreen()->allocateGameObject(CelesteEngine::Layer::kWorld);
+        const Handle<GameObject>& bullet = m_turret->getBullet()->create(getGameObject()->getOwnerScreen());
         bullet->getTransform()->setTranslation(getTransform()->getWorldTranslation());
 
         float worldRotation = getTransform()->getWorldRotation();
         bullet->getTransform()->setRotation(worldRotation);
 
-        const Handle<SpriteRenderer>& spriteRenderer = bullet->addComponent<SpriteRenderer>();
-        spriteRenderer->setTexture(Path("Textures", "Bullets", "shell_small.png"));
-        const Handle<Physics::RigidBody2D>& rigidBody = bullet->addComponent<Physics::RigidBody2D>();
-        rigidBody->setLinearVelocity(700 * std::sin(worldRotation), 700 * std::cos(worldRotation));
+        float speed = m_turret->getBullet()->getSpeed();
+        const Handle<Physics::RigidBody2D>& rigidBody = bullet->findComponent<Physics::RigidBody2D>();
+        rigidBody->setLinearVelocity(speed * std::sin(worldRotation), speed * std::cos(worldRotation));
 
         m_currentFireTimer = 0;
       }

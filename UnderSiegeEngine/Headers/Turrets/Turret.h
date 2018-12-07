@@ -6,24 +6,30 @@
 
 namespace US
 {
+  class Bullet;
 
-class UnderSiegeEngineDllExport Turret : public CelesteEngine::ScriptableObject
-{
-  DECLARE_SCRIPTABLE_OBJECT(Turret)
+  class UnderSiegeEngineDllExport Turret : public CelesteEngine::ScriptableObject
+  {
+    DECLARE_SCRIPTABLE_OBJECT(Turret)
 
-  public:
-    Turret();
+    public:
+      Turret();
 
-    float getFireRate() const { return m_fireRate->getValue(); }
+      float getFireRate() const { return m_fireRate->getValue(); }
+      const Bullet* getBullet() const { return m_bullet; }
 
-    Handle<GameObject> create(const Handle<Screen>& screen);
+      Handle<GameObject> create(const Handle<Screen>& screen) const;
 
-  private:
-    ValueField<int>* m_damage;
-    ValueField<float>* m_fireRate;
-    ReferenceField<std::string>* m_bullet;
+    protected:
+      bool doDeserialize(const tinyxml2::XMLElement* element) override;
+
+    private:
+      ValueField<int>* m_damage;
+      ValueField<float>* m_fireRate;
+      ReferenceField<Path>* m_bulletAsset;
+      ReferenceField<Path>* m_turretPrefab;
     
-    std::vector<Handle<Resources::Texture2D>> m_firingAnimationFrames;
-};
-
+      std::vector<Handle<Resources::Texture2D>> m_firingAnimationFrames;
+      Bullet* m_bullet;
+  };
 }

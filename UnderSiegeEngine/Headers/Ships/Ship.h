@@ -26,7 +26,7 @@ namespace US
       float getHullStrength() const { return m_hullStrength->getValue(); }
       const std::vector<Turret*>& getTurrets() const { return m_turrets; }
 
-      Handle<GameObject> create(const Handle<Screen>& screen);
+      Handle<GameObject> create(const Handle<Screen>& screen) const;
 
     protected:
       bool doDeserialize(const tinyxml2::XMLElement* element) override;
@@ -35,9 +35,8 @@ namespace US
     private:
       HandleField<Resources::Texture2D>* m_texture;
       ValueField<float>* m_hullStrength;
+      ReferenceField<Path>* m_shipPrefab;
 	    Shield* m_shield;
       std::vector<Turret*> m_turrets;
-
-      Handle<GameObject> m_gameObject;
   };
 }
