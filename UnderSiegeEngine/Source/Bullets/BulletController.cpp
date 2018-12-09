@@ -42,9 +42,8 @@ namespace US
 
         const Handle<SpriteSheetAnimation>& spriteSheetAnimation = gameObject->addComponent<SpriteSheetAnimation>();
         spriteSheetAnimation->setSpriteSheetDimensions(glm::ivec2(4, 4));
-        spriteSheetAnimation->setLooping(SpriteSheetAnimation::LoopMode::kLooping);
+        spriteSheetAnimation->setLooping(SpriteSheetAnimation::LoopMode::kOneTime);
         spriteSheetAnimation->play();
-
           
         //getGameObject()->die();
       }
