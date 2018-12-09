@@ -42,7 +42,7 @@ namespace US
 
     if (Input::isKeyPressed(GLFW_KEY_SPACE))
     {
-      m_turretAnimation->resume();
+      m_turretAnimation->play();
 
       if (m_currentFireTimer >= m_turret->getFireRate())
       {
@@ -79,6 +79,7 @@ namespace US
   {
     Inherited::onDeath();
 
+    m_turret = nullptr;
     m_turretAnimation.reset();
     m_currentFireTimer = 0;
   }

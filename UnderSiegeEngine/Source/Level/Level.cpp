@@ -43,6 +43,10 @@ namespace US
 
       // Now load the current player ship configuration
       m_current->setPlayer();
+
+      Ship* enemy = ScriptableObject::load<Ship>(Path("Data", "Enemies", "Fiirkan.asset"));
+      Handle<GameObject> enemyGameObject = enemy->create(m_current->m_screen);
+      enemyGameObject->getTransform()->setTranslation(getViewportDimensions() * 0.5f);
     }
   }
 

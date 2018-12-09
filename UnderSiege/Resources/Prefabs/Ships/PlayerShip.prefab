@@ -2,10 +2,12 @@
 <Root>
   <Prefab name="Ship" guid="c8f35eaf-ad63-49b6-97b2-845b1d5f996d">
     <GameObjects>
-      <GameObject layer="World" name="Player" position="0.5%,0.5%">
+      <GameObject layer="World" name="Player" tag="Ship" position="0.5%,0.5%">
         <Components>
           <SpriteRenderer/>
           <RigidBody2D/>
+          <RectangleCollider trigger="true" dimensions="0"/>
+          <ShipController/>
           <KeyboardTransformer
             translate_up_key="W"
             translate_down_key="S"

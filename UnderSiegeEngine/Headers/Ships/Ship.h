@@ -30,7 +30,6 @@ namespace US
 
     protected:
       bool doDeserialize(const tinyxml2::XMLElement* element) override;
-      void doSerialize(tinyxml2::XMLElement* element) const override;
 
     private:
       HandleField<Resources::Texture2D>* m_texture;

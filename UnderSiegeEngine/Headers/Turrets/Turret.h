@@ -7,6 +7,7 @@
 namespace US
 {
   class Bullet;
+  class Ship;
 
   class UnderSiegeEngineDllExport Turret : public CelesteEngine::ScriptableObject
   {
@@ -17,6 +18,9 @@ namespace US
 
       float getFireRate() const { return m_fireRate->getValue(); }
       const Bullet* getBullet() const { return m_bullet; }
+
+      const Ship* getShip() const { return m_ship; }
+      void setShip(const Ship* ship) { m_ship = ship; }
 
       Handle<GameObject> create(const Handle<Screen>& screen) const;
 
@@ -30,6 +34,8 @@ namespace US
       ReferenceField<Path>* m_turretPrefab;
     
       std::vector<Handle<Resources::Texture2D>> m_firingAnimationFrames;
+
+      const Ship* m_ship;
       Bullet* m_bullet;
   };
 }

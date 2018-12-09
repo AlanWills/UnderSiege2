@@ -3,6 +3,9 @@
 #include "Bullets/Bullet.h"
 #include "Registries/ScriptableObjectRegistry.h"
 #include "Rendering/SpriteRenderer.h"
+#include "Physics/PhysicsManager.h"
+#include "Physics/RectangleCollider.h"
+#include "Bullets/BulletController.h"
 
 using namespace CelesteEngine::Resources;
 
@@ -31,6 +34,12 @@ namespace US
 
     Handle<GameObject> gameObject = prefab->instantiate(screen);
     gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(m_texture->getValue());
+    gameObject->findComponent<BulletController>()->setBullet(this);
+
+    const Handle<Physics::RectangleCollider>& collider = gameObject->findComponent<Physics::RectangleCollider>();
+    collider->setDimensions(gameObject->findComponent<Rendering::SpriteRenderer>()->getDimensions());
+
+    Physics::addSimulatedBody(collider.as<Physics::Collider>());
 
     return gameObject;
   }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Root>
-  <Prefab>
+  <Prefab name="Ship" guid="7248bf60-8f49-4fca-b258-bd20a20e15ba">
     <GameObjects>
-      <GameObject layer="World" name="Bullet" tag="Bullet">
+      <GameObject layer="World" name="Enemy" tag="Ship">
         <Components>
           <SpriteRenderer/>
           <RigidBody2D/>
           <RectangleCollider trigger="true" dimensions="0"/>
-          <BulletController/>
+          <ShipController/>
         </Components>
       </GameObject>
     </GameObjects>

@@ -51,6 +51,15 @@ namespace US
     }
 
     m_bullet = ScriptableObject::load<Bullet>(m_bulletAsset->getValue());
+    if (m_bullet == nullptr)
+    {
+      ASSERT_FAIL();
+      return false;
+    }
+
+    m_bullet->setTurret(this);
+
+    return true;
   }
 
   //------------------------------------------------------------------------------------------------

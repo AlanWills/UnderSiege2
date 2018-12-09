@@ -173,6 +173,7 @@
     </CustomBuild>
     <None Include="Resources\Audio\Music\TheSwarmApproaches.wma" />
     <None Include="Resources\Data\Bullets\SmallBullet.asset" />
+    <None Include="Resources\Data\Enemies\Fiirkan.asset" />
     <None Include="Resources\Data\Shields\BasicShield.asset" />
     <None Include="Resources\Data\Turrets\BasicTurret.asset" />
     <None Include="Resources\Prefabs\Shields\BasicShield.prefab" />
@@ -180,6 +181,7 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="Resources\Prefabs\Ships\EnemyShip.prefab" />
     <None Include="Resources\Prefabs\Turrets\BasicTurret.prefab">
       <SubType>
       </SubType>
@@ -249,6 +251,7 @@
     <Image Include="Resources\Textures\Backgrounds\Level1Background.jpg" />
     <Image Include="Resources\Textures\Backgrounds\MainMenuScreen.jpg" />
     <Image Include="Resources\Textures\Bullets\shell_small.png" />
+    <Image Include="Resources\Textures\FX\Explosions\Explosion.png" />
     <Image Include="Resources\Textures\Shields\Shield.png" />
     <Image Include="Resources\Textures\Ships\Fiirkan.png" />
     <Image Include="Resources\Textures\UI\ButtonDefault.png" />

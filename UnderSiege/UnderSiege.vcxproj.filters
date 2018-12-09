@@ -31,6 +31,8 @@
     <None Include="Resources\Prefabs\Bullets\SmallBullet.prefab" />
     <None Include="Resources\Prefabs\Turrets\BasicTurret.prefab" />
     <None Include="Resources\Prefabs\Shields\BasicShield.prefab" />
+    <None Include="Resources\Prefabs\Ships\EnemyShip.prefab" />
+    <None Include="Resources\Data\Enemies\Fiirkan.asset" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />
@@ -184,6 +186,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Textures\Bullets\shell_small.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\FX\Explosions\Explosion.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
