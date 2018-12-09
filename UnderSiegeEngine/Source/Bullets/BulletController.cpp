@@ -44,6 +44,7 @@ namespace US
         spriteSheetAnimation->setSpriteSheetDimensions(glm::ivec2(4, 4));
         spriteSheetAnimation->setLooping(SpriteSheetAnimation::LoopMode::kLooping);
         spriteSheetAnimation->play();
+
           
         //getGameObject()->die();
       }
