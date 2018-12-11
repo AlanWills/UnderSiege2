@@ -44,6 +44,8 @@ namespace US
         spriteSheetAnimation->setSpriteSheetDimensions(glm::ivec2(4, 4));
         spriteSheetAnimation->setLooping(SpriteSheetAnimation::LoopMode::kOneTime);
         spriteSheetAnimation->play();
+
+        // MAKE DATACONVERTERS SPECIFIABLE IN LUA
           
         //getGameObject()->die();
       }
