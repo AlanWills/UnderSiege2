@@ -23,3 +23,6 @@ registerComponentDataConverter("SpriteSheetAnimation",
 -- Or should we be clever and have one which we reset?
 -- Do we store the default value in the attributes/elements, because if we do, we're golden (except for derived classes doing custom behaviour?)
 -- Is custom behaviour even a thing?
+
+-- We have a problem when adding data converter to registry - it calls destructor which deletes attributes
+-- Maybe we need to factory function/instantiate this?
