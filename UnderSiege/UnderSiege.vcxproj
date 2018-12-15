@@ -237,6 +237,7 @@
     <Xml Include="Resources\Prefabs\Asteroids\LargeAsteroid.prefab" />
     <Xml Include="Resources\Prefabs\Asteroids\SmallAsteroid.prefab" />
     <Xml Include="Resources\Prefabs\Asteroids\TinyAsteroid.prefab" />
+    <Xml Include="Resources\Prefabs\FX\Explosion.prefab" />
     <Xml Include="Resources\Prefabs\Ships\PlayerShip.prefab">
       <SubType>Designer</SubType>
     </Xml>

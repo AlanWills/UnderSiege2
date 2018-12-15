@@ -45,8 +45,11 @@ namespace US
         spriteSheetAnimation->setLooping(SpriteSheetAnimation::LoopMode::kOneTime);
         spriteSheetAnimation->play();
 
-        // MAKE DATACONVERTERS SPECIFIABLE IN LUA
-          
+        // How do we defer kill this game object?
+        // Remove from simulation?  But we are iterating over it.
+        // Need this function call after all the physics calculation has taken place.
+        // Maybe let entire physics calculation happen then resolve function calls
+
         //getGameObject()->die();
       }
     }

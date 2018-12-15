@@ -91,6 +91,7 @@
     <Xml Include="Resources\Prefabs\Asteroids\SmallAsteroid.prefab" />
     <Xml Include="Resources\Prefabs\Asteroids\TinyAsteroid.prefab" />
     <Xml Include="Resources\Prefabs\Ships\PlayerShip.prefab" />
+    <Xml Include="Resources\Prefabs\FX\Explosion.prefab" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Resources\Fonts\Arial.ttf" />

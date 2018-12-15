@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Prefab>
+    <GameObjects>
+      <GameObject layer="World" name="Explosion">
+        <Components>
+          <SpriteRenderer sprite="Textures\FX\Explosions\Explosion.png"/>
+          <SpriteSheetAnimation sprite_sheet_dimensions="4,4"/>
+        </Components>
+      </GameObject>
+    </GameObjects>
+  </Prefab>
+</Root>
