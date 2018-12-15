@@ -12,11 +12,23 @@ registerComponentDataConverter("SpriteSheetAnimation",
         },
         ["Looping"] = 
         {
-        
+            ["Name"] = "looping",
+            ["Type"] = "bool",
+            ["Default Value"] = "true",
+            ["Is Required"] = false,
+            ["Is Reference"] = false
         },
         ["PlayImmediately"] = 
         {
-        
+            ["Name"]= "play_immediately",
+            ["Type"] = "bool",
+            ["Default Value"] = "true",
+            ["Is Required"] = false,
+            ["Is Reference"] = false
         }
-    }
+    },
+
+    ["onSetGameObject"] = function(converter, component)
+
+    end
 })

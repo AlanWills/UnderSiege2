@@ -6,6 +6,7 @@
 #include "Physics/PhysicsManager.h"
 #include "Physics/RectangleCollider.h"
 #include "Bullets/BulletController.h"
+#include "Screens/Screen.h"
 
 using namespace CelesteEngine::Resources;
 
@@ -18,7 +19,8 @@ namespace US
   Bullet::Bullet() :
     m_speed(createValueField<float>("speed")),
     m_texture(createHandleField<Resources::Texture2D>("texture")),
-    m_bulletPrefab(createReferenceField<Path>("bullet_prefab"))
+    m_bulletPrefab(createReferenceField<Path>("bullet_prefab")),
+    m_explosionPrefab(createReferenceField<Path>("explosion_prefab"))
   {
   }
 
@@ -42,5 +44,18 @@ namespace US
     Physics::addSimulatedBody(collider.as<Physics::Collider>());
 
     return gameObject;
+  }
+
+  //------------------------------------------------------------------------------------------------
+  Handle<GameObject> Bullet::createExplosion(const Handle<Screen>& screen) const
+  {
+    const Handle<Prefab>& prefab = getResourceManager()->load<Prefab>(m_bulletPrefab->getValue());
+    if (prefab.is_null())
+    {
+      ASSERT_FAIL();
+      return Handle<GameObject>();
+    }
+
+    return prefab->instantiate(screen);
   }
 }

@@ -34,16 +34,8 @@ namespace US
       const ConstHandle<ShipController>& shipController = collider->getGameObject()->findComponent<ShipController>();
       if (shipController->getShip() != m_bullet->getTurret()->getShip())
       {
-        const Handle<GameObject>& gameObject = getGameObject()->getOwnerScreen()->allocateGameObject(Layer::kWorld);
-        gameObject->getTransform()->setTranslation(getGameObject()->getTransform()->getWorldTranslation());
-
-        const Handle<Rendering::SpriteRenderer>& renderer = gameObject->addComponent<Rendering::SpriteRenderer>();
-        renderer->setTexture(Path("Textures", "FX", "Explosions", "Explosion.png"));
-
-        const Handle<SpriteSheetAnimation>& spriteSheetAnimation = gameObject->addComponent<SpriteSheetAnimation>();
-        spriteSheetAnimation->setSpriteSheetDimensions(glm::ivec2(4, 4));
-        spriteSheetAnimation->setLooping(SpriteSheetAnimation::LoopMode::kOneTime);
-        spriteSheetAnimation->play();
+        const Handle<GameObject>& gameObject = m_bullet->createExplosion(getGameObject()->getOwnerScreen());
+        gameObject->getTransform()->setWorldTranslation(getGameObject()->getTransform()->getWorldTranslation());
 
         // How do we defer kill this game object?
         // Remove from simulation?  But we are iterating over it.
