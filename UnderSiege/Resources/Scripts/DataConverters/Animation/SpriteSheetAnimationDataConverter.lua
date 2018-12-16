@@ -14,21 +14,20 @@ registerComponentDataConverter("SpriteSheetAnimation",
         {
             ["Name"] = "looping",
             ["Type"] = "bool",
-            ["Default Value"] = "true",
-            ["Is Required"] = false,
-            ["Is Reference"] = false
+            ["Default Value"] = "true"
         },
         ["PlayImmediately"] = 
         {
             ["Name"]= "play_immediately",
             ["Type"] = "bool",
-            ["Default Value"] = "true",
-            ["Is Required"] = false,
-            ["Is Reference"] = false
+            ["Default Value"] = "true"
         }
     },
 
-    ["onSetGameObject"] = function(converter, component)
-
+    ["doSetValues"] = function(converter, component)
+        local spriteSheetAnimation = component:asSpriteSheetAnimation();
+        
+        spriteSheetAnimation:setPlayImmediately(false);
+        --component:setSpriteSheetDimensions(4, 4);
     end
 })
