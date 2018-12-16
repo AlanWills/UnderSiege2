@@ -46,7 +46,7 @@ namespace US
 
       Ship* enemy = ScriptableObject::load<Ship>(Path("Data", "Enemies", "Fiirkan.asset"));
       Handle<GameObject> enemyGameObject = enemy->create(m_current->m_screen);
-      enemyGameObject->getTransform()->setTranslation(getViewportDimensions() * 0.5f);
+      enemyGameObject->getTransform()->setTranslation(100, getViewportDimensions().y * 0.5f);
     }
   }
 

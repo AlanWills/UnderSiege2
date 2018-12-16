@@ -49,7 +49,7 @@ namespace US
   //------------------------------------------------------------------------------------------------
   Handle<GameObject> Bullet::createExplosion(const Handle<Screen>& screen) const
   {
-    const Handle<Prefab>& prefab = getResourceManager()->load<Prefab>(m_bulletPrefab->getValue());
+    const Handle<Prefab>& prefab = getResourceManager()->load<Prefab>(m_explosionPrefab->getValue());
     if (prefab.is_null())
     {
       ASSERT_FAIL();
