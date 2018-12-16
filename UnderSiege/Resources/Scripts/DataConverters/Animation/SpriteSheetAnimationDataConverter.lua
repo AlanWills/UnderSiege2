@@ -26,10 +26,10 @@ LuaComponentDataConverter.register("SpriteSheetAnimation",
 
     ["doSetValues"] = function(converter, component)
         local spriteSheetAnimation = component:asSpriteSheetAnimation()
-        local playImmediately = converter:findAttribute("play_immediately")
         
-        spriteSheetAnimation:setPlayImmediately(playImmediately:asBool())
-        --component:setSpriteSheetDimensions(4, 4);
+        spriteSheetAnimation:setSpriteSheetDimensions(converter:findAttribute("sprite_sheet_dimensions"):asUVec2())
+        spriteSheetAnimation:setLooping(converter:findAttribute("looping"):asBool())
+        spriteSheetAnimation:setPlayImmediately(converter:findAttribute("play_immediately"):asBool())
     end
 })
 
