@@ -1,4 +1,4 @@
-registerComponentDataConverter("SpriteSheetAnimation", 
+LuaComponentDataConverter.register("SpriteSheetAnimation", 
 {
     ["attributes"] = 
     {
@@ -25,9 +25,13 @@ registerComponentDataConverter("SpriteSheetAnimation",
     },
 
     ["doSetValues"] = function(converter, component)
-        local spriteSheetAnimation = component:asSpriteSheetAnimation();
+        local spriteSheetAnimation = component:asSpriteSheetAnimation()
+        local playImmediately = converter:findAttribute("play_immediately")
         
-        spriteSheetAnimation:setPlayImmediately(false);
+        spriteSheetAnimation:setPlayImmediately(playImmediately:asBool())
         --component:setSpriteSheetDimensions(4, 4);
     end
 })
+
+-- Add move constructors
+-- Delete all copy and assignment operators from data converters
