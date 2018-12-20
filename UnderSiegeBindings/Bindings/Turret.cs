@@ -22,10 +22,10 @@ namespace US
 
 		[Serialize, DisplayPriority(3)]
 		[XmlAttribute("bullet"), DisplayName("Bullet")]
-		public string Bullet { get; set; } = "";
+		public Path Bullet { get; set; } = new Path(@"");
 
 		[Serialize, DisplayPriority(4)]
-		[XmlAttribute("firing_animation_frames"), DisplayName("Firing Animation Frames")]
-		public List<Texture2D> FiringAnimationFrames { get; set; } = new List<Texture2D>();
+		[XmlAttribute("turret_prefab"), DisplayName("Turret Prefab")]
+		public Path TurretPrefab { get; set; } = new Path(@"");
 	}
 }

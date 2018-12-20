@@ -27,5 +27,9 @@ namespace US
 		[Serialize, DisplayPriority(4)]
 		[XmlAttribute("colour"), DisplayName("Colour")]
 		public Vector3 Colour { get; set; } = new Vector3(1.000000f, 1.000000f, 1.000000f);
+
+		[Serialize, DisplayPriority(5)]
+		[XmlAttribute("shield_prefab"), DisplayName("Shield Prefab")]
+		public Path ShieldPrefab { get; set; } = new Path(@"");
 	}
 }

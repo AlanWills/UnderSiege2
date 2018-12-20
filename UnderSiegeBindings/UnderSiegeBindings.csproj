@@ -58,12 +58,15 @@
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Bindings\"/>
+        <Compile Include="Bindings\Bullet.cs"/>
         <Compile Include="Bindings\Level.cs"/>
         <Compile Include="Bindings\Shield.cs"/>
         <Compile Include="Bindings\Turret.cs"/>
         <Compile Include="Bindings\Ship.cs"/>
         <Compile Include="Bindings\ShipManager.cs"/>
+        <Compile Include="Bindings\BulletController.cs"/>
         <Compile Include="Bindings\AsteroidSpawner.cs"/>
+        <Compile Include="Bindings\ShipController.cs"/>
         <Compile Include="Bindings\TurretController.cs"/>
         <Compile Include="Bindings\OptionsScreenUIManager.cs"/>
     </ItemGroup>
