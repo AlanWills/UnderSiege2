@@ -6,6 +6,7 @@
 #include "Rendering/SpriteRenderer.h"
 #include "Registries/ScriptableObjectRegistry.h"
 #include "Serialization/MathsSerializers.h"
+#include "Deserialization/MathsDeserializers.h"
 
 
 namespace US

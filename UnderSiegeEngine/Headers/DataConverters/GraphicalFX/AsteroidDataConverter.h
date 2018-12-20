@@ -14,8 +14,8 @@ class AsteroidDataConverter : public CelesteEngine::DataConverter
 
     const std::string& getPrefabPath() const { return m_prefabPath; }
 
-    size_t getCount() const { return m_count.getValue(); }
-    const std::string& getCountXMLName() const { return m_count.getAttributeName(); }
+    size_t getCount() const { return m_count->getValue(); }
+    const std::string& getCountXMLName() const { return m_count->getAttributeName(); }
 
   protected:
     bool doConvertFromXML(const XMLElement* objectElement) override;
@@ -24,7 +24,7 @@ class AsteroidDataConverter : public CelesteEngine::DataConverter
     typedef CelesteEngine::DataConverter Inherited;
 
     std::string m_prefabPath;
-    ValueAttribute<size_t> m_count;
+    ValueAttribute<size_t>* m_count;
 };
 
 }

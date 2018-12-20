@@ -3,8 +3,10 @@
 #include "Shields/Shield.h"
 #include "Registries/ScriptableObjectRegistry.h"
 #include "Serialization/MathsSerializers.h"
+#include "Deserialization/MathsDeserializers.h"
 #include "Resources/Data/Prefab.h"
 #include "Rendering/SpriteRenderer.h"
+#include "Objects/GameObject.h"
 
 using namespace CelesteEngine::Resources;
 

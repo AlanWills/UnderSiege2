@@ -35,7 +35,7 @@ namespace US
       return false;
     }
 
-    for (auto child : children(animationFrames))
+    for (auto child : XML::children(animationFrames))
     {
       const char* framePath = child->GetText();
       if (framePath != nullptr)

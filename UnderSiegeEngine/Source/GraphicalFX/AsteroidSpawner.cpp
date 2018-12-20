@@ -9,6 +9,7 @@
 #include "Physics/RigidBody2D.h"
 #include "Maths/RandomGenerator.h"
 #include "Time/TimeUtils.h"
+#include "DataConverters/Objects/GameObjectDataConverter.h"
 
 using namespace CelesteEngine::Physics;
 using namespace CelesteEngine::Resources;

@@ -39,7 +39,7 @@ namespace US
       return true;
     }
 
-    for (auto turretElement : children(turretsElement))
+    for (auto turretElement : XML::children(turretsElement))
     {
       const char* elementText = turretElement->GetText();
       if (elementText != nullptr)
