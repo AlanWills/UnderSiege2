@@ -32,10 +32,3 @@ LuaComponentDataConverter.register("SpriteSheetAnimation",
         spriteSheetAnimation:setPlayImmediately(converter:findAttribute("play_immediately"):asBool())
     end
 })
-
--- Change attributes and elements to only be constructible from DataConverter
--- and add new API for creating them similar to scriptable object fields
--- Maybe we should make that deserialization API/structure shared or something?
--- Create template specializations for certain types of SO fields - e.g. Prefab/Resource/ScriptableObject fields?
--- Go through data converters with new resource/path element - it'll do wonders
--- Go through all data converters and remove #includes for attributes and elements
