@@ -6,7 +6,10 @@
 
 namespace CelesteEngine
 {
-  class Animation;
+  namespace Animation
+  {
+    class Animator;
+  }
 }
 
 namespace US
@@ -31,7 +34,7 @@ namespace US
       using Inherited = CelesteEngine::Script;
 
       const Turret* m_turret;
-      Handle<Animation> m_turretAnimation;
+      Handle<Animation::Animator> m_turretAnimation;
       float m_currentFireTimer;
   };
 }

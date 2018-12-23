@@ -4,7 +4,7 @@
 #include "Registries/ScriptableObjectRegistry.h"
 #include "Objects/GameObject.h"
 #include "Turrets/TurretController.h"
-#include "Animation/Animation.h"
+#include "Animation/Animator.h"
 #include "Bullets/Bullet.h"
 
 using namespace CelesteEngine::Resources;
@@ -74,7 +74,7 @@ namespace US
 
     Handle<GameObject> gameObject = prefab->instantiate(screen);
     gameObject->findComponent<TurretController>()->setTurret(this);
-    gameObject->findComponent<Animation>()->addFrames(m_firingAnimationFrames);
+    //gameObject->findComponent<Animator>()->addFrames(m_firingAnimationFrames);
     gameObject->findComponent<SpriteRenderer>()->setTexture(m_firingAnimationFrames[0]);
 
     return gameObject;

@@ -3,7 +3,7 @@
 #include "Turrets/TurretController.h"
 #include "Objects/GameObject.h"
 #include "Input/InputUtils.h"
-#include "Animation/Animation.h"
+#include "Animation/Animator.h"
 #include "Screens/Screen.h"
 #include "Physics/RigidBody2D.h"
 #include "Turrets/Turret.h"
@@ -32,7 +32,7 @@ namespace US
   {
     Inherited::onSetGameObject(gameObject);
 
-    m_turretAnimation = gameObject->findComponent<Animation>();
+    m_turretAnimation = gameObject->findComponent<Animation::Animator>();
   }
 
   //------------------------------------------------------------------------------------------------

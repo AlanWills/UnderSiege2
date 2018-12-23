@@ -7,8 +7,6 @@
 #include "Bullets/Bullet.h"
 #include "Turrets/Turret.h"
 #include "Screens/Screen.h"
-#include "Rendering/SpriteRenderer.h"
-#include "Animation/SpriteSheetAnimation.h"
 
 
 namespace US
