@@ -16,6 +16,12 @@ LuaComponentDataConverter.register("Animator",
             ["Type"] = "bool",
             ["Default Value"] = "true"
         },
+        ["SecondsPerFrame"] = 
+        {
+            ["Name"] = "seconds_per_frame",
+            ["Type"] = "float",
+            ["Default Value"] = "0.1";
+        },
         ["PlayImmediately"] = 
         {
             ["Name"]= "play_immediately",
@@ -29,6 +35,7 @@ LuaComponentDataConverter.register("Animator",
         
         animator:setSpriteSheetDimensions(converter:findAttribute("sprite_sheet_dimensions"):asUVec2())
         animator:setLooping(converter:findAttribute("looping"):asBool())
+        animator:setSecondsPerFrame(converter:findAttribute("seconds_per_frame"):asFloat())
         animator:setPlayImmediately(converter:findAttribute("play_immediately"):asBool())
     end
 })
