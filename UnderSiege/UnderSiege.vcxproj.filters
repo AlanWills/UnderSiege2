@@ -33,7 +33,7 @@
     <None Include="Resources\Prefabs\Shields\BasicShield.prefab" />
     <None Include="Resources\Prefabs\Ships\EnemyShip.prefab" />
     <None Include="Resources\Data\Enemies\Fiirkan.asset" />
-    <None Include="Resources\Scripts\DataConverters\Animation\SpriteSheetAnimationDataConverter.lua" />
+    <None Include="Resources\Scripts\DataConverters\Animation\AnimatorDataConverter.lua" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />
