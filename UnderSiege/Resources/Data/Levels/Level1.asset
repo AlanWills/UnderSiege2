@@ -1,4 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Root>
-  <Level screen_file_path="Data\Screens\GameplayScreen.asset" background_file_path="Textures\Backgrounds\Level1Background.jpg" player_spawn_position="100,100" name="Level1" />
+  <Level name="Level1" guid="ee55d56e-f373-4834-9523-672c311beb5f"
+          screen_file_path="Data\Screens\GameplayScreen.asset"
+          background_file_path="Textures\Backgrounds\Level1Background.jpg"
+          player_spawn_position="100,100"/>
 </Root>

@@ -1,4 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Root>
-  <Ship hull_strength="50" shield="Data\Shields\BasicShield.asset" ship_prefab="Prefabs\Ships\EnemyShip.prefab" name="Fiirkan" />
+  <Ship name="Fiirkan" guid="6549b42f-8aec-4cdb-85a6-e870c4540874" hull_strength="50"
+       shield="Data\Shields\BasicShield.asset" texture="Textures\Ships\Fiirkan.png"
+       ship_prefab="Prefabs\Ships\EnemyShip.prefab">
+    <Turrets>
+       <Turret>Data\Turrets\BasicTurret.asset</Turret>
+    </Turrets>
+  </Ship>
 </Root>

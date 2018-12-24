@@ -1,4 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Root>
-  <Shield strength="100" recharge_per_second="4" colour="1,1,1" shield_prefab="Prefabs\Shields\BasicShield.prefab" name="Basic Shield" />
+  <Shield name="Basic Shield" guid="71106f0b-4ef9-4a4a-9828-7d37ea1b555b"
+           strength="100" recharge_per_second="10"
+           texture="Textures\Shields\Shield.png" colour="1,1,1"
+           shield_prefab="Prefabs\Shields\BasicShield.prefab"/>
 </Root>

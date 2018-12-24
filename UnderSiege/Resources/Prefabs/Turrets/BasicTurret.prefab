@@ -5,7 +5,7 @@
       <GameObject layer="World" name="Turret">
         <Components>
           <SpriteRenderer/>
-          <Animation looping="true"/>
+          <Animator looping="true"/>
           <TurretController/>
         </Components>
       </GameObject>
