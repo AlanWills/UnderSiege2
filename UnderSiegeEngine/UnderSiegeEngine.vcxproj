@@ -172,6 +172,7 @@
     <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidDataConverter.h" />
     <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.h" />
     <ClInclude Include="Headers\GraphicalFX\AsteroidSpawner.h" />
+    <ClInclude Include="Headers\Input\LookAtCursor.h" />
     <ClInclude Include="Headers\Level\Level.h" />
     <ClInclude Include="Headers\Shields\Shield.h" />
     <ClInclude Include="Headers\Ships\Ship.h" />
@@ -190,6 +191,7 @@
     <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidDataConverter.cpp" />
     <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.cpp" />
     <ClCompile Include="Source\GraphicalFX\AsteroidSpawner.cpp" />
+    <ClCompile Include="Source\Input\LookAtCursor.cpp" />
     <ClCompile Include="Source\Level\Level.cpp" />
     <ClCompile Include="Source\Shield\Shield.cpp" />
     <ClCompile Include="Source\Ships\Ship.cpp" />

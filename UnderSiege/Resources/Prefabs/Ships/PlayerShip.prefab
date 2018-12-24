@@ -11,10 +11,8 @@
           <KeyboardTransformer
             translate_up_key="W"
             translate_down_key="S"
-            rotate_left_key="A"
-            rotate_right_key="D"
-            translation_speed="400"
-            rotation_speed="1"/>
+            translation_speed="400"/>
+          <LookAtCursor/>
         </Components>
       </GameObject>
     </GameObjects>

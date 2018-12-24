@@ -19,37 +19,13 @@ namespace US
     m_damage(createValueField<int>("damage", 0)),
     m_fireRate(createValueField<float>("fire_rate", 1)),
     m_bulletAsset(createReferenceField<Path>("bullet")),
-    m_turretPrefab(createReferenceField<Path>("turret_prefab")),
-    m_firingAnimationFrames()
+    m_turretPrefab(createReferenceField<Path>("turret_prefab"))
   {
   }
 
   //------------------------------------------------------------------------------------------------
   bool Turret::doDeserialize(const tinyxml2::XMLElement* element)
   {
-    const tinyxml2::XMLElement* animationFrames = element->FirstChildElement("AnimationFrames");
-    if (animationFrames == nullptr)
-    {
-      // This is an error - no sprite images provided for turret
-      ASSERT_FAIL();
-      return false;
-    }
-
-    for (auto child : XML::children(animationFrames))
-    {
-      const char* framePath = child->GetText();
-      if (framePath != nullptr)
-      {
-        const Handle<Texture2D>& animationFrame = getResourceManager()->load<Texture2D>(framePath);
-        ASSERT(!animationFrame.is_null());
-
-        if (!animationFrame.is_null())
-        {
-          m_firingAnimationFrames.push_back(animationFrame);
-        }
-      }
-    }
-
     m_bullet = ScriptableObject::load<Bullet>(m_bulletAsset->getValue());
     if (m_bullet == nullptr)
     {
@@ -74,8 +50,6 @@ namespace US
 
     Handle<GameObject> gameObject = prefab->instantiate(screen);
     gameObject->findComponent<TurretController>()->setTurret(this);
-    //gameObject->findComponent<Animator>()->addFrames(m_firingAnimationFrames);
-    //gameObject->findComponent<SpriteRenderer>()->setTexture(m_firingAnimationFrames[0]);
 
     return gameObject;
   }

@@ -33,8 +33,6 @@ namespace US
       ReferenceField<Path>* m_bulletAsset;
       ReferenceField<Path>* m_turretPrefab;
     
-      std::vector<Handle<Resources::Texture2D>> m_firingAnimationFrames;
-
       const Ship* m_ship;
       Bullet* m_bullet;
   };
