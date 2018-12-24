@@ -264,6 +264,7 @@
     <Image Include="Resources\Textures\UI\ProgressBar.png" />
     <Image Include="Resources\Textures\UI\Rectangle.png" />
     <Image Include="Resources\Textures\UI\UpDirectionIndicator.png" />
+    <Image Include="Resources\Textures\Weapons\Shredder\Shredder.png" />
     <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_00.png" />
     <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_01.png" />
     <Image Include="Resources\Textures\Weapons\Shredder\uw_shredder_02.png" />

@@ -4,8 +4,8 @@
     <GameObjects>
       <GameObject layer="World" name="Turret">
         <Components>
-          <SpriteRenderer/>
-          <Animator sprite_sheet_dimensions="1,1" looping="true"/>
+          <SpriteRenderer sprite="Textures\Weapons\Shredder\Shredder.png"/>
+          <Animator sprite_sheet_dimensions="7, 2" looping="true"/>
           <TurretController/>
         </Components>
       </GameObject>

@@ -75,7 +75,7 @@ namespace US
     Handle<GameObject> gameObject = prefab->instantiate(screen);
     gameObject->findComponent<TurretController>()->setTurret(this);
     //gameObject->findComponent<Animator>()->addFrames(m_firingAnimationFrames);
-    gameObject->findComponent<SpriteRenderer>()->setTexture(m_firingAnimationFrames[0]);
+    //gameObject->findComponent<SpriteRenderer>()->setTexture(m_firingAnimationFrames[0]);
 
     return gameObject;
   }
