@@ -1,4 +1,4 @@
-LuaComponentDataConverter.register("Animation", 
+LuaComponentDataConverter.register("Animator", 
 {
     ["Attributes"] = 
     {
