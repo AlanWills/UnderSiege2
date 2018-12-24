@@ -14,7 +14,11 @@ namespace US
   {
     Inherited::onInitialize();
 
+<<<<<<< HEAD
     Lua::LuaState::script(Path(Resources::getResourcesDirectory(), "Scripts", "DataConverters", "Animation", "AnimatorDataConverter.lua"));
+=======
+    Lua::LuaState::script(Path(Resources::getResourcesDirectory(), "Scripts", "DataConverters", "Animation", "AnimationDataConverter.lua"));
+>>>>>>> de79c8c... Updating submodules and fixing up after sprite sheet animation refactoring
     Lua::LuaState::script(Path(Resources::getResourcesDirectory(), "Scripts", "Game.lua"));
   }
 }
