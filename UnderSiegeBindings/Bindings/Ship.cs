@@ -21,7 +21,11 @@ namespace US
 		public float HullStrength { get; set; } = 0.000000f;
 
 		[Serialize, DisplayPriority(3)]
-		[DisplayName("shield")]
-		public Shield Shield { get; set; }
+		[XmlAttribute("shield"), DisplayName("Shield")]
+		public Path Shield { get; set; } = new Path(@"");
+
+		[Serialize, DisplayPriority(4)]
+		[XmlAttribute("ship_prefab"), DisplayName("Ship Prefab")]
+		public Path ShipPrefab { get; set; } = new Path(@"");
 	}
 }
