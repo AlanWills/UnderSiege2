@@ -16,6 +16,7 @@ namespace US
       Bullet();
 
       float getSpeed() const { return m_speed->getValue(); }
+      float getDamage() const { return m_damage->getValue(); }
 
       const Turret* getTurret() const { return m_turret; }
       void setTurret(const Turret* turret) { m_turret = turret; }
@@ -25,6 +26,7 @@ namespace US
 
     private:
       ValueField<float>* m_speed;
+      ValueField<float>* m_damage;
       HandleField<Resources::Texture2D>* m_texture;
       ReferenceField<Path>* m_bulletPrefab;
       ReferenceField<Path>* m_explosionPrefab;

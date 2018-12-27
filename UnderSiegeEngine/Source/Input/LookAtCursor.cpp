@@ -37,7 +37,7 @@ namespace US
       float mouseWorldSpaceY = mouseScreenPosition.y + cameraWorldTranslation.y;
       float diffX = mouseWorldSpaceX - worldTranslation.x;
       float diffY = mouseWorldSpaceY - worldTranslation.y;
-      float angle = std::atan2f(-diffY, diffX) + glm::half_pi<float>();
+      float angle = std::atan2f(diffX, diffY);
 
       getTransform()->setWorldRotation(angle);
     }

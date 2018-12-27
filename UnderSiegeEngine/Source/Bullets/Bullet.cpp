@@ -18,6 +18,7 @@ namespace US
   //------------------------------------------------------------------------------------------------
   Bullet::Bullet() :
     m_speed(createValueField<float>("speed")),
+    m_damage(createValueField<float>("damage")),
     m_texture(createHandleField<Resources::Texture2D>("texture")),
     m_bulletPrefab(createReferenceField<Path>("bullet_prefab")),
     m_explosionPrefab(createReferenceField<Path>("explosion_prefab"))
