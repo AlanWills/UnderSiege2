@@ -27,6 +27,7 @@ namespace US
       const std::vector<Turret*>& getTurrets() const { return m_turrets; }
 
       Handle<GameObject> create(const Handle<Screen>& screen) const;
+      Handle<GameObject> createDeathAnimation(const Handle<Screen>& screen) const;
 
     protected:
       bool doDeserialize(const tinyxml2::XMLElement* element) override;
@@ -36,6 +37,7 @@ namespace US
       ValueField<float>* m_hullStrength;
       ReferenceField<Path>* m_shieldAsset;
       ReferenceField<Path>* m_shipPrefab;
+      ReferenceField<Path>* m_deathAnimationPrefab;
 
 	    Shield* m_shield;
       std::vector<Turret*> m_turrets;

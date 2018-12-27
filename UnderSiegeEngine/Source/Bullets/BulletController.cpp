@@ -40,7 +40,7 @@ namespace US
         // Then this might work?
         // Could also manually get each bullet to check rather than relying on physics?
 
-        //getGameObject()->die();
+        getGameObject()->die();
 
         // Damage the ship we have just hit
         shipController->damage(m_damage);

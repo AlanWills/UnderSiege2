@@ -25,6 +25,7 @@ namespace US
     m_hullStrength(createValueField<float>("hull_strength")),
     m_shieldAsset(createReferenceField<Path>("shield")),
     m_shipPrefab(createReferenceField<Path>("ship_prefab")),
+    m_deathAnimationPrefab(createReferenceField<Path>("death_animation_prefab")),
 	  m_shield(nullptr)
   {
   }
@@ -91,5 +92,18 @@ namespace US
     Physics::getPhysicsManager()->addSimulatedBody(collider.as<Physics::Collider>());
 
     return gameObject;
+  }
+
+  //------------------------------------------------------------------------------------------------
+  Handle<GameObject> Ship::createDeathAnimation(const Handle<Screen>& screen) const
+  {
+    const Handle<Prefab>& prefab = getResourceManager()->load<Prefab>(m_deathAnimationPrefab->getValue());
+    if (prefab.is_null())
+    {
+      ASSERT_FAIL();
+      return Handle<GameObject>();
+    }
+
+    return prefab->instantiate(screen);
   }
 }

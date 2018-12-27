@@ -46,6 +46,10 @@ namespace US
     m_hullStrength -= damage;
     if (m_hullStrength <= 0)
     {
+      Handle<GameObject> deathAnimation = m_ship->createDeathAnimation(getGameObject()->getOwnerScreen());
+      deathAnimation->getTransform()->setWorldTranslation(getTransform()->getWorldTranslation());
+
+      // Kill this after we have created the death animation, otherwise the owner screen will be null
       getGameObject()->die();
     }
   }
