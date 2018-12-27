@@ -2,7 +2,7 @@
 <Root>
   <Bullet name="Small Bullet" guid="60b4ad5f-ba24-41fb-a274-fa9246be4165"
           speed="700"
-          damage="50"
+          damage="1"
           texture="Textures\Bullets\shell_small.png"
           bullet_prefab="Prefabs\Bullets\SmallBullet.prefab"
           explosion_prefab="Prefabs\FX\Explosion.prefab">
