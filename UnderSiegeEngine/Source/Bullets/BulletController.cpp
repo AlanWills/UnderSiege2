@@ -25,7 +25,7 @@ namespace US
   }
 
   //------------------------------------------------------------------------------------------------
-  void BulletController::onTriggerEnter(const ConstHandle<Physics::Collider>& collider)
+  void BulletController::onTriggerEnter(const Handle<Physics::Collider>& collider)
   {
     if (collider->getGameObject()->getTag() == internString("Ship"))
     {
@@ -35,11 +35,11 @@ namespace US
         const Handle<GameObject>& gameObject = m_bullet->createExplosion(getGameObject()->getOwnerScreen());
         gameObject->getTransform()->setWorldTranslation(getGameObject()->getTransform()->getWorldTranslation());
 
-        // Change collider to not be const - don't know why it is!
         // Remove from physics simulation (somehow)
         // Change scripts to only die in game object death function
         // Then this might work?
         // Could also manually get each bullet to check rather than relying on physics?
+
         //getGameObject()->die();
 
         // Damage the ship we have just hit

@@ -17,7 +17,7 @@ namespace US
       void setBullet(const Bullet* bullet);
 
     protected:
-      void onTriggerEnter(const ConstHandle<Physics::Collider>& collider) override;
+      void onTriggerEnter(const Handle<Physics::Collider>& collider) override;
       void onDeath() override;
 
     private:
