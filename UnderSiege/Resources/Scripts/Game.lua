@@ -1,4 +1,3 @@
-package.path = package.path .. ";" .. getResourcesDirectory() .. "\\?.lua"
 local path = require "Scripts.Core.FileSystem.Path"
 
 local settingsPath = path.combine(getResourcesDirectory(), "Data", "Settings", "GameSettings.asset")

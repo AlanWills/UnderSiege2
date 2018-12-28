@@ -1,0 +1,2 @@
+require "Scripts.DataConverters.Animation.AnimatorDataConverter"
+require "Scripts.DataConverters.Physics.EllipseColliderDataConverter"

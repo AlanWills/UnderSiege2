@@ -34,6 +34,8 @@
     <None Include="Resources\Prefabs\Ships\EnemyShip.prefab" />
     <None Include="Resources\Data\Enemies\Fiirkan.asset" />
     <None Include="Resources\Scripts\DataConverters\Animation\AnimatorDataConverter.lua" />
+    <None Include="Resources\Scripts\DataConverters\DataConverters.lua" />
+    <None Include="Resources\Scripts\Engine.lua" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />
@@ -201,5 +203,8 @@
     <CustomBuild Include="Build Events\CopyDependencyDLLs.bat">
       <Filter>Source Files</Filter>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Resources\Scripts\DataConverters\Physics\EllipseColliderDataConverter.lua" />
   </ItemGroup>
 </Project>
