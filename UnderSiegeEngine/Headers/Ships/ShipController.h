@@ -2,6 +2,7 @@
 
 #include "Objects/Script.h"
 #include "UnderSiegeEngineDllExport.h"
+#include "Shields/ShieldController.h"
 
 
 namespace US

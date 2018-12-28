@@ -175,6 +175,7 @@
     <ClInclude Include="Headers\Input\LookAtCursor.h" />
     <ClInclude Include="Headers\Level\Level.h" />
     <ClInclude Include="Headers\Shields\Shield.h" />
+    <ClInclude Include="Headers\Shields\ShieldController.h" />
     <ClInclude Include="Headers\Ships\Ship.h" />
     <ClInclude Include="Headers\Ships\ShipController.h" />
     <ClInclude Include="Headers\Ships\ShipManager.h" />
@@ -193,7 +194,8 @@
     <ClCompile Include="Source\GraphicalFX\AsteroidSpawner.cpp" />
     <ClCompile Include="Source\Input\LookAtCursor.cpp" />
     <ClCompile Include="Source\Level\Level.cpp" />
-    <ClCompile Include="Source\Shield\Shield.cpp" />
+    <ClCompile Include="Source\Shields\Shield.cpp" />
+    <ClCompile Include="Source\Shields\ShieldController.cpp" />
     <ClCompile Include="Source\Ships\Ship.cpp" />
     <ClCompile Include="Source\Ships\ShipController.cpp" />
     <ClCompile Include="Source\Ships\ShipManager.cpp" />

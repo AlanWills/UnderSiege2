@@ -4,6 +4,8 @@
 #include "Objects/GameObject.h"
 #include "Physics/Collider.h"
 #include "Ships/ShipController.h"
+#include "Shields/ShieldController.h"
+#include "Shields/Shield.h"
 #include "Bullets/Bullet.h"
 #include "Turrets/Turret.h"
 #include "Screens/Screen.h"
@@ -27,6 +29,8 @@ namespace US
   //------------------------------------------------------------------------------------------------
   void BulletController::onTriggerEnter(const Handle<Physics::Collider>& collider)
   {
+    // Tidy this up
+
     if (collider->getGameObject()->getTag() == internString("Ship"))
     {
       const Handle<ShipController>& shipController = collider->getGameObject()->findComponent<ShipController>();
@@ -35,15 +39,26 @@ namespace US
         const Handle<GameObject>& gameObject = m_bullet->createExplosion(getGameObject()->getOwnerScreen());
         gameObject->getTransform()->setWorldTranslation(getGameObject()->getTransform()->getWorldTranslation());
 
-        // Remove from physics simulation (somehow)
-        // Change scripts to only die in game object death function
-        // Then this might work?
-        // Could also manually get each bullet to check rather than relying on physics?
-
-        getGameObject()->die();
-
         // Damage the ship we have just hit
         shipController->damage(m_damage);
+
+        // Kill this bullet
+        getGameObject()->die();
+      }
+    }
+    else if (collider->getGameObject()->getTag() == internString("Shield"))
+    {
+      const Handle<ShieldController>& shieldController = collider->getGameObject()->findComponent<ShieldController>();
+      if (shieldController->getShield()->getShip() != m_bullet->getTurret()->getShip())
+      {
+        const Handle<GameObject>& gameObject = m_bullet->createExplosion(getGameObject()->getOwnerScreen());
+        gameObject->getTransform()->setWorldTranslation(getGameObject()->getTransform()->getWorldTranslation());
+
+        // Damage the ship we have just hit
+        shieldController->damage(m_damage);
+
+        // Kill this bullet
+        getGameObject()->die();
       }
     }
   }

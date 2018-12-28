@@ -55,6 +55,10 @@ namespace US
     }
 
     m_shield = ScriptableObject::load<Shield>(m_shieldAsset->getValue());
+    if (m_shield != nullptr)
+    {
+      m_shield->setShip(this);
+    }
 
     return true;
   }
@@ -87,9 +91,6 @@ namespace US
 
     const Handle<Physics::RectangleCollider>& collider = gameObject->findComponent<Physics::RectangleCollider>();
     collider->setDimensions(getTexture()->getDimensions());
-
-    // Ensure this ship responds to collisions
-    Physics::getPhysicsManager()->addSimulatedBody(collider.as<Physics::Collider>());
 
     return gameObject;
   }

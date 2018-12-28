@@ -1,8 +1,9 @@
 #include "stdafx.h"
 
 #include "Ships/ShipController.h"
-#include "Objects/GameObject.h"
 #include "Ships/Ship.h"
+#include "Objects/GameObject.h"
+#include "Shields/Shield.h"
 
 
 namespace US
@@ -43,14 +44,18 @@ namespace US
   //------------------------------------------------------------------------------------------------
   void ShipController::damage(float damage)
   {
-    m_hullStrength -= damage;
-    if (m_hullStrength <= 0)
+    if (damage > 0)
     {
-      Handle<GameObject> deathAnimation = m_ship->createDeathAnimation(getGameObject()->getOwnerScreen());
-      deathAnimation->getTransform()->setWorldTranslation(getTransform()->getWorldTranslation());
+      m_hullStrength = std::max(0.0f, m_hullStrength - damage);
 
-      // Kill this after we have created the death animation, otherwise the owner screen will be null
-      getGameObject()->die();
+      if (m_hullStrength <= 0)
+      {
+        Handle<GameObject> deathAnimation = m_ship->createDeathAnimation(getGameObject()->getOwnerScreen());
+        deathAnimation->getTransform()->setWorldTranslation(getTransform()->getWorldTranslation());
+
+        // Kill this after we have created the death animation, otherwise the owner screen will be null
+        getGameObject()->die();
+      }
     }
   }
 }

@@ -1,12 +1,15 @@
 #include "stdafx.h"
 
 #include "Shields/Shield.h"
+#include "Shields/ShieldController.h"
 #include "Registries/ScriptableObjectRegistry.h"
 #include "Serialization/MathsSerializers.h"
 #include "Deserialization/MathsDeserializers.h"
 #include "Resources/Data/Prefab.h"
 #include "Rendering/SpriteRenderer.h"
 #include "Objects/GameObject.h"
+#include "Physics/EllipseCollider.h"
+#include "Physics/PhysicsManager.h"
 
 using namespace CelesteEngine::Resources;
 
@@ -17,11 +20,12 @@ namespace US
 
   //------------------------------------------------------------------------------------------------
   Shield::Shield() :
-    m_strength(createValueField("strength", 100)),
-    m_rechargePerSecond(createValueField("recharge_per_second", 1)),
+    m_strength(createValueField("strength", 100.0f)),
+    m_rechargePerSecond(createValueField("recharge_per_second", 1.0f)),
     m_texture(createHandleField<Resources::Texture2D>("texture")),
     m_colour(createReferenceField("colour", glm::vec3(1))),
-    m_shieldPrefab(createReferenceField<Path>("shield_prefab"))
+    m_shieldPrefab(createReferenceField<Path>("shield_prefab")),
+    m_ship(nullptr)
   {
   }
 
@@ -36,7 +40,13 @@ namespace US
     }
 
     Handle<GameObject> gameObject = prefab->instantiate(screen);
-    gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(m_texture->getValue());
+    gameObject->findComponent<ShieldController>()->setShield(this);
+
+    Handle<SpriteRenderer> spriteRenderer = gameObject->findComponent<Rendering::SpriteRenderer>();
+    spriteRenderer->setTexture(m_texture->getValue());
+
+    Handle<Physics::EllipseCollider> ellipseCollider = gameObject->findComponent<Physics::EllipseCollider>();
+    ellipseCollider->setDimensions(spriteRenderer->getDimensions());
 
     return gameObject;
   }
