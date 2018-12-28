@@ -54,7 +54,8 @@ namespace US
 
     if (m_shieldStrength == 0)
     {
-      getGameObject()->findComponent<Rendering::SpriteRenderer>()->setShouldRender(false);
+      getGameObject()->setActive(false);
+      getGameObject()->setShouldRender(false);
     }
   }
 }
