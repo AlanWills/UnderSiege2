@@ -2,6 +2,7 @@
 
 #include "UnderSiegeEngineDllExport.h"
 #include "Objects/ScriptableObject.h"
+#include "Serialization/MathsSerializers.h"
 
 
 namespace US
@@ -14,12 +15,10 @@ namespace US
     DECLARE_SCRIPTABLE_OBJECT(Turret)
 
     public:
-      Turret();
-
       float getDamage() const { return m_damage->getValue(); }
       float getFireRate() const { return m_fireRate->getValue(); }
       const Path& getTurretSprite() const { return m_turretSprite->getValue(); }
-      const glm::vec2& getTurretSpriteSheetDimensions() const { return m_turretSpriteSheetDimensions->getValue(); }
+      const glm::uvec2& getTurretSpriteSheetDimensions() const { return m_turretSpriteSheetDimensions->getValue(); }
       const Bullet* getBullet() const { return m_bullet; }
 
       const Ship* getShip() const { return m_ship; }
