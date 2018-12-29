@@ -16,7 +16,10 @@ namespace US
     public:
       Turret();
 
+      float getDamage() const { return m_damage->getValue(); }
       float getFireRate() const { return m_fireRate->getValue(); }
+      const Path& getTurretSprite() const { return m_turretSprite->getValue(); }
+      const glm::vec2& getTurretSpriteSheetDimensions() const { return m_turretSpriteSheetDimensions->getValue(); }
       const Bullet* getBullet() const { return m_bullet; }
 
       const Ship* getShip() const { return m_ship; }
@@ -28,10 +31,12 @@ namespace US
       bool doDeserialize(const tinyxml2::XMLElement* element) override;
 
     private:
-      ValueField<int>* m_damage;
+      ValueField<float>* m_damage;
       ValueField<float>* m_fireRate;
-      ReferenceField<Path>* m_bulletAsset;
+      ReferenceField<Path>* m_turretSprite;
+      ReferenceField<glm::uvec2>* m_turretSpriteSheetDimensions;
       ReferenceField<Path>* m_turretPrefab;
+      ReferenceField<Path>* m_bulletAsset;
     
       const Ship* m_ship;
       Bullet* m_bullet;

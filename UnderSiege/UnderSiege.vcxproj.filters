@@ -29,13 +29,13 @@
     <None Include="Resources\Shaders\Model.vert" />
     <None Include="Resources\Data\Bullets\SmallBullet.asset" />
     <None Include="Resources\Prefabs\Bullets\SmallBullet.prefab" />
-    <None Include="Resources\Prefabs\Turrets\BasicTurret.prefab" />
     <None Include="Resources\Prefabs\Shields\BasicShield.prefab" />
     <None Include="Resources\Prefabs\Ships\EnemyShip.prefab" />
     <None Include="Resources\Data\Enemies\Fiirkan.asset" />
     <None Include="Resources\Scripts\DataConverters\Animation\AnimatorDataConverter.lua" />
     <None Include="Resources\Scripts\DataConverters\DataConverters.lua" />
     <None Include="Resources\Scripts\Engine.lua" />
+    <None Include="Resources\Prefabs\Turrets\BasicTurret.prefab" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />

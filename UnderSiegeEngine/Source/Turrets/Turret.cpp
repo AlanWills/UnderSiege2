@@ -6,6 +6,8 @@
 #include "Turrets/TurretController.h"
 #include "Animation/Animator.h"
 #include "Bullets/Bullet.h"
+#include "Rendering/SpriteRenderer.h"
+#include "Animation/Animator.h"
 
 using namespace CelesteEngine::Resources;
 
@@ -16,10 +18,12 @@ namespace US
 
   //------------------------------------------------------------------------------------------------
   Turret::Turret() :
-    m_damage(createValueField<int>("damage", 0)),
+    m_damage(createValueField<float>("damage", 0)),
     m_fireRate(createValueField<float>("fire_rate", 1)),
-    m_bulletAsset(createReferenceField<Path>("bullet")),
-    m_turretPrefab(createReferenceField<Path>("turret_prefab"))
+    m_turretSprite(createReferenceField<Path>("turret_sprite")),
+    m_turretSpriteSheetDimensions(createReferenceField<glm::uvec2>("turret_sprite_sheet_dimensions")),
+    m_turretPrefab(createReferenceField<Path>("turret_prefab")),
+    m_bulletAsset(createReferenceField<Path>("bullet"))
   {
   }
 
@@ -50,6 +54,8 @@ namespace US
 
     Handle<GameObject> gameObject = prefab->instantiate(screen);
     gameObject->findComponent<TurretController>()->setTurret(this);
+    gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(getTurretSprite());
+    gameObject->findComponent<Animation::Animator>()->setSpriteSheetDimensions(getTurretSpriteSheetDimensions());
 
     return gameObject;
   }

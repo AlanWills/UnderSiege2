@@ -182,10 +182,7 @@
       </SubType>
     </None>
     <None Include="Resources\Prefabs\Ships\EnemyShip.prefab" />
-    <None Include="Resources\Prefabs\Turrets\BasicTurret.prefab">
-      <SubType>
-      </SubType>
-    </None>
+    <None Include="Resources\Prefabs\Turrets\BasicTurret.prefab" />
     <None Include="Resources\Scripts\Core\FileSystem\Path.lua" />
     <None Include="Resources\Scripts\DataConverters\Animation\AnimatorDataConverter.lua" />
     <None Include="Resources\Scripts\DataConverters\DataConverters.lua" />
