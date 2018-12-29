@@ -2,7 +2,7 @@
 
 #include "UnderSiegeEngineDllExport.h"
 #include "FileSystem/Path.h"
-#include "Ships/ShipManager.h"
+#include "Ships/PlayerShip.h"
 
 
 namespace CelesteEngine
@@ -23,7 +23,6 @@ namespace US
       static Level* current() { return m_current.get(); }
       void makeCurrent();
 
-      ShipManager* getShipManager() const { return m_shipManager; }
       Ship* getPlayerShip() const { return m_playerShip.get(); }
 
       const Path& getScreenFilePath() const { return m_screenFilePath->getValue(); }
@@ -32,18 +31,14 @@ namespace US
     private:
       typedef ScriptableObject Inherited;
 
-      // Ensure we are forced through the singleton
-      Level();
-
       void setBackground() const;
       void setPlayer() const; 
 
       static std::unique_ptr<Level> m_current;
 
       Handle<Screen> m_screen;
-      std::unique_ptr<Ship> m_playerShip;
+      std::unique_ptr<PlayerShip> m_playerShip;
 
-      ShipManager* m_shipManager;
       ReferenceField<Path>* m_screenFilePath;
       ReferenceField<Path>* m_backgroundFilePath;
       ReferenceField<glm::vec2>* m_playerSpawnPosition;

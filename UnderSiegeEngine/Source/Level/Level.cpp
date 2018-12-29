@@ -7,6 +7,7 @@
 #include "Registries/ScriptableObjectRegistry.h"
 #include "Serialization/MathsSerializers.h"
 #include "Deserialization/MathsDeserializers.h"
+#include "Ships/EnemyShip.h"
 
 
 namespace US
@@ -19,7 +20,6 @@ namespace US
   Level::Level() :
     Inherited(),
     m_screen(),
-    m_shipManager(createScriptableObject<ShipManager>("Ship Manager")),
     m_playerShip(),
     m_screenFilePath(createReferenceField("screen_file_path", Path(""))),
     m_backgroundFilePath(createReferenceField("background_file_path", Path(""))),
@@ -45,7 +45,7 @@ namespace US
       // Now load the current player ship configuration
       m_current->setPlayer();
 
-      Ship* enemy = ScriptableObject::load<Ship>(Path("Data", "Enemies", "Fiirkan.asset"));
+      EnemyShip* enemy = ScriptableObject::load<EnemyShip>(Path("Data", "Enemies", "Fiirkan.asset"));
       Handle<GameObject> enemyGameObject = enemy->create(m_current->m_screen);
       enemyGameObject->getTransform()->setTranslation(100, getViewportDimensions().y * 0.5f);
     }
@@ -64,7 +64,7 @@ namespace US
   //------------------------------------------------------------------------------------------------
   void Level::setPlayer() const
   {
-    m_current->m_playerShip.reset(ScriptableObject::load<Ship>(Path("Data", "Player", "PlayerShip.asset")));
+    m_current->m_playerShip.reset(ScriptableObject::load<PlayerShip>(Path("Data", "Player", "PlayerShip.asset")));
     ASSERT(m_current->m_playerShip.get());
 
     // Create the player game object

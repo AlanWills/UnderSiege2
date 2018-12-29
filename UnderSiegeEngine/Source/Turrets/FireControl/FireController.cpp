@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-#include "Turrets/TurretController.h"
+#include "Turrets/FireControl/FireController.h"
 #include "Objects/GameObject.h"
 #include "Input/InputUtils.h"
 #include "Animation/Animator.h"
@@ -12,23 +12,17 @@
 
 namespace US
 {
-  REGISTER_COMPONENT(TurretController, 10)
-
   //------------------------------------------------------------------------------------------------
-  TurretController::TurretController() :
+  FireController::FireController() :
     m_turret(nullptr),
     m_turretAnimation(),
-    m_currentFireTimer(0)
+    m_currentFireTimer(0),
+    m_isFiring(false)
   {
   }
 
   //------------------------------------------------------------------------------------------------
-  TurretController::~TurretController()
-  {
-  }
-
-  //------------------------------------------------------------------------------------------------
-  void TurretController::onSetGameObject(const Handle<GameObject>& gameObject)
+  void FireController::onSetGameObject(const Handle<GameObject>& gameObject)
   {
     Inherited::onSetGameObject(gameObject);
 
@@ -36,11 +30,11 @@ namespace US
   }
 
   //------------------------------------------------------------------------------------------------
-  void TurretController::onHandleInput()
+  void FireController::onUpdate(float elapsedGameTime)
   {
-    Inherited::onHandleInput();
+    Inherited::onUpdate(elapsedGameTime);
 
-    if (Input::isKeyPressed(GLFW_KEY_SPACE))
+    if (m_isFiring)
     {
       m_turretAnimation->play();
 
@@ -58,6 +52,10 @@ namespace US
 
         m_currentFireTimer = 0;
       }
+      else
+      {
+        m_currentFireTimer += elapsedGameTime;
+      }
     }
     else
     {
@@ -67,20 +65,13 @@ namespace US
   }
 
   //------------------------------------------------------------------------------------------------
-  void TurretController::onUpdate(float elapsedGameTime)
-  {
-    Inherited::onUpdate(elapsedGameTime);
-
-    m_currentFireTimer += elapsedGameTime;
-  }
-
-  //------------------------------------------------------------------------------------------------
-  void TurretController::onDeath()
+  void FireController::onDeath()
   {
     Inherited::onDeath();
 
     m_turret = nullptr;
     m_turretAnimation.reset();
     m_currentFireTimer = 0;
+    m_isFiring = false;
   }
 }

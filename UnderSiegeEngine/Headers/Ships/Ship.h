@@ -17,8 +17,6 @@ namespace US
 
   class UnderSiegeEngineDllExport Ship : public CelesteEngine::ScriptableObject
   {
-    DECLARE_SCRIPTABLE_OBJECT(Ship)
-
     public:
       Ship();
 
@@ -31,6 +29,8 @@ namespace US
 
     protected:
       bool doDeserialize(const tinyxml2::XMLElement* element) override;
+
+      virtual void onCreate(const Handle<GameObject>& gameObject) const = 0;
 
     private:
       HandleField<Resources::Texture2D>* m_texture;

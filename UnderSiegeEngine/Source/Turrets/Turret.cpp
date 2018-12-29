@@ -1,9 +1,9 @@
 #include "stdafx.h"
 
 #include "Turrets/Turret.h"
+#include "Turrets/FireControl/FireController.h"
 #include "Registries/ScriptableObjectRegistry.h"
 #include "Objects/GameObject.h"
-#include "Turrets/TurretController.h"
 #include "Animation/Animator.h"
 #include "Bullets/Bullet.h"
 #include "Rendering/SpriteRenderer.h"
@@ -53,7 +53,6 @@ namespace US
     }
 
     Handle<GameObject> gameObject = prefab->instantiate(screen);
-    gameObject->findComponent<TurretController>()->setTurret(this);
     gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(getTurretSprite());
     gameObject->findComponent<Animation::Animator>()->setSpriteSheetDimensions(getTurretSpriteSheetDimensions());
 

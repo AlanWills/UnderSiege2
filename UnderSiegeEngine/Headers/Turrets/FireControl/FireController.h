@@ -16,19 +16,20 @@ namespace US
 {
   class Turret;
 
-  class UnderSiegeEngineDllExport TurretController : public CelesteEngine::Script
+  class UnderSiegeEngineDllExport FireController : public CelesteEngine::Script
   {
-    DECLARE_SCRIPT(TurretController)
-
     public:
+      FireController();
+
       const Turret* getTurret() const { return m_turret; }
       void setTurret(const Turret* turret) { m_turret = turret; }
 
     protected:
       void onSetGameObject(const Handle<GameObject>& gameObject) override;
-      void onHandleInput() override;
       void onUpdate(float elapsedGameTime) override;
       void onDeath() override;
+
+      void setIsFiring(bool isFiring) { m_isFiring = isFiring; }
 
     private:
       using Inherited = CelesteEngine::Script;
@@ -36,5 +37,6 @@ namespace US
       const Turret* m_turret;
       Handle<Animation::Animator> m_turretAnimation;
       float m_currentFireTimer;
+      bool m_isFiring;
   };
 }

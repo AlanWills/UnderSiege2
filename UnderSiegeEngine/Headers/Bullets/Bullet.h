@@ -13,8 +13,6 @@ namespace US
     DECLARE_SCRIPTABLE_OBJECT(Bullet)
 
     public:
-      Bullet();
-
       float getSpeed() const { return m_speed->getValue(); }
       float getDamage() const { return m_damage->getValue(); }
 

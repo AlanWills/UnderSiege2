@@ -17,8 +17,6 @@ using namespace CelesteEngine::Resources;
 
 namespace US
 {
-  REGISTER_SCRIPTABLE_OBJECT(Ship)
-
   //------------------------------------------------------------------------------------------------
   Ship::Ship() :
     m_texture(createHandleField<Resources::Texture2D>("texture")),
@@ -74,6 +72,7 @@ namespace US
     }
 
     Handle<GameObject> gameObject = prefab->instantiate(screen);
+    gameObject->findComponent<Physics::RectangleCollider>()->setDimensions(getTexture()->getDimensions());
     gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(getTexture());
     gameObject->findComponent<ShipController>()->setShip(this);
 
@@ -89,9 +88,7 @@ namespace US
       shieldGameObject->setParent(gameObject);
     }
 
-    const Handle<Physics::RectangleCollider>& collider = gameObject->findComponent<Physics::RectangleCollider>();
-    collider->setDimensions(getTexture()->getDimensions());
-
+    onCreate(gameObject);
     return gameObject;
   }
 

@@ -13,8 +13,6 @@ namespace US
     DECLARE_SCRIPTABLE_OBJECT(Shield)
 
     public:
-      Shield();
-
   	  const Handle<Resources::Texture2D>& getTexture() const { return m_texture->getValue(); }
       float getShieldStrength() const { return m_strength->getValue(); }
 
