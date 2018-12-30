@@ -8,6 +8,7 @@
 #include "Serialization/MathsSerializers.h"
 #include "Deserialization/MathsDeserializers.h"
 #include "Ships/EnemyShip.h"
+#include "UI/GUI.h"
 
 
 namespace US
@@ -52,6 +53,9 @@ namespace US
 
       // Add enemy to ship manager
       m_current->m_shipManager->addShip(enemy);
+
+      // Set up GUI
+      UI::GUI::instance().setup(m_current);
     }
   }
 

@@ -25,6 +25,7 @@ namespace US
       void makeCurrent();
 
       ShipManager* getShipManager() const { return m_shipManager; }
+      const Handle<Screen>& getScreen() const { return m_screen; }
       Ship* getPlayerShip() const { return m_playerShip.get(); }
 
       const Path& getScreenFilePath() const { return m_screenFilePath->getValue(); }

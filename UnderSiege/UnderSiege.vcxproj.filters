@@ -36,6 +36,8 @@
     <None Include="Resources\Scripts\DataConverters\DataConverters.lua" />
     <None Include="Resources\Scripts\Engine.lua" />
     <None Include="Resources\Prefabs\Turrets\BasicTurret.prefab" />
+    <None Include="Resources\Prefabs\UI\TurretGUIManager.prefab" />
+    <None Include="Resources\Prefabs\UI\TurretGUI.prefab" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />

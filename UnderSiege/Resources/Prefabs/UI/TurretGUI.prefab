@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Prefab>
+    <GameObjects>
+      <GameObject layer="GUI" name="TurretGUIBackground">
+        <Components>
+          <SpriteRenderer size="64,64" sprite="Textures\UI\Rectangle.png" colour="1" opacity="0.5"/>
+        </Components>
+      </GameObject>
+      <GameObject layer="GUI" name="TurretSprite" parent="TurretGUIBackground">
+        <Components>
+          <SpriteRenderer/>
+        </Components>
+      </GameObject>
+    </GameObjects>
+  </Prefab>
+</Root>
