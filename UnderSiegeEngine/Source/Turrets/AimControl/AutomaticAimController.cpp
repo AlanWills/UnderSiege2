@@ -29,12 +29,12 @@ namespace US
 
     if (m_targetShip.is_null())
     {
-      std::vector<Handle<GameObject>> targetShips;
+      std::vector<Ship*> targetShips;
       Level::current()->getShipManager()->getShipsOfType(m_targetType, targetShips);
 
       if (!targetShips.empty())
       {
-        m_targetShip = targetShips.front();
+        m_targetShip = targetShips.front()->getGameObject();
       }
     }
     else

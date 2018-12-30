@@ -50,7 +50,8 @@ namespace US
       Handle<GameObject> enemyGameObject = enemy->create(m_current->m_screen);
       enemyGameObject->getTransform()->setTranslation(100, getViewportDimensions().y * 0.5f);
 
-      m_current->m_shipManager->addShip(enemyGameObject);
+      // Add enemy to ship manager
+      m_current->m_shipManager->addShip(enemy);
     }
   }
 
@@ -69,7 +70,7 @@ namespace US
   {
     if (m_current->m_playerShip != nullptr)
     {
-      //m_current->m_shipManager->removeShip(m_current->m_playerShip->getGameObject());
+      m_current->m_shipManager->removeShip(m_current->m_playerShip.get());
     }
 
     m_current->m_playerShip.reset(ScriptableObject::load<PlayerShip>(Path("Data", "Player", "PlayerShip.asset")));
@@ -83,6 +84,6 @@ namespace US
     playerShip->getTransform()->setTranslation(m_current->m_playerSpawnPosition->getValue());
 
     // Add to ship manager
-    m_current->m_shipManager->addShip(playerShip);
+    m_current->m_shipManager->addShip(m_current->m_playerShip.get());
   }
 }

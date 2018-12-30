@@ -25,13 +25,20 @@ namespace US
     m_texture(createHandleField<Resources::Texture2D>("texture")),
     m_colour(createReferenceField("colour", glm::vec3(1))),
     m_shieldPrefab(createReferenceField<Path>("shield_prefab")),
+    m_gameObject(),
     m_ship(nullptr)
   {
   }
 
   //------------------------------------------------------------------------------------------------
-  Handle<GameObject> Shield::create(const Handle<Screen>& screen) const
+  Handle<GameObject> Shield::create(const Handle<Screen>& screen, const Ship* ship)
   {
+    if (!m_gameObject.is_null())
+    {
+      ASSERT_FAIL();
+      return m_gameObject;
+    }
+
     const Handle<Prefab>& prefab = getResourceManager()->load<Prefab>(m_shieldPrefab->getValue());
     if (prefab.is_null())
     {
@@ -39,15 +46,16 @@ namespace US
       return Handle<GameObject>();
     }
 
-    Handle<GameObject> gameObject = prefab->instantiate(screen);
-    gameObject->findComponent<ShieldController>()->setShield(this);
+    m_ship = ship;
+    m_gameObject = prefab->instantiate(screen);
+    m_gameObject->findComponent<ShieldController>()->setShield(this);
 
-    Handle<SpriteRenderer> spriteRenderer = gameObject->findComponent<Rendering::SpriteRenderer>();
+    Handle<SpriteRenderer> spriteRenderer = m_gameObject->findComponent<Rendering::SpriteRenderer>();
     spriteRenderer->setTexture(m_texture->getValue());
 
-    Handle<Physics::EllipseCollider> ellipseCollider = gameObject->findComponent<Physics::EllipseCollider>();
+    Handle<Physics::EllipseCollider> ellipseCollider = m_gameObject->findComponent<Physics::EllipseCollider>();
     ellipseCollider->setDimensions(spriteRenderer->getDimensions());
 
-    return gameObject;
+    return m_gameObject;
   }
 }

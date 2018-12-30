@@ -23,12 +23,13 @@ namespace US
 
       const Handle<Resources::Texture2D>& getTexture() const { return m_texture->getValue(); }
       float getHullStrength() const { return m_hullStrength->getValue(); }
+      const Handle<GameObject>& getGameObject() const { return m_gameObject; }
       const std::vector<Turret*>& getTurrets() const { return m_turrets; }
 
       ShipType getShipType() const { return m_shipType; }
       void setShipType(ShipType shipType) { m_shipType = shipType; }
 
-      Handle<GameObject> create(const Handle<Screen>& screen) const;
+      Handle<GameObject> create(const Handle<Screen>& screen);
       Handle<GameObject> createDeathAnimation(const Handle<Screen>& screen) const;
 
     protected:
@@ -43,6 +44,7 @@ namespace US
       ReferenceField<Path>* m_shipPrefab;
       ReferenceField<Path>* m_deathAnimationPrefab;
 
+      Handle<GameObject> m_gameObject;
       ShipType m_shipType;
 	    Shield* m_shield;
       std::vector<Turret*> m_turrets;

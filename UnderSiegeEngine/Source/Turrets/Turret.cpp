@@ -23,7 +23,10 @@ namespace US
     m_turretSprite(createReferenceField<Path>("turret_sprite")),
     m_turretSpriteSheetDimensions(createReferenceField<glm::uvec2>("turret_sprite_sheet_dimensions")),
     m_turretPrefab(createReferenceField<Path>("turret_prefab")),
-    m_bulletAsset(createReferenceField<Path>("bullet"))
+    m_bulletAsset(createReferenceField<Path>("bullet")),
+    m_gameObject(),
+    m_ship(),
+    m_bullet()
   {
   }
 
@@ -43,8 +46,14 @@ namespace US
   }
 
   //------------------------------------------------------------------------------------------------
-  Handle<GameObject> Turret::create(const Handle<Screen>& screen) const
+  Handle<GameObject> Turret::create(const Handle<Screen>& screen, const Ship* ship)
   {
+    if (!m_gameObject.is_null())
+    {
+      ASSERT_FAIL();
+      return m_gameObject;
+    }
+
     const Handle<Prefab>& prefab = getResourceManager()->load<Prefab>(m_turretPrefab->getValue());
     if (prefab.is_null())
     {
@@ -52,10 +61,11 @@ namespace US
       return Handle<GameObject>();
     }
 
-    Handle<GameObject> gameObject = prefab->instantiate(screen);
-    gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(getTurretSprite());
-    gameObject->findComponent<Animation::Animator>()->setSpriteSheetDimensions(getTurretSpriteSheetDimensions());
+    m_ship = ship;
+    m_gameObject = prefab->instantiate(screen);
+    m_gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(getTurretSprite());
+    m_gameObject->findComponent<Animation::Animator>()->setSpriteSheetDimensions(getTurretSpriteSheetDimensions());
 
-    return gameObject;
+    return m_gameObject;
   }
 }

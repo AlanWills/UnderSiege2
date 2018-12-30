@@ -17,10 +17,10 @@ namespace US
   }
 
   //------------------------------------------------------------------------------------------------
-  void ShipManager::getShipsOfType(ShipType shipType, std::vector<Handle<GameObject>>& output)
+  void ShipManager::getShipsOfType(ShipType shipType, std::vector<Ship*>& output)
   {
-    std::copy_if(m_ships.begin(), m_ships.end(), std::back_inserter(output), [&](Handle<GameObject> ship) {
-      return ship->findComponent<ShipController>()->getShip()->getShipType() == shipType;
+    std::copy_if(m_ships.begin(), m_ships.end(), std::back_inserter(output), [&](Ship* ship) {
+      return ship->getShipType() == shipType;
     });
   }
 }

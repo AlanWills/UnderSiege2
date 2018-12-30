@@ -15,11 +15,10 @@ namespace US
     public:
   	  const Handle<Resources::Texture2D>& getTexture() const { return m_texture->getValue(); }
       float getShieldStrength() const { return m_strength->getValue(); }
-
+      const Handle<GameObject>& getGameObject() const { return m_gameObject; }
       const Ship* getShip() const { return m_ship; }
-      void setShip(const Ship* ship) { m_ship = ship; }
 
-      Handle<GameObject> create(const Handle<Screen>& screen) const;
+      Handle<GameObject> create(const Handle<Screen>& screen, const Ship* ship);
 
     private:
       ValueField<float>* m_strength;
@@ -28,6 +27,7 @@ namespace US
       ReferenceField<glm::vec3>* m_colour;
       ReferenceField<Path>* m_shieldPrefab;
 
+      Handle<GameObject> m_gameObject;
       const Ship* m_ship;
   };
 }

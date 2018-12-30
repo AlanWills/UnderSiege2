@@ -20,11 +20,10 @@ namespace US
       const Path& getTurretSprite() const { return m_turretSprite->getValue(); }
       const glm::uvec2& getTurretSpriteSheetDimensions() const { return m_turretSpriteSheetDimensions->getValue(); }
       const Bullet* getBullet() const { return m_bullet; }
-
+      const Handle<GameObject>& getGameObject() const { return m_gameObject; }
       const Ship* getShip() const { return m_ship; }
-      void setShip(const Ship* ship) { m_ship = ship; }
 
-      Handle<GameObject> create(const Handle<Screen>& screen) const;
+      Handle<GameObject> create(const Handle<Screen>& screen, const Ship* ship);
 
     protected:
       bool doDeserialize(const tinyxml2::XMLElement* element) override;
@@ -37,6 +36,7 @@ namespace US
       ReferenceField<Path>* m_turretPrefab;
       ReferenceField<Path>* m_bulletAsset;
     
+      Handle<GameObject> m_gameObject;
       const Ship* m_ship;
       Bullet* m_bullet;
   };
