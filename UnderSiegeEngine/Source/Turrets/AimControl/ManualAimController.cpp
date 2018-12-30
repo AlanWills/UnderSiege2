@@ -6,6 +6,7 @@
 #include "Input/Mouse.h"
 #include "Viewport/Camera.h"
 #include "Screens/Screen.h"
+#include "Maths/MathsUtils.h"
 
 
 namespace US
@@ -33,9 +34,7 @@ namespace US
 
     float mouseWorldSpaceX = mouseScreenPosition.x + cameraWorldTranslation.x;
     float mouseWorldSpaceY = mouseScreenPosition.y + cameraWorldTranslation.y;
-    float diffX = mouseWorldSpaceX - worldTranslation.x;
-    float diffY = mouseWorldSpaceY - worldTranslation.y;
-    float angle = std::atan2f(diffX, diffY);
+    float angle = Maths::lookAt(worldTranslation, glm::vec2(mouseWorldSpaceX, mouseWorldSpaceY));
 
     getTransform()->setWorldRotation(angle);
   }

@@ -3,6 +3,7 @@
 #include "UnderSiegeEngineDllExport.h"
 #include "Objects/ScriptableObject.h"
 #include "Resources/2D/Texture2D.h"
+#include "Ships/ShipEnums.h"
 
 
 namespace CelesteEngine
@@ -24,6 +25,9 @@ namespace US
       float getHullStrength() const { return m_hullStrength->getValue(); }
       const std::vector<Turret*>& getTurrets() const { return m_turrets; }
 
+      ShipType getShipType() const { return m_shipType; }
+      void setShipType(ShipType shipType) { m_shipType = shipType; }
+
       Handle<GameObject> create(const Handle<Screen>& screen) const;
       Handle<GameObject> createDeathAnimation(const Handle<Screen>& screen) const;
 
@@ -39,6 +43,7 @@ namespace US
       ReferenceField<Path>* m_shipPrefab;
       ReferenceField<Path>* m_deathAnimationPrefab;
 
+      ShipType m_shipType;
 	    Shield* m_shield;
       std::vector<Turret*> m_turrets;
   };

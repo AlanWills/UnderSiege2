@@ -10,9 +10,7 @@
           <ShipController/>
           <KeyboardTransformer
             translate_up_key="W"
-            translate_left_key="A"
             translate_down_key="S"
-            translate_right_key="D"
             rotate_left_key="Q"
             rotate_right_key="E"
             translation_speed="400"

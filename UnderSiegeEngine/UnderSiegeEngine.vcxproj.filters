@@ -89,6 +89,12 @@
     <ClInclude Include="Headers\Turrets\FireControl\AutomaticFireController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Ships\ShipManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Ships\ShipEnums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\UI\OptionsScreenUIManager.cpp">
@@ -155,6 +161,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\Turrets\FireControl\AutomaticFireController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Ships\ShipManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

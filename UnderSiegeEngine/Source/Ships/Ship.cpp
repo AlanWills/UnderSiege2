@@ -24,7 +24,9 @@ namespace US
     m_shieldAsset(createReferenceField<Path>("shield")),
     m_shipPrefab(createReferenceField<Path>("ship_prefab")),
     m_deathAnimationPrefab(createReferenceField<Path>("death_animation_prefab")),
-	  m_shield(nullptr)
+    m_shipType(ShipType::kPlayer),
+	  m_shield(nullptr),
+    m_turrets()
   {
   }
 

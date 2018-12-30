@@ -19,6 +19,7 @@ namespace US
   //------------------------------------------------------------------------------------------------
   Level::Level() :
     Inherited(),
+    m_shipManager(createScriptableObject<ShipManager>("ShipManager")),
     m_screen(),
     m_playerShip(),
     m_screenFilePath(createReferenceField("screen_file_path", Path(""))),
@@ -48,6 +49,8 @@ namespace US
       EnemyShip* enemy = ScriptableObject::load<EnemyShip>(Path("Data", "Enemies", "Fiirkan.asset"));
       Handle<GameObject> enemyGameObject = enemy->create(m_current->m_screen);
       enemyGameObject->getTransform()->setTranslation(100, getViewportDimensions().y * 0.5f);
+
+      m_current->m_shipManager->addShip(enemyGameObject);
     }
   }
 
@@ -64,6 +67,11 @@ namespace US
   //------------------------------------------------------------------------------------------------
   void Level::setPlayer() const
   {
+    if (m_current->m_playerShip != nullptr)
+    {
+      //m_current->m_shipManager->removeShip(m_current->m_playerShip->getGameObject());
+    }
+
     m_current->m_playerShip.reset(ScriptableObject::load<PlayerShip>(Path("Data", "Player", "PlayerShip.asset")));
     ASSERT(m_current->m_playerShip.get());
 
@@ -73,5 +81,8 @@ namespace US
 
     // Set the player's starting location
     playerShip->getTransform()->setTranslation(m_current->m_playerSpawnPosition->getValue());
+
+    // Add to ship manager
+    m_current->m_shipManager->addShip(playerShip);
   }
 }

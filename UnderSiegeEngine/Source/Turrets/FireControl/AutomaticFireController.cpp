@@ -23,5 +23,7 @@ namespace US
   void AutomaticFireController::onHandleInput()
   {
     Inherited::onHandleInput();
+
+    //setIsFiring(true);
   }
 }

@@ -2,6 +2,8 @@
 
 #include "Turrets/AimControl/AutomaticAimController.h"
 #include "Objects/GameObject.h"
+#include "Level/Level.h"
+#include "Maths/MathsUtils.h"
 
 
 namespace US
@@ -9,7 +11,9 @@ namespace US
   REGISTER_SCRIPT(AutomaticAimController, 10)
 
   //------------------------------------------------------------------------------------------------
-  AutomaticAimController::AutomaticAimController()
+  AutomaticAimController::AutomaticAimController() :
+    m_targetType(ShipType::kPlayer),
+    m_targetShip()
   {
   }
 
@@ -22,5 +26,20 @@ namespace US
   void AutomaticAimController::onUpdate(float elapsedGameTime)
   {
     Inherited::onUpdate(elapsedGameTime);
+
+    if (m_targetShip.is_null())
+    {
+      std::vector<Handle<GameObject>> targetShips;
+      Level::current()->getShipManager()->getShipsOfType(m_targetType, targetShips);
+
+      if (!targetShips.empty())
+      {
+        m_targetShip = targetShips.front();
+      }
+    }
+    else
+    {
+      getTransform()->setWorldRotation(Maths::lookAt(getTransform()->getWorldTranslation(), m_targetShip->getTransform()->getWorldTranslation()));
+    }
   }
 }

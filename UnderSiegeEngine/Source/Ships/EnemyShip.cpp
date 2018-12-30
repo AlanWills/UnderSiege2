@@ -13,6 +13,7 @@ namespace US
   //------------------------------------------------------------------------------------------------
   EnemyShip::EnemyShip()
   {
+    setShipType(ShipType::kEnemy);
   }
 
   //------------------------------------------------------------------------------------------------
@@ -27,7 +28,7 @@ namespace US
       {
         Turret* turret = getTurrets()[turretCounter++];
 
-        turretGameObject->addComponent<AutomaticAimController>();
+        turretGameObject->addComponent<AutomaticAimController>()->setTargetType(ShipType::kPlayer);
         turretGameObject->addComponent<AutomaticFireController>()->setTurret(turret);
       }
     }
