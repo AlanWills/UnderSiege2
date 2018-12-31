@@ -104,6 +104,9 @@
     <ClInclude Include="Headers\UI\TurretGUIs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Debug\DebugConsole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\UI\OptionsScreenUIManager.cpp">
@@ -182,6 +185,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\UI\TurretGUIs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Debug\DebugConsole.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
