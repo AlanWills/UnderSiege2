@@ -104,7 +104,7 @@
     <ClInclude Include="Headers\UI\TurretGUIs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\Debug\DebugConsole.h">
+    <ClInclude Include="Headers\Debugging\DebugConsole.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -187,7 +187,7 @@
     <ClCompile Include="Source\UI\TurretGUIs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Debug\DebugConsole.cpp">
+    <ClCompile Include="Source\Debugging\DebugConsole.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
