@@ -26,7 +26,7 @@ namespace US
     }
 
     //------------------------------------------------------------------------------------------------
-    void GUI::setup(const std::unique_ptr<Level>& level)
+    void GUI::setup(const Level* level)
     {
       const Handle<Prefab>& prefab = getResourceManager()->load<Prefab>(Path("Prefabs", "UI", "TurretGUIManager.prefab"));
       if (prefab.is_null())
@@ -36,6 +36,13 @@ namespace US
       }
 
       m_turretGUIs->setup(prefab->instantiate(level->getScreen()), level->getPlayerShip()->getTurrets());
+    }
+
+    //------------------------------------------------------------------------------------------------
+    void GUI::cleanup()
+    {
+      // Destroy all gui objects here
+      m_turretGUIs->getGameObject()->die();
     }
   }
 }

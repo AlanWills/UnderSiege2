@@ -17,7 +17,8 @@ namespace US
       public:
         static GUI& instance();
 
-        void setup(const std::unique_ptr<Level>& level);
+        void setup(const Level* level);
+        void cleanup();
 
       private:
         // Private to force everyone through the singleton
@@ -26,7 +27,6 @@ namespace US
         GUI(const GUI&) = delete;
         GUI& operator=(const GUI&) = delete;
 
-        std::unique_ptr<GUI> m_current;
         std::unique_ptr<TurretGUIs> m_turretGUIs;
     };
   }

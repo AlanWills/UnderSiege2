@@ -7,5 +7,6 @@ setMasterVolume(settings:getMasterVolume())
 setMusicVolume(settings:getMusicVolume())
 setSFXVolume(settings:getSFXVolume())
 
-loadScreen(path.combine(getResourcesDirectory(), "Data", "Screens", "PersistentStartupAndMainMenu.asset"));
-loadScreen(path.combine(getResourcesDirectory(), "Data", "Screens", "SplashScreen.asset"));
+loadScreen(path.combine(getResourcesDirectory(), "Data", "Screens", "DebugTools.asset"))
+loadScreen(path.combine(getResourcesDirectory(), "Data", "Screens", "PersistentStartupAndMainMenu.asset"))
+loadScreen(path.combine(getResourcesDirectory(), "Data", "Screens", "SplashScreen.asset"))

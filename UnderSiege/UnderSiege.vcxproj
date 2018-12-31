@@ -174,8 +174,16 @@
     <None Include="Resources\Audio\Music\TheSwarmApproaches.wma" />
     <None Include="Resources\Data\Bullets\SmallBullet.asset" />
     <None Include="Resources\Data\Enemies\Fiirkan.asset" />
+    <None Include="Resources\Data\Screens\DebugTools.asset">
+      <SubType>
+      </SubType>
+    </None>
     <None Include="Resources\Data\Shields\BasicShield.asset" />
     <None Include="Resources\Data\Turrets\BasicTurret.asset" />
+    <None Include="Resources\Prefabs\Debugging\DebugConsole.prefab">
+      <SubType>
+      </SubType>
+    </None>
     <None Include="Resources\Prefabs\Shields\BasicShield.prefab" />
     <None Include="Resources\Prefabs\Bullets\SmallBullet.prefab">
       <SubType>
