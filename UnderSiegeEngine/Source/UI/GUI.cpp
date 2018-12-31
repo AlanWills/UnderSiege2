@@ -14,7 +14,7 @@ namespace US
   {
     //------------------------------------------------------------------------------------------------
     GUI::GUI() :
-      m_turretGUIManager(ScriptableObject::create<TurretGUIManager>("TurretGUIManager"))
+      m_turretGUIs(ScriptableObject::create<TurretGUIs>("TurretGUIs"))
     {
     }
 
@@ -35,7 +35,7 @@ namespace US
         return;
       }
 
-      m_turretGUIManager->setup(prefab->instantiate(level->getScreen()), level->getPlayerShip()->getTurrets());
+      m_turretGUIs->setup(prefab->instantiate(level->getScreen()), level->getPlayerShip()->getTurrets());
     }
   }
 }

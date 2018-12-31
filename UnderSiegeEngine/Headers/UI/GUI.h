@@ -1,7 +1,7 @@
 #pragma once
 
 #include "UnderSiegeEngineDllExport.h"
-#include "UI/TurretGUIManager.h"
+#include "UI/TurretGUIs.h"
 
 #include <memory>
 
@@ -27,7 +27,7 @@ namespace US
         GUI& operator=(const GUI&) = delete;
 
         std::unique_ptr<GUI> m_current;
-        std::unique_ptr<TurretGUIManager> m_turretGUIManager;
+        std::unique_ptr<TurretGUIs> m_turretGUIs;
     };
   }
 }

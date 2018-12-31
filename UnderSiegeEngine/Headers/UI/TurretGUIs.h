@@ -15,9 +15,9 @@ namespace US
 
   namespace UI
   {
-    class UnderSiegeEngineDllExport TurretGUIManager : public CelesteEngine::ScriptableObject
+    class UnderSiegeEngineDllExport TurretGUIs : public CelesteEngine::ScriptableObject
     {
-      DECLARE_SCRIPTABLE_OBJECT(TurretGUIManager)
+      DECLARE_SCRIPTABLE_OBJECT(TurretGUIs)
 
       public:
         const Handle<GameObject>& getGameObject() const { return m_gameObject; }

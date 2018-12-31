@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-#include "UI/TurretGUIManager.h"
+#include "UI/TurretGUIs.h"
 #include "UI/TurretGUI.h"
 #include "UI/StackPanel.h"
 #include "Registries/ScriptableObjectRegistry.h"
@@ -14,16 +14,16 @@ namespace US
 {
   namespace UI
   {
-    REGISTER_SCRIPTABLE_OBJECT(TurretGUIManager)
+    REGISTER_SCRIPTABLE_OBJECT(TurretGUIs)
 
     //------------------------------------------------------------------------------------------------
-    TurretGUIManager::TurretGUIManager() :
+    TurretGUIs::TurretGUIs() :
       m_gameObject()
     {
     }
 
     //------------------------------------------------------------------------------------------------
-    void TurretGUIManager::setup(const Handle<GameObject>& gameObject, const std::vector<Turret*>& turrets)
+    void TurretGUIs::setup(const Handle<GameObject>& gameObject, const std::vector<Turret*>& turrets)
     {
       m_gameObject = gameObject;
 

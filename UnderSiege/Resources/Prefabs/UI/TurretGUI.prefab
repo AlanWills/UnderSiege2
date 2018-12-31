@@ -4,12 +4,14 @@
     <GameObjects>
       <GameObject layer="GUI" name="TurretGUIBackground">
         <Components>
-          <SpriteRenderer size="64,64" sprite="Textures\UI\Rectangle.png" colour="1" opacity="0.5"/>
+          <SpriteRenderer size="0.1%,0.1%" sprite="Textures\UI\Rectangle.png" colour="1" opacity="0.5" preserve_aspect_ratio="true"/>
+          <RectangleCollider dimensions="0.1%,0.1%" trigger="true"/>
+          <MouseInteractionHandler/>
         </Components>
       </GameObject>
       <GameObject layer="GUI" name="TurretSprite" parent="TurretGUIBackground">
         <Components>
-          <SpriteRenderer/>
+          <SpriteRenderer size="0.05%,0.05%"/>
         </Components>
       </GameObject>
     </GameObjects>

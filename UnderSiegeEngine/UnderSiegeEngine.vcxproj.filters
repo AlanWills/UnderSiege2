@@ -95,13 +95,13 @@
     <ClInclude Include="Headers\Ships\ShipEnums.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\UI\TurretGUIManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Headers\UI\GUI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Headers\UI\TurretGUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\UI\TurretGUIs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -178,10 +178,10 @@
     <ClCompile Include="Source\UI\GUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\UI\TurretGUIManager.cpp">
+    <ClCompile Include="Source\UI\TurretGUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\UI\TurretGUI.cpp">
+    <ClCompile Include="Source\UI\TurretGUIs.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

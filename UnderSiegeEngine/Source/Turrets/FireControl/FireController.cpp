@@ -34,33 +34,15 @@ namespace US
   {
     Inherited::onUpdate(elapsedGameTime);
 
+    m_currentFireTimer = std::min(m_currentFireTimer + elapsedGameTime, m_turret->getFireRate());
+
     if (m_isFiring)
     {
-      m_turretAnimation->play();
-
-      if (m_currentFireTimer >= m_turret->getFireRate())
-      {
-        const Handle<GameObject>& bullet = m_turret->getBullet()->create(getGameObject()->getOwnerScreen());
-        bullet->getTransform()->setTranslation(getTransform()->getWorldTranslation());
-
-        float worldRotation = getTransform()->getWorldRotation();
-        bullet->getTransform()->setRotation(worldRotation);
-
-        float speed = m_turret->getBullet()->getSpeed();
-        const Handle<Physics::RigidBody2D>& rigidBody = bullet->findComponent<Physics::RigidBody2D>();
-        rigidBody->setLinearVelocity(speed * std::sin(worldRotation), speed * std::cos(worldRotation));
-
-        m_currentFireTimer = 0;
-      }
-      else
-      {
-        m_currentFireTimer += elapsedGameTime;
-      }
+      tryFire();
     }
     else
     {
       m_turretAnimation->pause();
-      m_currentFireTimer = 0;
     }
   }
 
@@ -73,5 +55,26 @@ namespace US
     m_turretAnimation.reset();
     m_currentFireTimer = 0;
     m_isFiring = false;
+  }
+
+  //------------------------------------------------------------------------------------------------
+  void FireController::tryFire()
+  {
+    if (m_currentFireTimer >= m_turret->getFireRate())
+    {
+      m_turretAnimation->play();
+
+      const Handle<GameObject>& bullet = m_turret->getBullet()->create(getGameObject()->getOwnerScreen());
+      bullet->getTransform()->setTranslation(getTransform()->getWorldTranslation());
+
+      float worldRotation = getTransform()->getWorldRotation();
+      bullet->getTransform()->setRotation(worldRotation);
+
+      float speed = m_turret->getBullet()->getSpeed();
+      const Handle<Physics::RigidBody2D>& rigidBody = bullet->findComponent<Physics::RigidBody2D>();
+      rigidBody->setLinearVelocity(speed * std::sin(worldRotation), speed * std::cos(worldRotation));
+
+      m_currentFireTimer = 0;
+    }
   }
 }

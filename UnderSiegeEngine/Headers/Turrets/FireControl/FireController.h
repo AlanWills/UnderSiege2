@@ -24,6 +24,8 @@ namespace US
       const Turret* getTurret() const { return m_turret; }
       void setTurret(const Turret* turret) { m_turret = turret; }
 
+      void tryFire();
+
     protected:
       void onSetGameObject(const Handle<GameObject>& gameObject) override;
       void onUpdate(float elapsedGameTime) override;

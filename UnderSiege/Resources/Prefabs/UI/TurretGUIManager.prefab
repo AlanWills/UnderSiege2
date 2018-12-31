@@ -2,7 +2,7 @@
 <Root>
   <Prefab>
     <GameObjects>
-      <GameObject layer="GUI" name="TurretGUIManager" position="0.5%,32">
+      <GameObject layer="GUI" name="TurretGUIManager" position="0.5%,0.05%">
         <Components>
           <StackPanel orientation="horizontal" horizontal_alignment="centre"/>
         </Components>

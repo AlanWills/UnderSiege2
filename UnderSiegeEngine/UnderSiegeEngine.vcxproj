@@ -191,7 +191,7 @@
     <ClInclude Include="Headers\UI\GUI.h" />
     <ClInclude Include="Headers\UI\OptionsScreenUIManager.h" />
     <ClInclude Include="Headers\UI\TurretGUI.h" />
-    <ClInclude Include="Headers\UI\TurretGUIManager.h" />
+    <ClInclude Include="Headers\UI\TurretGUIs.h" />
     <ClInclude Include="Headers\UnderSiegeEngineDllExport.h" />
     <ClInclude Include="Headers\UnderSiegeGame.h" />
   </ItemGroup>
@@ -220,7 +220,7 @@
     <ClCompile Include="Source\UI\GUI.cpp" />
     <ClCompile Include="Source\UI\OptionsScreenUIManager.cpp" />
     <ClCompile Include="Source\UI\TurretGUI.cpp" />
-    <ClCompile Include="Source\UI\TurretGUIManager.cpp" />
+    <ClCompile Include="Source\UI\TurretGUIs.cpp" />
     <ClCompile Include="Source\UnderSiegeGame.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
