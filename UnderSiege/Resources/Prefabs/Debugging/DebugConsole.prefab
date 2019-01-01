@@ -4,6 +4,7 @@
     <GameObjects>
       <GameObject layer="GUI" name="DebugConsole" Tag="Debug">
         <Components>
+          <KeyboardActivator activation_key="0" deactivation_key="0" mode="Toggle"/>
           <DebugConsole/>
         </Components>
       </GameObject>
