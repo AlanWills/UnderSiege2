@@ -41,6 +41,7 @@
     <None Include="Resources\Prefabs\Debugging\DebugConsole.prefab" />
     <None Include="Resources\Data\Screens\DebugTools.asset" />
     <None Include="Resources\Scripts\DataConverters\Input\KeyboardActivatorDataConverter.lua" />
+    <None Include="Resources\Scripts\DataConverters\Input\KeyboardVisibilityDataConverter.lua" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />

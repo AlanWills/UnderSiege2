@@ -197,6 +197,7 @@
     <None Include="Resources\Scripts\DataConverters\Animation\AnimatorDataConverter.lua" />
     <None Include="Resources\Scripts\DataConverters\DataConverters.lua" />
     <None Include="Resources\Scripts\DataConverters\Input\KeyboardActivatorDataConverter.lua" />
+    <None Include="Resources\Scripts\DataConverters\Input\KeyboardVisibilityDataConverter.lua" />
     <None Include="Resources\Scripts\Game.lua" />
     <None Include="Resources\Scripts\Engine.lua" />
     <None Include="Resources\Shaders\Model.frag" />
