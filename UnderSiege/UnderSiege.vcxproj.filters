@@ -40,6 +40,7 @@
     <None Include="Resources\Prefabs\UI\TurretGUI.prefab" />
     <None Include="Resources\Prefabs\Debugging\DebugConsole.prefab" />
     <None Include="Resources\Data\Screens\DebugTools.asset" />
+    <None Include="Resources\Scripts\DataConverters\Input\KeyboardActivatorDataConverter.lua" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />

@@ -1,2 +1,3 @@
 require "Scripts.DataConverters.Animation.AnimatorDataConverter"
+require "Scripts.DataConverters.Input.KeyboardActivatorDataConverter"
 require "Scripts.DataConverters.Physics.EllipseColliderDataConverter"
