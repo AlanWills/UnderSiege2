@@ -1,4 +1,4 @@
-LuaComponentDataConverter.register("keyboardActivator", 
+LuaComponentDataConverter.register("KeyboardActivator", 
 {
     ["Attributes"] = 
     {

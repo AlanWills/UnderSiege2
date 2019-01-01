@@ -2,9 +2,22 @@
 <Root>
   <Prefab>
     <GameObjects>
-      <GameObject layer="GUI" name="DebugConsole" Tag="Debug">
+      <GameObject layer="GUI" name="ReloadScreenButton" parent="DebugConsole">
+        <Components>
+          <Button text="Reload Screen" font_height="24">
+            <LeftClickCallbacks/>
+          </Button>
+        </Components>
+      </GameObject>
+      <GameObject layer="GUI" name="DebugConsole" Tag="Debug" position="0.5%,0.5%" should_render="false">
         <Components>
           <KeyboardActivator activation_key="0" deactivation_key="0" mode="Toggle"/>
+          <StackPanel orientation="vertical" vertical_alignment="centre" padding="20">
+            <Children>
+              <Child>ReloadScreenButton</Child>
+            </Children>
+          </StackPanel>
+          <SpriteRenderer sprite="Textures\UI\Rectangle.png" colour="0" opacity="0.5" size="1%,1%"/>
           <DebugConsole/>
         </Components>
       </GameObject>

@@ -12,16 +12,17 @@ namespace US
     {
       DECLARE_SCRIPT(DebugConsole)
 
-      protected:
-        void onHandleInput() override;
-
-      private:
-        using Inherited = CelesteEngine::Script;
-
+      public:
         void reloadScreen();
         void reloadPlayer();
         void reloadEnemies();
         void reloadGUI();
+
+      protected:
+        void onSetGameObject(const Handle<GameObject>& gameObject) override;
+
+      private:
+        using Inherited = CelesteEngine::Script;
     };
   }
 }

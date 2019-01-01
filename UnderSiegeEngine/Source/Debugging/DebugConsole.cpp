@@ -7,7 +7,10 @@
 #include "Screens/Loading/ScreenLoader.h"
 #include "Level/Level.h"
 #include "UI/GUI.h"
+#include "UI/Button.h"
 #include "Resources/ResourceManager.h"
+
+using Button = CelesteEngine::UI::Button;
 
 
 namespace US
@@ -27,30 +30,16 @@ namespace US
     }
 
     //------------------------------------------------------------------------------------------------
-    void DebugConsole::onHandleInput()
+    void DebugConsole::onSetGameObject(const Handle<GameObject>& gameObject)
     {
-      Inherited::onHandleInput();
+      Inherited::onSetGameObject(gameObject);
 
-      // Change the DebugConsole prefab to have buttons for this instead
-      if (Input::isKeyPressed(GLFW_KEY_LEFT_CONTROL))
+      const Handle<GameObject>& reloadScreenButton = gameObject->findChildGameObject("ReloadScreenButton");
+      const Handle<Button>& button = reloadScreenButton->findComponent<Button>();
+      button->getMouseInteractionHandler()->getOnLeftButtonClickedEvent().subscribe([](EventArgs& e, const Handle<GameObject>& go) -> void
       {
-        if (Input::isKeyTapped(GLFW_KEY_S))
-        {
-          reloadScreen();
-        }
-        else if (Input::isKeyTapped(GLFW_KEY_G))
-        {
-          reloadGUI();
-        }
-        else if (Input::isKeyTapped(GLFW_KEY_P))
-        {
-          reloadPlayer();
-        }
-        else if (Input::isKeyTapped(GLFW_KEY_E))
-        {
-          reloadEnemies();
-        }
-      }
+        go->getParent()->findComponent<DebugConsole>()->reloadScreen();
+      });
     }
 
     //------------------------------------------------------------------------------------------------
