@@ -18,13 +18,22 @@
       </GameObject>
       <GameObject layer="GUI" name="PlayButton">
         <Components>
-          <Button text="Play" font_height="24">
+          <Button>
             <LeftClickCallbacks>
               <Callback name="KillScreen" arg="PersistentStartupAndMainMenu"/>
               <Callback name="KillOwnerScreen"/>
               <Callback name="LoadLevel" arg="Data\Levels\Level1.asset"/>
             </LeftClickCallbacks>
           </Button>
+        </Components>
+      </GameObject>
+      <GameObject layer="GUI" name="PlayText" parent="PlayButton" position="0,1,0">
+        <Components>
+          <TextRenderer font_height="24">
+            <Lines>
+              <Line>Play</Line>
+            </Lines>
+          </TextRenderer>
         </Components>
       </GameObject>
       <GameObject layer="GUI" name="OptionsButton">
@@ -36,6 +45,15 @@
           </Button>
         </Components>
       </GameObject>
+      <GameObject layer="GUI" name="OptionsText" parent="OptionsButton" position="0,1,0">
+        <Components>
+          <TextRenderer font_height="24">
+            <Lines>
+              <Line>Options</Line>
+            </Lines>
+          </TextRenderer>
+        </Components>
+      </GameObject>
       <GameObject layer="GUI" name="ExitButton">
         <Components>
           <Button text="Exit" font_height="24">
@@ -43,6 +61,15 @@
               <Callback name="ExitGame"/>
             </LeftClickCallbacks>
           </Button>
+        </Components>
+      </GameObject>
+      <GameObject layer="GUI" name="ExitText" parent="ExitButton" position="0,1,0">
+        <Components>
+          <TextRenderer font_height="24">
+            <Lines>
+              <Line>Exit</Line>
+            </Lines>
+          </TextRenderer>
         </Components>
       </GameObject>
       <GameObject layer="GUI" position="0.5%, 0.5%, 0" name="LayoutStackPanel">

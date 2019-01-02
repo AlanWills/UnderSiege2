@@ -4,9 +4,19 @@
     <GameObjects>
       <GameObject layer="GUI" name="ReloadScreenButton" parent="DebugConsole" should_render="false">
         <Components>
-          <Button text="Reload Screen" font_height="24">
+          <Button>
             <LeftClickCallbacks/>
           </Button>
+        </Components>
+      </GameObject>
+      <GameObject layer="GUI" name="ReloadScreenText" parent="ReloadScreenButton" should_render="false"
+                  position="0,1,0">
+        <Components>
+          <TextRenderer font_height="24">
+            <Lines>
+              <Line>Reload Screen</Line>
+            </Lines>
+          </TextRenderer>
         </Components>
       </GameObject>
       <GameObject layer="GUI" name="DebugConsole" Tag="Debug" position="0.5%,0.5%" should_render="false">
