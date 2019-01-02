@@ -17,7 +17,7 @@ namespace US
 {
   namespace Debugging
   {
-    REGISTER_SCRIPT(DebugConsole, 2)
+    REGISTER_SCRIPT(DebugConsole, 1)
 
     //------------------------------------------------------------------------------------------------
     DebugConsole::DebugConsole()
