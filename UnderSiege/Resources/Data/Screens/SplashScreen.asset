@@ -8,7 +8,12 @@
       </Texture2Ds>
     </Resources>
     <GameObjects>
-      <GameObject layer="GUI" position="0.5%, 0.5%, 0" name="Logo0">
+      <GameObject name="Canvas">
+        <Components>
+          <CanvasRenderer/>
+        </Components>
+      </GameObject>
+      <GameObject layer="GUI" position="0.5%, 0.5%, 0" name="Logo0" parent="Canvas">
         <Components>
           <SpriteRenderer sprite="Textures\UI\CelesteGamesLogo.png" size="0.9%,0.9%" opacity="0" preserve_aspect_ratio="true"/>
           <OpacityLerper lerping_up="true" lerp_down_time="1" lerp_up_time="1" min_wait_time="0.2" max_wait_time="1"/>
@@ -19,7 +24,7 @@
           </LimitedLifeTime>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="Delayer" active="false">
+      <GameObject layer="GUI" name="Delayer" active="false" parent="Canvas">
         <Components>
           <LimitedLifeTime lifetime="0.1">
             <OnDeathCallbacks>
@@ -29,7 +34,7 @@
           </LimitedLifeTime>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" position="0.5%, 0.5%, 0" name="Logo1" active="false" should_render="false">
+      <GameObject layer="GUI" position="0.5%, 0.5%, 0" name="Logo1" active="false" should_render="false" parent="Canvas">
         <Components>
           <SpriteRenderer sprite="Textures\UI\CelesteEngineLogo.png" size="0.9%,0.9%" opacity="0" preserve_aspect_ratio="true"/>
           <OpacityLerper lerping_up="true" lerp_down_time="1" lerp_up_time="1" min_wait_time="0.2" max_wait_time="1"/>

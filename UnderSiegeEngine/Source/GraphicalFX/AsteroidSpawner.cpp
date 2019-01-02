@@ -105,9 +105,6 @@ namespace US
       return element->getElementName() == RigidBody2D::type_name();
     }) != components.end());
 
-    // Check the asteroid is in the world layer
-    ASSERT(gameObject->getLayer() == Layer::kWorld);
-
     const glm::vec2& viewportDimensions = getViewportDimensions();
 
     for (size_t count = 0; count < numberToSpawn; ++count)
