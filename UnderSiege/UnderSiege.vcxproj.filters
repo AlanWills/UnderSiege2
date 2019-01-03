@@ -42,6 +42,7 @@
     <None Include="Resources\Data\Screens\DebugTools.asset" />
     <None Include="Resources\Scripts\DataConverters\Input\KeyboardActivatorDataConverter.lua" />
     <None Include="Resources\Scripts\DataConverters\Input\KeyboardVisibilityDataConverter.lua" />
+    <None Include="Resources\Scripts\DataConverters\Rendering\CanvasRendererDataConverter.lua" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />

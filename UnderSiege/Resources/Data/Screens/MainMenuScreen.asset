@@ -2,12 +2,17 @@
 <Root>
   <Screen name="Main Menu" guid="7d5623bd-af84-468a-bf94-44b2400de483">
     <GameObjects>
-      <GameObject layer="GUI" name="Background" position="0.5%, 0.5%, 0">
+      <GameObject name="Canvas">
+        <Components>
+          <CanvasRenderer projection_mode="Orthographic" dimensions="1%,1%"/>
+        </Components>
+      </GameObject>
+      <!--<GameObject layer="GUI" name="Background" position="0.5%, 0.5%, 0" parent="Canvas">
         <Components>
           <SpriteRenderer sprite="Textures\Backgrounds\MainMenuScreen.jpg" size="1%, 1%"/>
         </Components>
-      </GameObject>
-      <GameObject layer="GUI" name="Title" position="0.5%, 0.8%, 0">
+      </GameObject>-->
+      <GameObject layer="GUI" name="Title" position="0.5%, 0.8%, 0" parent="Canvas">
         <Components>
           <TextRenderer font_height="32" horizontal_alignment="centre">
             <Lines>
@@ -72,7 +77,7 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" position="0.5%, 0.5%, 0" name="LayoutStackPanel">
+      <GameObject layer="GUI" position="0.5%, 0.5%, 0" name="LayoutStackPanel" parent="Canvas">
         <Components>
           <StackPanel orientation="vertical" vertical_alignment="centre" padding="20">
             <Children>

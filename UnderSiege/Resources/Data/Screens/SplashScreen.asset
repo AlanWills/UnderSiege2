@@ -10,7 +10,7 @@
     <GameObjects>
       <GameObject name="Canvas">
         <Components>
-          <CanvasRenderer/>
+          <CanvasRenderer projection_mode="Orthographic" dimensions="1%,1%"/>
         </Components>
       </GameObject>
       <GameObject layer="GUI" position="0.5%, 0.5%, 0" name="Logo0" parent="Canvas">
