@@ -2,7 +2,7 @@
 <Root>
   <Screen name="Main Menu" guid="7d5623bd-af84-468a-bf94-44b2400de483">
     <GameObjects>
-      <GameObject name="Canvas">
+      <GameObject name="Canvas" position="0,0,-1">
         <Components>
           <CanvasRenderer projection_mode="Orthographic" dimensions="1%,1%"/>
         </Components>

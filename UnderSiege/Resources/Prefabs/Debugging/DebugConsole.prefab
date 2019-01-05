@@ -70,8 +70,9 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="DebugConsole" Tag="Debug" position="0.5%,0.5%,0" should_render="false">
+      <GameObject layer="GUI" name="DebugConsole" Tag="Debug" position="0.5%,0.5%,1" should_render="false">
         <Components>
+          <CanvasRenderer/>
           <KeyboardVisibility visibility_key="0" invisibility_key="0" mode="Toggle"/>
           <StackPanel orientation="vertical" vertical_alignment="centre" padding="20">
             <Children>
