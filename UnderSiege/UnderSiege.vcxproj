@@ -193,14 +193,9 @@
     <None Include="Resources\Prefabs\Turrets\BasicTurret.prefab" />
     <None Include="Resources\Prefabs\UI\TurretGUI.prefab" />
     <None Include="Resources\Prefabs\UI\TurretGUIManager.prefab" />
-    <None Include="Resources\Scripts\Core\FileSystem\Path.lua" />
-    <None Include="Resources\Scripts\DataConverters\Animation\AnimatorDataConverter.lua" />
-    <None Include="Resources\Scripts\DataConverters\DataConverters.lua" />
-    <None Include="Resources\Scripts\DataConverters\Input\KeyboardActivatorDataConverter.lua" />
     <None Include="Resources\Scripts\DataConverters\Input\KeyboardVisibilityDataConverter.lua" />
     <None Include="Resources\Scripts\DataConverters\Rendering\CanvasRendererDataConverter.lua" />
     <None Include="Resources\Scripts\Game.lua" />
-    <None Include="Resources\Scripts\Engine.lua" />
     <None Include="Resources\Shaders\Model.frag" />
     <None Include="Resources\Shaders\Model.vert" />
   </ItemGroup>
@@ -299,9 +294,6 @@
     <ProjectReference Include="..\UnderSiegeEngine\UnderSiegeEngine.vcxproj">
       <Project>{fd856473-f15e-4488-931d-071d6d3074ea}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Resources\Scripts\DataConverters\Physics\EllipseColliderDataConverter.lua" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

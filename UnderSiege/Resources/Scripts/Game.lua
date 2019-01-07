@@ -1,4 +1,6 @@
-local path = require "Scripts.Core.FileSystem.Path"
+package.path = getResourcesDirectory() .. "\\..\\..\\CelesteEngine\\CelesteEngine\\Resources\\?.lua;" .. package.path
+
+require "Scripts.Engine"
 
 local settingsPath = path.combine(getResourcesDirectory(), "Data", "Settings", "GameSettings.asset")
 local settings = GameSettings.load(settingsPath)
