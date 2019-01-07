@@ -30,11 +30,7 @@ namespace US
 
     const glm::vec3& worldTranslation = getTransform()->getWorldTranslation();
     glm::vec2 mouseScreenPosition = CelesteEngine::Input::getMouse().getScreenPosition();
-    //const glm::vec3& cameraWorldTranslation = getGameObject()->getOwnerScreen()->getWorldLayer().getCamera().getTransform()->getWorldTranslation();
-
-    float mouseWorldSpaceX = mouseScreenPosition.x; //+ cameraWorldTranslation.x;
-    float mouseWorldSpaceY = mouseScreenPosition.y; //+ cameraWorldTranslation.y;
-    float angle = Maths::lookAt(worldTranslation, glm::vec2(mouseWorldSpaceX, mouseWorldSpaceY));
+    float angle = Maths::lookAt(worldTranslation, glm::vec2(mouseScreenPosition.x, mouseScreenPosition.y));
 
     getTransform()->setWorldRotation(angle);
   }
