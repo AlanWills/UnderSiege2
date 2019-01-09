@@ -14,15 +14,17 @@ namespace US
 
     public:
       const Bullet* getBullet() const { return m_bullet; }
-      void setBullet(const Bullet* bullet) { m_bullet = bullet; }
+      void setBullet(const Bullet* bullet);
 
     protected:
-      void onTriggerEnter(const ConstHandle<Physics::Collider>& collider) override;
+      void onTriggerEnter(const Handle<Physics::Collider>& collider) override;
       void onDeath() override;
 
     private:
       using Inherited = CelesteEngine::Script;
 
       const Bullet* m_bullet;
+
+      float m_damage;
   };
 }

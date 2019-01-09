@@ -2,6 +2,7 @@
 
 #include "Objects/Script.h"
 #include "UnderSiegeEngineDllExport.h"
+#include "Shields/ShieldController.h"
 
 
 namespace US
@@ -14,7 +15,9 @@ namespace US
 
     public:
       const Ship* getShip() const { return m_ship; }
-      void setShip(const Ship* ship) { m_ship = ship; }
+      void setShip(const Ship* ship);
+
+      void damage(float damage);
 
     protected:
       void onDeath() override;
@@ -23,5 +26,6 @@ namespace US
       using Inherited = CelesteEngine::Script;
 
       const Ship* m_ship;
+      float m_hullStrength;
   };
 }

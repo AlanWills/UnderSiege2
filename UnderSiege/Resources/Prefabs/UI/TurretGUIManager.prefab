@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Prefab>
+    <GameObjects>
+      <GameObject layer="GUI" name="TurretGUIManager" position="0.5%,0.05%">
+        <Components>
+          <StackPanel orientation="horizontal" horizontal_alignment="centre"/>
+        </Components>
+      </GameObject>
+    </GameObjects>
+  </Prefab>
+</Root>

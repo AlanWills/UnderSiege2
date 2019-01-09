@@ -6,22 +6,28 @@
 
 namespace US
 {
+  class Ship;
+
   class UnderSiegeEngineDllExport Shield : public CelesteEngine::ScriptableObject
   {
     DECLARE_SCRIPTABLE_OBJECT(Shield)
 
     public:
-      Shield();
-
   	  const Handle<Resources::Texture2D>& getTexture() const { return m_texture->getValue(); }
+      float getShieldStrength() const { return m_strength->getValue(); }
+      const Handle<GameObject>& getGameObject() const { return m_gameObject; }
+      const Ship* getShip() const { return m_ship; }
 
-      Handle<GameObject> create(const Handle<Screen>& screen) const;
+      Handle<GameObject> create(const Handle<Screen>& screen, const Ship* ship);
 
     private:
-      ValueField<int>* m_strength;
-      ValueField<int>* m_rechargePerSecond;
+      ValueField<float>* m_strength;
+      ValueField<float>* m_rechargePerSecond;
       HandleField<Resources::Texture2D>* m_texture;
       ReferenceField<glm::vec3>* m_colour;
       ReferenceField<Path>* m_shieldPrefab;
+
+      Handle<GameObject> m_gameObject;
+      const Ship* m_ship;
   };
 }

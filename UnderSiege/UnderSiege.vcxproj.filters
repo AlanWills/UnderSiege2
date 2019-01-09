@@ -24,16 +24,20 @@
     <None Include="Resources\Data\Shields\BasicShield.asset" />
     <None Include="Resources\Data\Turrets\BasicTurret.asset" />
     <None Include="Resources\Scripts\Game.lua" />
-    <None Include="Resources\Scripts\Core\FileSystem\Path.lua" />
     <None Include="Resources\Shaders\Model.frag" />
     <None Include="Resources\Shaders\Model.vert" />
     <None Include="Resources\Data\Bullets\SmallBullet.asset" />
     <None Include="Resources\Prefabs\Bullets\SmallBullet.prefab" />
-    <None Include="Resources\Prefabs\Turrets\BasicTurret.prefab" />
     <None Include="Resources\Prefabs\Shields\BasicShield.prefab" />
     <None Include="Resources\Prefabs\Ships\EnemyShip.prefab" />
     <None Include="Resources\Data\Enemies\Fiirkan.asset" />
-    <None Include="Resources\Scripts\DataConverters\Animation\SpriteSheetAnimationDataConverter.lua" />
+    <None Include="Resources\Prefabs\Turrets\BasicTurret.prefab" />
+    <None Include="Resources\Prefabs\UI\TurretGUIManager.prefab" />
+    <None Include="Resources\Prefabs\UI\TurretGUI.prefab" />
+    <None Include="Resources\Prefabs\Debugging\DebugConsole.prefab" />
+    <None Include="Resources\Data\Screens\DebugTools.asset" />
+    <None Include="Resources\Scripts\DataConverters\Input\KeyboardVisibilityDataConverter.lua" />
+    <None Include="Resources\Scripts\DataConverters\Rendering\CanvasRendererDataConverter.lua" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />
@@ -191,6 +195,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Textures\FX\Explosions\Explosion.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Weapons\Shredder\Shredder.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

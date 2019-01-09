@@ -8,6 +8,7 @@
           <RigidBody2D/>
           <RectangleCollider trigger="true" dimensions="0"/>
           <BulletController/>
+          <LimitedLifeTime lifetime="2"/>
         </Components>
       </GameObject>
     </GameObjects>

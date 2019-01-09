@@ -2,10 +2,12 @@
 <Root>
   <Prefab>
     <GameObjects>
-      <GameObject layer="World" name="Shield">
+      <GameObject layer="World" name="Shield" tag="Shield">
         <Components>
-          <SpriteRenderer />
-          <OpacityLerper min_opacity="0.2" lerp_up_time="1" lerp_down_time="1"/>
+          <SpriteRenderer opacity="0.2"/>
+          <OpacityLerper min="0.2" lerp_down_time="2" lerp_up_time="10000"/>
+          <EllipseCollider dimensions="0" is_trigger="true"/>
+          <ShieldController/>
         </Components>
       </GameObject>
     </GameObjects>

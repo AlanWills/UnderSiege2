@@ -4,11 +4,11 @@
 #include "Objects/GameObject.h"
 #include "Physics/Collider.h"
 #include "Ships/ShipController.h"
+#include "Shields/ShieldController.h"
+#include "Shields/Shield.h"
 #include "Bullets/Bullet.h"
 #include "Turrets/Turret.h"
 #include "Screens/Screen.h"
-#include "Rendering/SpriteRenderer.h"
-#include "Animation/SpriteSheetAnimation.h"
 
 
 namespace US
@@ -27,22 +27,38 @@ namespace US
   }
 
   //------------------------------------------------------------------------------------------------
-  void BulletController::onTriggerEnter(const ConstHandle<Physics::Collider>& collider)
+  void BulletController::onTriggerEnter(const Handle<Physics::Collider>& collider)
   {
+    // Tidy this up
+
     if (collider->getGameObject()->getTag() == internString("Ship"))
     {
-      const ConstHandle<ShipController>& shipController = collider->getGameObject()->findComponent<ShipController>();
+      const Handle<ShipController>& shipController = collider->getGameObject()->findComponent<ShipController>();
       if (shipController->getShip() != m_bullet->getTurret()->getShip())
       {
         const Handle<GameObject>& gameObject = m_bullet->createExplosion(getGameObject()->getOwnerScreen());
         gameObject->getTransform()->setWorldTranslation(getGameObject()->getTransform()->getWorldTranslation());
 
-        // How do we defer kill this game object?
-        // Remove from simulation?  But we are iterating over it.
-        // Need this function call after all the physics calculation has taken place.
-        // Maybe let entire physics calculation happen then resolve function calls
+        // Damage the ship we have just hit
+        shipController->damage(m_damage);
 
-        //getGameObject()->die();
+        // Kill this bullet
+        getGameObject()->die();
+      }
+    }
+    else if (collider->getGameObject()->getTag() == internString("Shield"))
+    {
+      const Handle<ShieldController>& shieldController = collider->getGameObject()->findComponent<ShieldController>();
+      if (shieldController->getShield()->getShip() != m_bullet->getTurret()->getShip())
+      {
+        const Handle<GameObject>& gameObject = m_bullet->createExplosion(getGameObject()->getOwnerScreen());
+        gameObject->getTransform()->setWorldTranslation(getGameObject()->getTransform()->getWorldTranslation());
+
+        // Damage the ship we have just hit
+        shieldController->damage(m_damage);
+
+        // Kill this bullet
+        getGameObject()->die();
       }
     }
   }
@@ -53,5 +69,16 @@ namespace US
     Inherited::onDeath();
 
     m_bullet = nullptr;
+  }
+
+  //------------------------------------------------------------------------------------------------
+  void BulletController::setBullet(const Bullet* bullet)
+  {
+    m_bullet = bullet;
+    
+    if (m_bullet != nullptr)
+    {
+      m_damage = m_bullet->getDamage();
+    }
   }
 }

@@ -1,23 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Root>
   <Turret name="Basic Turret" guid="0f178b9b-026f-48a8-b616-18f5ba48499e" damage="0" fire_rate="1"
-          bullet="Data\Bullets\SmallBullet.asset" 
-          turret_prefab="Prefabs\Turrets\BasicTurret.prefab">
-    <AnimationFrames>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_00.png</Frame>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_01.png</Frame>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_02.png</Frame>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_03.png</Frame>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_04.png</Frame>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_05.png</Frame>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_06.png</Frame>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_07.png</Frame>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_08.png</Frame>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_09.png</Frame>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_10.png</Frame>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_11.png</Frame>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_12.png</Frame>
-      <Frame>Textures\Weapons\Shredder\uw_shredder_13.png</Frame>
-    </AnimationFrames>
+          turret_sprite="Textures\Weapons\Shredder\Shredder.png"
+          turret_sprite_sheet_dimensions="7,2"
+          turret_prefab="Prefabs\Turrets\BasicTurret.prefab"
+          bullet="Data\Bullets\SmallBullet.asset">
   </Turret>
 </Root>
