@@ -2,7 +2,7 @@
 <Root>
   <Prefab>
     <GameObjects>
-      <GameObject layer="World" name="Bullet" tag="Bullet">
+      <GameObject name="Bullet" tag="Bullet">
         <Components>
           <SpriteRenderer/>
           <RigidBody2D/>

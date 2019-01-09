@@ -7,7 +7,7 @@
           <Canvas projection_mode="Orthographic" dimensions="1%,1%"/>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="Background" position="0.5%, 0.5%, 0" parent="Canvas">
+      <GameObject name="Background" position="0.5%, 0.5%, 0" parent="Canvas">
         <Components>
           <SpriteRenderer sprite="Textures\Backgrounds\MainMenuScreen.jpg" size="1%, 1%"/>
         </Components>
@@ -17,7 +17,7 @@
           <Canvas projection_mode="Orthographic" dimensions="1%,1%"/>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="Title" position="0.5%, 0.8%, 0" parent="Canvas2">
+      <GameObject name="Title" position="0.5%, 0.8%, 0" parent="Canvas2">
         <Components>
           <TextRenderer font_height="32" horizontal_alignment="centre">
             <Lines>
@@ -26,7 +26,7 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="PlayButton">
+      <GameObject name="PlayButton">
         <Components>
           <Button>
             <LeftClickCallbacks>
@@ -37,7 +37,7 @@
           </Button>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="PlayText" parent="PlayButton" position="0,1,0">
+      <GameObject name="PlayText" parent="PlayButton" position="0,1,0">
         <Components>
           <TextRenderer font_height="24">
             <Lines>
@@ -46,7 +46,7 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="OptionsButton">
+      <GameObject name="OptionsButton">
         <Components>
           <Button text="Options" font_height="24">
             <LeftClickCallbacks>
@@ -55,7 +55,7 @@
           </Button>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="OptionsText" parent="OptionsButton" position="0,1,0">
+      <GameObject name="OptionsText" parent="OptionsButton" position="0,1,0">
         <Components>
           <TextRenderer font_height="24">
             <Lines>
@@ -64,7 +64,7 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="ExitButton">
+      <GameObject name="ExitButton">
         <Components>
           <Button text="Exit" font_height="24">
             <LeftClickCallbacks>
@@ -73,7 +73,7 @@
           </Button>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="ExitText" parent="ExitButton" position="0,1,0">
+      <GameObject name="ExitText" parent="ExitButton" position="0,1,0">
         <Components>
           <TextRenderer font_height="24">
             <Lines>
@@ -82,7 +82,7 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" position="0.5%, 0.5%, 0" name="LayoutStackPanel" parent="Canvas2">
+      <GameObject position="0.5%, 0.5%, 0" name="LayoutStackPanel" parent="Canvas2">
         <Components>
           <StackPanel orientation="vertical" vertical_alignment="centre" padding="20">
             <Children>

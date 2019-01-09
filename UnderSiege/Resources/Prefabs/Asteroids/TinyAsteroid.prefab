@@ -2,7 +2,7 @@
 <Root>
   <Prefab name="Tiny Asteroid" guid="3612e4fb-535b-4c95-a0aa-915e523396e1">
     <GameObjects>
-      <GameObject layer="World" name="TinyAsteroid">
+      <GameObject name="TinyAsteroid">
         <Components>
           <SpriteRenderer sprite="Textures\Asteroids\TinyAsteroid.png"/>
           <RectangleCollider dimensions="0"/>

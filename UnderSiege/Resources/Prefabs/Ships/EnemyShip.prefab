@@ -2,7 +2,7 @@
 <Root>
   <Prefab name="Ship" guid="7248bf60-8f49-4fca-b258-bd20a20e15ba">
     <GameObjects>
-      <GameObject layer="World" name="Enemy" tag="Ship">
+      <GameObject name="Enemy" tag="Ship">
         <Components>
           <SpriteRenderer/>
           <RigidBody2D/>

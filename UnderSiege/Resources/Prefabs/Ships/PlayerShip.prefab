@@ -2,7 +2,7 @@
 <Root>
   <Prefab name="Ship" guid="c8f35eaf-ad63-49b6-97b2-845b1d5f996d">
     <GameObjects>
-      <GameObject layer="World" name="Player" tag="Ship" position="0.5%,0.5%">
+      <GameObject name="Player" tag="Ship" position="0.5%,0.5%">
         <Components>
           <SpriteRenderer/>
           <RigidBody2D/>

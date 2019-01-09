@@ -2,14 +2,14 @@
 <Root>
   <Prefab>
     <GameObjects>
-      <GameObject layer="GUI" name="ReloadScreenButton" parent="DebugConsole" should_render="false">
+      <GameObject name="ReloadScreenButton" parent="DebugConsole" should_render="false">
         <Components>
           <Button>
             <LeftClickCallbacks/>
           </Button>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="ReloadScreenText" parent="ReloadScreenButton" should_render="false"
+      <GameObject name="ReloadScreenText" parent="ReloadScreenButton" should_render="false"
                   position="0,1,0">
         <Components>
           <TextRenderer font_height="24">
@@ -19,14 +19,14 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="ReloadPlayerButton" parent="DebugConsole" should_render="false">
+      <GameObject name="ReloadPlayerButton" parent="DebugConsole" should_render="false">
         <Components>
           <Button>
             <LeftClickCallbacks/>
           </Button>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="ReloadPlayerText" parent="ReloadPlayerButton" should_render="false"
+      <GameObject name="ReloadPlayerText" parent="ReloadPlayerButton" should_render="false"
                   position="0,1,0">
         <Components>
           <TextRenderer font_height="24">
@@ -36,14 +36,14 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="ReloadEnemiesButton" parent="DebugConsole" should_render="false">
+      <GameObject name="ReloadEnemiesButton" parent="DebugConsole" should_render="false">
         <Components>
           <Button>
             <LeftClickCallbacks/>
           </Button>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="ReloadEnemiesText" parent="ReloadEnemiesButton" should_render="false"
+      <GameObject name="ReloadEnemiesText" parent="ReloadEnemiesButton" should_render="false"
                   position="0,1,0">
         <Components>
           <TextRenderer font_height="24">
@@ -53,14 +53,14 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="ReloadGUIButton" parent="DebugConsole" should_render="false">
+      <GameObject name="ReloadGUIButton" parent="DebugConsole" should_render="false">
         <Components>
           <Button>
             <LeftClickCallbacks/>
           </Button>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="ReloadGUIText" parent="ReloadGUIButton" should_render="false"
+      <GameObject name="ReloadGUIText" parent="ReloadGUIButton" should_render="false"
                   position="0,1,0">
         <Components>
           <TextRenderer font_height="24">
@@ -70,7 +70,7 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject layer="GUI" name="DebugConsole" Tag="Debug" position="0.5%,0.5%,1" should_render="false">
+      <GameObject name="DebugConsole" Tag="Debug" position="0.5%,0.5%,1" should_render="false">
         <Components>
           <Canvas/>
           <KeyboardVisibility visibility_key="0" invisibility_key="0" mode="Toggle"/>

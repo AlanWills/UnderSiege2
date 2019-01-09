@@ -2,7 +2,7 @@
 <Root>
   <Prefab>
     <GameObjects>
-      <GameObject layer="World" name="Shield" tag="Shield">
+      <GameObject name="Shield" tag="Shield">
         <Components>
           <SpriteRenderer opacity="0.2"/>
           <OpacityLerper min="0.2" lerp_down_time="2" lerp_up_time="10000"/>
