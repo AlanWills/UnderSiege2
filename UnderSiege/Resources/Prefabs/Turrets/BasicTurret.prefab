@@ -2,7 +2,7 @@
 <Root>
   <Prefab>
     <GameObjects>
-      <GameObject layer="World" name="Turret" tag="Turret">
+      <GameObject name="Turret" tag="Turret">
         <Components>
           <SpriteRenderer/>
           <Animator sprite_sheet_dimensions="1,1" looping="true" seconds_per_frame="0.05"/>

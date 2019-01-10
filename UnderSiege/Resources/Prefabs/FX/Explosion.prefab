@@ -2,7 +2,7 @@
 <Root>
   <Prefab>
     <GameObjects>
-      <GameObject layer="World" name="Explosion">
+      <GameObject name="Explosion">
         <Components>
           <SpriteRenderer sprite="Textures\FX\Explosions\Explosion.png"/>
           <Animator sprite_sheet_dimensions="4,4" looping="false" play_immediately="true"/>

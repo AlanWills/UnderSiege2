@@ -2,12 +2,12 @@
 <Root>
   <Screen name="GameplayScreen" guid="516cd17a-b2a0-4283-a625-725bed2c141f">
     <GameObjects>
-      <GameObject layer="World" name="Background" size="1%,1%" position="0.5%,0.5%,-0.5">
+      <GameObject name="Background" size="1%,1%" position="0.5%,0.5%,-0.5">
         <Components>
           <SpriteRenderer/>
         </Components>
       </GameObject>
-      <GameObject layer="World" name="AsteroidSpawner">
+      <GameObject name="AsteroidSpawner">
         <Components>
           <AsteroidSpawner>
             <Asteroid count="10">Prefabs\Asteroids\TinyAsteroid.prefab</Asteroid>

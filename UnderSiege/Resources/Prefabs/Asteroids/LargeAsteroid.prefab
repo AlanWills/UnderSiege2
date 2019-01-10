@@ -2,7 +2,7 @@
 <Root>
   <Prefab name="Large Asteroid" guid="45fb54cc-c19b-4328-9ec9-849d443076bc">
     <GameObjects>
-      <GameObject layer="World" name="LargeAsteroid">
+      <GameObject name="LargeAsteroid">
         <Components>
           <SpriteRenderer sprite="Textures\Asteroids\LargeAsteroid.png"/>
           <RectangleCollider dimensions="0"/>
