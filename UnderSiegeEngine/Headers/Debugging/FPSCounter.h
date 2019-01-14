@@ -28,6 +28,7 @@ namespace US
         using Inherited = CelesteEngine::Script;
 
         Handle<CelesteEngine::Rendering::TextRenderer> m_textRenderer;
+        float m_current;
     };
   }
 }

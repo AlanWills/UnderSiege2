@@ -12,7 +12,9 @@ namespace US
     REGISTER_SCRIPT(FPSCounter, 1)
 
     //------------------------------------------------------------------------------------------------
-    FPSCounter::FPSCounter()
+    FPSCounter::FPSCounter() :
+      m_textRenderer(),
+      m_current(0)
     {
     }
 
@@ -35,8 +37,14 @@ namespace US
     {
       Inherited::onUpdate(elapsedGameTime);
 
-      size_t fps = static_cast<size_t>(1 / elapsedGameTime);
-      m_textRenderer->setLine(0, std::to_string(fps));
+      m_current += elapsedGameTime;
+
+      if (m_current > 0.5f)
+      {
+        size_t fps = static_cast<size_t>(1 / elapsedGameTime);
+        m_textRenderer->setLine(0, std::to_string(fps));
+        m_current = 0;
+      }
     }
   }
 }
