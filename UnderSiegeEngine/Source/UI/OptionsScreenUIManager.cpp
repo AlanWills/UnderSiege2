@@ -58,9 +58,6 @@ namespace US
       getAudioManager()->setMasterVolume(newValue);
     });
     slider->setCurrentValue(getAudioManager()->getMasterVolume());
-
-    // Invoke the event to update any UI just in case it's not triggered already by setting the current value
-    slider->getValueChangedEvent().invoke(slider->getGameObject(), slider->getCurrentValue());
   }
 
   //------------------------------------------------------------------------------------------------
@@ -74,9 +71,6 @@ namespace US
       getAudioManager()->setMusicVolume(newValue);
     });
     slider->setCurrentValue(getAudioManager()->getMusicVolume());
-
-    // Invoke the event to update any UI just in case it's not triggered already by setting the current value
-    slider->getValueChangedEvent().invoke(slider->getGameObject(), slider->getCurrentValue());
   }
 
   //------------------------------------------------------------------------------------------------
@@ -90,9 +84,6 @@ namespace US
       getAudioManager()->setSFXVolume(newValue);
     });
     slider->setCurrentValue(getAudioManager()->getSFXVolume());
-
-    // Invoke the event to update any UI just in case it's not triggered already by setting the current value
-    slider->getValueChangedEvent().invoke(slider->getGameObject(), slider->getCurrentValue());
   }
 
   //------------------------------------------------------------------------------------------------

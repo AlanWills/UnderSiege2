@@ -28,6 +28,10 @@
       </GameObject>
       <GameObject name="PlayButton">
         <Components>
+          <SpriteRenderer/>
+          <RectangleCollider/>
+          <MouseInteractionHandler/>
+          <AudioSource audio_type="SFX"/>
           <Button>
             <LeftClickCallbacks>
               <Callback name="KillScreen" arg="PersistentStartupAndMainMenu"/>
@@ -48,7 +52,11 @@
       </GameObject>
       <GameObject name="OptionsButton">
         <Components>
-          <Button text="Options" font_height="24">
+          <SpriteRenderer/>
+          <RectangleCollider/>
+          <MouseInteractionHandler/>
+          <AudioSource audio_type="SFX"/>
+          <Button>
             <LeftClickCallbacks>
               <Callback name="TransitionToScreen" arg="Data\Screens\OptionsScreen.asset"/>
             </LeftClickCallbacks>
@@ -66,7 +74,11 @@
       </GameObject>
       <GameObject name="ExitButton">
         <Components>
-          <Button text="Exit" font_height="24">
+          <SpriteRenderer/>
+          <RectangleCollider/>
+          <MouseInteractionHandler/>
+          <AudioSource audio_type="SFX"/>
+          <Button>
             <LeftClickCallbacks>
               <Callback name="ExitGame"/>
             </LeftClickCallbacks>
