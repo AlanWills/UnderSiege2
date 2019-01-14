@@ -184,6 +184,10 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="Resources\Prefabs\Debugging\FPSCounter.prefab">
+      <SubType>
+      </SubType>
+    </None>
     <None Include="Resources\Prefabs\Shields\BasicShield.prefab" />
     <None Include="Resources\Prefabs\Bullets\SmallBullet.prefab">
       <SubType>

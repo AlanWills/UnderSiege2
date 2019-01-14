@@ -154,6 +154,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)..\CelesteEngine\Lua\Headers;$(ProjectDir)Headers;$(ProjectDir)..\CelesteEngine\CelesteEngine\Headers;$(ProjectDir)..\CelesteEngine\3rdParty\Include;$(ProjectDir)..\CelesteEngine\3rdParty\Include\freetype2;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>BUILDING_UNDER_SIEGE_ENGINE_DLL;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -172,6 +173,7 @@
     <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidDataConverter.h" />
     <ClInclude Include="Headers\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.h" />
     <ClInclude Include="Headers\Debugging\DebugConsole.h" />
+    <ClInclude Include="Headers\Debugging\FPSCounter.h" />
     <ClInclude Include="Headers\GraphicalFX\AsteroidSpawner.h" />
     <ClInclude Include="Headers\Ships\ShipEnums.h" />
     <ClInclude Include="Headers\Ships\ShipManager.h" />
@@ -203,6 +205,7 @@
     <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidDataConverter.cpp" />
     <ClCompile Include="Source\DataConverters\GraphicalFX\AsteroidSpawnerDataConverter.cpp" />
     <ClCompile Include="Source\Debugging\DebugConsole.cpp" />
+    <ClCompile Include="Source\Debugging\FPSCounter.cpp" />
     <ClCompile Include="Source\GraphicalFX\AsteroidSpawner.cpp" />
     <ClCompile Include="Source\Ships\ShipManager.cpp" />
     <ClCompile Include="Source\Turrets\AimControl\AimController.cpp" />

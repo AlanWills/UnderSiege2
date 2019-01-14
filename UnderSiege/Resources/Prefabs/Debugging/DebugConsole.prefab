@@ -4,6 +4,10 @@
     <GameObjects>
       <GameObject name="ReloadScreenButton" parent="DebugConsole" should_render="false">
         <Components>
+          <SpriteRenderer/>
+          <RectangleCollider/>
+          <MouseInteractionHandler/>
+          <AudioSource audio_type="SFX"/>
           <Button>
             <LeftClickCallbacks/>
           </Button>
@@ -21,6 +25,10 @@
       </GameObject>
       <GameObject name="ReloadPlayerButton" parent="DebugConsole" should_render="false">
         <Components>
+          <SpriteRenderer/>
+          <RectangleCollider/>
+          <MouseInteractionHandler/>
+          <AudioSource audio_type="SFX"/>
           <Button>
             <LeftClickCallbacks/>
           </Button>
@@ -38,6 +46,10 @@
       </GameObject>
       <GameObject name="ReloadEnemiesButton" parent="DebugConsole" should_render="false">
         <Components>
+          <SpriteRenderer/>
+          <RectangleCollider/>
+          <MouseInteractionHandler/>
+          <AudioSource audio_type="SFX"/>
           <Button>
             <LeftClickCallbacks/>
           </Button>
@@ -55,6 +67,10 @@
       </GameObject>
       <GameObject name="ReloadGUIButton" parent="DebugConsole" should_render="false">
         <Components>
+          <SpriteRenderer/>
+          <RectangleCollider/>
+          <MouseInteractionHandler/>
+          <AudioSource audio_type="SFX"/>
           <Button>
             <LeftClickCallbacks/>
           </Button>
@@ -70,9 +86,10 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject name="DebugConsole" Tag="Debug" position="0.5%,0.5%,1" should_render="false">
+      <GameObject name="DebugConsole" Tag="Debug" position="0.5%,0.5%,1" active="false" should_render="false">
         <Components>
           <Canvas/>
+          <KeyboardActivator activation_key="0" deactivation_key="0" mode="Toggle" active="true"/>
           <KeyboardVisibility visibility_key="0" invisibility_key="0" mode="Toggle"/>
           <StackPanel orientation="vertical" vertical_alignment="centre" padding="20">
             <Children>
