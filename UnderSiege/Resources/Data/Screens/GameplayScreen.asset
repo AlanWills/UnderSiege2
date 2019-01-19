@@ -4,10 +4,16 @@
     <GameObjects>
       <GameObject name="Background" size="1%,1%" position="0.5%,0.5%,-0.5">
         <Components>
+          <Canvas mode="Orthographic"/>
           <SpriteRenderer/>
         </Components>
       </GameObject>
-      <GameObject name="AsteroidSpawner">
+      <GameObject name="Canvas">
+        <Components>
+          <Canvas mode="Perspective"/>
+        </Components>
+      </GameObject>
+      <GameObject name="AsteroidSpawner" parent="Canvas">
         <Components>
           <AsteroidSpawner>
             <Asteroid count="10">Prefabs\Asteroids\TinyAsteroid.prefab</Asteroid>

@@ -76,6 +76,7 @@ namespace US
     {
       Resources::getResourceManager()->unloadAll<Resources::Prefab>();
       Resources::getResourceManager()->unloadAll<Resources::Data>();
+
       UI::GUI::instance().cleanup();
       Level::current()->loadGUI();
     }
