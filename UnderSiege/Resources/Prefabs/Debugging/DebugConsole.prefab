@@ -86,11 +86,8 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject name="DebugConsole" Tag="Debug" position="0.5%,0.5%,1">
+      <GameObject name="DebugConsole" Tag="Debug" position="0.5%,0.5%,1" parent="Canvas" active="false" should_render="false">
         <Components>
-          <Canvas/>
-          <KeyboardActivator activation_key="0" deactivation_key="0" mode="Toggle"/>
-          <KeyboardVisibility visibility_key="0" invisibility_key="0" mode="Toggle"/>
           <StackPanel orientation="vertical" vertical_alignment="centre" padding="20">
             <Children>
               <Child>ReloadScreenButton</Child>
@@ -101,6 +98,13 @@
           </StackPanel>
           <SpriteRenderer sprite="Textures\UI\Rectangle.png" colour="0,0,0" opacity="0.5" size="1%,1%"/>
           <DebugConsole/>
+        </Components>
+      </GameObject>
+      <GameObject name="Canvas">
+        <Components>
+          <Canvas/>
+          <KeyboardActivator activation_key="0" deactivation_key="0" mode="Toggle" target="DebugConsole"/>
+          <KeyboardVisibility visibility_key="0" invisibility_key="0" mode="Toggle" target="DebugConsole"/>
         </Components>
       </GameObject>
     </GameObjects>
