@@ -46,7 +46,7 @@ namespace US
       const Handle<RectangleCollider>& collider = (*it)->findComponent<RectangleCollider>();
       ASSERT(!collider.is_null());
 
-      if (collider->rectangle().left().x >= getViewportDimensions().x)
+      if (collider->rectangle().getLeft().x >= getViewportDimensions().x)
       {
         // Left hand side of collider has gone past the right hand side of the viewport dimensions
         // So we put it back into the screen on the left hand side
