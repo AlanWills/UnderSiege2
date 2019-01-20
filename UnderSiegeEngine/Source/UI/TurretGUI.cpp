@@ -45,7 +45,7 @@ namespace US
         
         const Handle<Rendering::SpriteRenderer>& spriteRenderer = m_gameObject->findChildGameObject("TurretSprite")->findComponent<Rendering::SpriteRenderer>();
         spriteRenderer->setTexture(turret->getTurretSprite());
-        spriteRenderer->getScissorRectangle().set_dimensions(textureDimensions.x / spriteSheetDimensions.x, textureDimensions.y / spriteSheetDimensions.y);
+        spriteRenderer->getScissorRectangle().setDimensions(textureDimensions.x / spriteSheetDimensions.x, textureDimensions.y / spriteSheetDimensions.y);
         spriteRenderer->setOrigin(0.5f / spriteSheetDimensions.x, (spriteSheetDimensions.y - 0.5f) / spriteSheetDimensions.y);
       }
     }

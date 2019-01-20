@@ -2,7 +2,7 @@
 <Root>
   <Prefab>
     <GameObjects>
-      <GameObject name="ReloadScreenButton" parent="DebugConsole" should_render="false">
+      <GameObject name="ReloadScreenButton" parent="DebugConsole">
         <Components>
           <SpriteRenderer/>
           <RectangleCollider/>
@@ -13,8 +13,7 @@
           </Button>
         </Components>
       </GameObject>
-      <GameObject name="ReloadScreenText" parent="ReloadScreenButton" should_render="false"
-                  position="0,1,0">
+      <GameObject name="ReloadScreenText" parent="ReloadScreenButton" position="0,1,0">
         <Components>
           <TextRenderer font_height="24">
             <Lines>
@@ -23,7 +22,7 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject name="ReloadPlayerButton" parent="DebugConsole" should_render="false">
+      <GameObject name="ReloadPlayerButton" parent="DebugConsole">
         <Components>
           <SpriteRenderer/>
           <RectangleCollider/>
@@ -34,8 +33,7 @@
           </Button>
         </Components>
       </GameObject>
-      <GameObject name="ReloadPlayerText" parent="ReloadPlayerButton" should_render="false"
-                  position="0,1,0">
+      <GameObject name="ReloadPlayerText" parent="ReloadPlayerButton" position="0,1,0">
         <Components>
           <TextRenderer font_height="24">
             <Lines>
@@ -44,7 +42,7 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject name="ReloadEnemiesButton" parent="DebugConsole" should_render="false">
+      <GameObject name="ReloadEnemiesButton" parent="DebugConsole">
         <Components>
           <SpriteRenderer/>
           <RectangleCollider/>
@@ -55,8 +53,7 @@
           </Button>
         </Components>
       </GameObject>
-      <GameObject name="ReloadEnemiesText" parent="ReloadEnemiesButton" should_render="false"
-                  position="0,1,0">
+      <GameObject name="ReloadEnemiesText" parent="ReloadEnemiesButton" position="0,1,0">
         <Components>
           <TextRenderer font_height="24">
             <Lines>
@@ -65,7 +62,7 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject name="ReloadGUIButton" parent="DebugConsole" should_render="false">
+      <GameObject name="ReloadGUIButton" parent="DebugConsole">
         <Components>
           <SpriteRenderer/>
           <RectangleCollider/>
@@ -76,8 +73,7 @@
           </Button>
         </Components>
       </GameObject>
-      <GameObject name="ReloadGUIText" parent="ReloadGUIButton" should_render="false"
-                  position="0,1,0">
+      <GameObject name="ReloadGUIText" parent="ReloadGUIButton" position="0,1,0">
         <Components>
           <TextRenderer font_height="24">
             <Lines>
@@ -86,7 +82,7 @@
           </TextRenderer>
         </Components>
       </GameObject>
-      <GameObject name="DebugConsole" Tag="Debug" position="0.5%,0.5%,1" parent="Canvas" active="false" should_render="false">
+      <GameObject name="DebugConsole" Tag="Debug" position="0.5%,0.5%,0" parent="Canvas" active="false" should_render="false">
         <Components>
           <StackPanel orientation="vertical" vertical_alignment="centre" padding="20">
             <Children>
@@ -100,7 +96,7 @@
           <DebugConsole/>
         </Components>
       </GameObject>
-      <GameObject name="Canvas">
+      <GameObject name="Canvas" position="0,0,1">
         <Components>
           <Canvas/>
           <KeyboardActivator activation_key="0" deactivation_key="0" mode="Toggle" target="DebugConsole"/>
