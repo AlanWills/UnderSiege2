@@ -1,4 +1,5 @@
 #include "UnderSiegeGame.h"
+#include "RayTracing/RayTracingGame.h"
 
 // Disables console window
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
@@ -10,7 +11,8 @@
 int main()
 {
   // Don't need to use unique_ptr as it will be deleted through 'current' unique_ptr
-  US::UnderSiegeGame* game = new US::UnderSiegeGame();
+  //US::UnderSiegeGame* game = new US::UnderSiegeGame();
+  US::RayTracing::RayTracingGame* game = new US::RayTracing::RayTracingGame();
   game->run();
 
   return 0;

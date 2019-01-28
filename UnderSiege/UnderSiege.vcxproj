@@ -170,6 +170,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\RayTracing\BuildRedSphere.cpp" />
+    <ClCompile Include="Source\RayTracing\Matrix.cpp" />
+    <ClCompile Include="Source\RayTracing\Normal.cpp" />
+    <ClCompile Include="Source\RayTracing\Point3D.cpp" />
+    <ClCompile Include="Source\RayTracing\Primitives\Plane.cpp" />
+    <ClCompile Include="Source\RayTracing\Primitives\Sphere.cpp" />
+    <ClCompile Include="Source\RayTracing\Ray.cpp" />
+    <ClCompile Include="Source\RayTracing\RayTracer.cpp" />
+    <ClCompile Include="Source\RayTracing\RayTracingGame.cpp" />
+    <ClCompile Include="Source\RayTracing\RGBColor.cpp" />
+    <ClCompile Include="Source\RayTracing\ShadeRec.cpp" />
+    <ClCompile Include="Source\RayTracing\SingleSphere.cpp" />
+    <ClCompile Include="Source\RayTracing\Tracer.cpp" />
+    <ClCompile Include="Source\RayTracing\Vector3D.cpp" />
+    <ClCompile Include="Source\RayTracing\ViewPlane.cpp" />
+    <ClCompile Include="Source\RayTracing\World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Build Events\CopyDependencyDLLs.bat">
@@ -179,6 +195,10 @@
     <None Include="Resources\Data\Bullets\SmallBullet.asset" />
     <None Include="Resources\Data\Enemies\Fiirkan.asset" />
     <None Include="Resources\Data\Screens\DebugTools.asset">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="Resources\Data\Screens\RayTracer.asset">
       <SubType>
       </SubType>
     </None>
@@ -204,6 +224,10 @@
     <None Include="Resources\Scripts\DataConverters\Input\KeyboardVisibilityDataConverter.lua" />
     <None Include="Resources\Scripts\DataConverters\Rendering\CanvasRendererDataConverter.lua" />
     <None Include="Resources\Scripts\Game.lua" />
+    <None Include="Resources\Scripts\RayTracer.lua">
+      <SubType>
+      </SubType>
+    </None>
     <None Include="Resources\Shaders\Model.frag" />
     <None Include="Resources\Shaders\Model.vert" />
   </ItemGroup>
@@ -302,6 +326,26 @@
     <ProjectReference Include="..\UnderSiegeEngine\UnderSiegeEngine.vcxproj">
       <Project>{fd856473-f15e-4488-931d-071d6d3074ea}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers\RayTracing\BuildRedSphere.h" />
+    <ClInclude Include="Headers\RayTracing\Constants.h" />
+    <ClInclude Include="Headers\RayTracing\Matrix.h" />
+    <ClInclude Include="Headers\RayTracing\Normal.h" />
+    <ClInclude Include="Headers\RayTracing\Point3D.h" />
+    <ClInclude Include="Headers\RayTracing\Primitives\GeometricObject.h" />
+    <ClInclude Include="Headers\RayTracing\Primitives\Plane.h" />
+    <ClInclude Include="Headers\RayTracing\Primitives\Sphere.h" />
+    <ClInclude Include="Headers\RayTracing\Ray.h" />
+    <ClInclude Include="Headers\RayTracing\RayTracer.h" />
+    <ClInclude Include="Headers\RayTracing\RGBColor.h" />
+    <ClInclude Include="Headers\RayTracing\ShadeRec.h" />
+    <ClInclude Include="Headers\RayTracing\SingleSphere.h" />
+    <ClInclude Include="Headers\RayTracing\Tracer.h" />
+    <ClInclude Include="Headers\RayTracing\Vector3D.h" />
+    <ClInclude Include="Headers\RayTracing\ViewPlane.h" />
+    <ClInclude Include="Headers\RayTracing\World.h" />
+    <ClInclude Include="Headers\RayTracing\RayTracingGame.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

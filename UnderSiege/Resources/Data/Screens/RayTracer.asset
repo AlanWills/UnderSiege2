@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Screen name="Gameplay">
+    <Resources>
+      <Fonts>
+        
+      </Fonts>
+      <FragmentShaders>
+        
+      </FragmentShaders>
+      <Sounds>
+        
+      </Sounds>
+      <Textures>
+        
+      </Textures>
+      <VertexShaders>
+        
+      </VertexShaders>
+    </Resources>
+    <GameObjects>
+      <GameObject name="Canvas" position="0,0,0">
+        <Components>
+          <Canvas/>
+        </Components>
+      </GameObject>
+      <GameObject name="RayTracer" position="0.5%,0.5%,0" parent="Canvas">
+        <Components>
+          <SpriteRenderer sprite="Textures\UI\Rectangle.png"/>
+          <RayTracer/>
+        </Components>
+      </GameObject>
+    </GameObjects>
+  </Screen>
+</Root>
