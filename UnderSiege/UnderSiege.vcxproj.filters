@@ -48,9 +48,6 @@
     <ClCompile Include="Source\RayTracing\ShadeRec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\RayTracing\SingleSphere.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source\RayTracing\Tracer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -64,6 +61,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source\RayTracing\RayTracingGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RayTracing\ColourTracer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RayTracing\Primitives\GeometricObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -291,9 +294,6 @@
     <ClInclude Include="Headers\RayTracing\ShadeRec.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\RayTracing\SingleSphere.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Headers\RayTracing\Tracer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -310,6 +310,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Headers\RayTracing\RayTracingGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\RayTracing\ColourTracer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

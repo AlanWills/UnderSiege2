@@ -48,7 +48,11 @@ namespace US
     //------------------------------------------------------------------------------------------------
     void RayTracer::raycast()
     {
-      World world;
+      World world(500, 500);
+      world.addObject(new Sphere(Point3D(0, 0, 0), 85, RGBColor(1, 0, 0)));
+      world.addObject(new Sphere(Point3D(100, 100, 0), 50, RGBColor(0, 1, 0)));
+      world.addObject(new Sphere(Point3D(-100, -100, 0), 50, RGBColor(0, 0, 1)));
+      world.addObject(new Sphere(Point3D(0, 0, 0), 200, RGBColor(1, 1, 1)));
       world.build();
 
       std::vector<float> worldData(world.vp.hres * world.vp.vres * 3);

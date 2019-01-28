@@ -1,27 +1,9 @@
 #include "RayTracing/World.h"
 #include "RayTracing/Constants.h"
-#include "RayTracing/SingleSphere.h"
+#include "RayTracing/ColourTracer.h"
 #include "Debugging/Debug.h"
 
 #include <fstream>
-
-struct lwrite
-{
-  unsigned long value;
-  unsigned      size;
-  lwrite(unsigned long value, unsigned size) :
-    value(value), size(size)
-  { }
-};
-
-//--------------------------------------------------------------------------
-inline std::ostream& operator << (std::ostream& outs, const lwrite& v)
-{
-  unsigned long value = v.value;
-  for (unsigned cntr = 0; cntr < v.size; cntr++, value >>= 8)
-    outs.put(static_cast <char> (value & 0xFF));
-  return outs;
-}
 
 // -------------------------------------------------------------------- default constructor
 
@@ -30,25 +12,23 @@ inline std::ostream& operator << (std::ostream& outs, const lwrite& v)
 // camera_ptr is set to NULL because the build functions will always have to construct a camera
 // and set its parameters
 
-World::World(void) :
+World::World(int width, int height) :
   background_color(black),
-	tracer_ptr(nullptr)
+	tracer_ptr(nullptr),
+  m_objects()
 {
+  vp.set_hres(width);
+  vp.set_vres(height);
 }
 
 //------------------------------------------------------------------ render_scene
 void World::build()
 {
-  vp.set_hres(200);
-  vp.set_vres(200);
   vp.set_pixel_size(1.0f);
   vp.set_gamma(1.0f);
 
   background_color = black;
-  tracer_ptr.reset(new SingleSphere(this));
-
-  sphere.setCentre(0);
-  sphere.setRadius(85);
+  tracer_ptr.reset(new ColourTracer(this));
 }
 
 //------------------------------------------------------------------ render_scene
@@ -79,4 +59,10 @@ World::render_scene(std::vector<float>& imgdata) const {
       imgdata[r * vres * 3 + c * 3 + 2] = pixel_color.b;
     }
   }
+}
+
+//------------------------------------------------------------------------------------------------
+void World::addObject(GeometricObject* object)
+{
+  m_objects.push_back(std::shared_ptr<GeometricObject>(object));
 }

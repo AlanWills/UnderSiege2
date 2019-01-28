@@ -5,14 +5,16 @@
 const double Sphere::s_epsilon = 0.001;
 
 //--------------------------------------------------------------------------------------------------
-Sphere::Sphere() :
+Sphere::Sphere(const RGBColor& colour) :
+  Inherited(colour),
   m_centre(),
   m_radius(1)
 {
 }
 
 //--------------------------------------------------------------------------------------------------
-Sphere::Sphere(const Point3D& centre, double radius) :
+Sphere::Sphere(const Point3D& centre, double radius, const RGBColor& colour) :
+  Inherited(colour),
   m_centre(centre),
   m_radius(radius)
 {

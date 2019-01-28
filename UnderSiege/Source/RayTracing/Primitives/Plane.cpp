@@ -5,14 +5,16 @@
 const double Plane::s_epsilon = 0.001;
 
 //--------------------------------------------------------------------------------------------------
-Plane::Plane() :
+Plane::Plane(const RGBColor& colour) :
+  Inherited(colour),
   m_point(),
   m_normal(0, 1, 0)
 {
 }
 
 //--------------------------------------------------------------------------------------------------
-Plane::Plane(const Point3D& point, const Normal& normal) :
+Plane::Plane(const Point3D& point, const Normal& normal, const RGBColor& colour) :
+  Inherited(colour),
   m_point(point),
   m_normal(normal)
 {

@@ -6,8 +6,8 @@
 class Sphere : public GeometricObject
 {
   public:
-    Sphere();
-    Sphere(const Point3D& centre, double radius);
+    Sphere(const RGBColor& colour);
+    Sphere(const Point3D& centre, double radius, const RGBColor& colour);
 
     const Point3D& getCentre() const { return m_centre; }
     void setCentre(const Point3D& centre) { m_centre = centre; }
@@ -18,6 +18,9 @@ class Sphere : public GeometricObject
     bool hit(const Ray& ray, double& tMin, ShadeRec& shadeRect) const override;
 
   private:
+
+    using Inherited = GeometricObject;
+
     static const double s_epsilon;
 
     Point3D m_centre;

@@ -1,50 +1,33 @@
 #pragma once
 
-
-// This file contains the declaration of the class World
-// The World class does not have a copy constructor or an assignment operator, for the followign reasons:
-
-// 1 	There's no need to copy construct or assign the World
-// 2 	We wouldn't want to do this anyway, because the world can contain an arbitray amount of data
-// 3 	These operations wouldn't work because the world is self-referencing:
-//	 	the Tracer base class contains a pointer to the world. If we wrote a correct copy constructor for the 
-// 	  	Tracer class, the World copy construtor would call itself recursively until we ran out of memory. 
-
-
-#include <vector>
-
 #include "RayTracing/ViewPlane.h"
 #include "RayTracing/RGBColor.h"
 #include "RayTracing/Tracer.h"
 #include "RayTracing/Primitives/Sphere.h"
 
+#include <vector>
 #include <memory>
 
 
-using namespace std;
+class World 
+{	
+  private:
+    using WorldObjects = std::vector<std::shared_ptr<GeometricObject>>;
 
-class RenderThread; 	//part of skeleton - wxRaytracer.h
-
-
-class World {	
 	public:
-	
 		ViewPlane					vp;
 		RGBColor					background_color;
 		std::unique_ptr<Tracer>	tracer_ptr;
-		Sphere 						sphere;		// for Chapter 3 only
 
-	public:
-	
-		World();												
+		World(int width, int height);												
 		
-		void 					
-		build();
+    void addObject(GeometricObject* object);
+		void build();
+		void render_scene(std::vector<float>& imgdata) const;
 
-		void 												
-		render_scene(std::vector<float>& imgdata) const;
+    WorldObjects::const_iterator begin() const { return m_objects.cbegin(); }
+    WorldObjects::const_iterator end() const { return m_objects.cend(); }
 			
   private:
-		void
-		display_pixel(const int row, const int column, const RGBColor& pixel_color) const;
+    WorldObjects m_objects;
 };

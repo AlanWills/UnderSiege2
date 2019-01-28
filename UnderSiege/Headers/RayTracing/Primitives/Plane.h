@@ -6,12 +6,14 @@
 class Plane : public GeometricObject
 {
   public:
-    Plane();
-    Plane(const Point3D& point, const Normal& normal);
+    Plane(const RGBColor& colour);
+    Plane(const Point3D& point, const Normal& normal, const RGBColor& colour);
 
     bool hit(const Ray& ray, double& tMin, ShadeRec& shadeRect) const override;
 
   private:
+    using Inherited = GeometricObject;
+
     static const double s_epsilon;
 
     Point3D m_point;
