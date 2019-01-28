@@ -21,7 +21,7 @@ Sphere::Sphere(const Point3D& centre, double radius, const RGBColor& colour) :
 }
 
 //--------------------------------------------------------------------------------------------------
-bool Sphere::hit(const Ray& ray, double& tMin, ShadeRec& shadeRect) const
+bool Sphere::hit(const US::RayTracing::Ray& ray, double& tMin, ShadeRec& shadeRect) const
 {
   Vector3D temp = ray.getOrigin() - m_centre;
 

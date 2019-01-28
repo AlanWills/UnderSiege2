@@ -4,8 +4,9 @@
 #include "Objects/GameObject.h"
 #include "Input/InputUtils.h"
 #include "Rendering/SpriteRenderer.h"
-#include "RayTracing/World.h"
+#include "Lua/LuaState.h"
 
+using namespace CelesteEngine;
 using Texture2D = CelesteEngine::Resources::Texture2D;
 
 
@@ -17,7 +18,9 @@ namespace US
 
     //------------------------------------------------------------------------------------------------
     RayTracer::RayTracer() :
-      m_texture(PinnedHandle<Texture2D>::make_pinned())
+      m_texture(PinnedHandle<Texture2D>::make_pinned()),
+      m_world(nullptr),
+      m_currentLine(-1)
     {
     }
 
@@ -31,9 +34,31 @@ namespace US
     {
       Inherited::onHandleInput();
 
-      if (Input::isKeyPressed(GLFW_KEY_R))
+      if (Input::isKeyPressed(GLFW_KEY_R) && 
+          m_currentLine < 0)
       {
-        raycast();
+        startRaycast();
+      }
+    }
+
+    //------------------------------------------------------------------------------------------------
+    void RayTracer::onUpdate(float elapsedGameTime)
+    {
+      Inherited::onUpdate(elapsedGameTime);
+
+      if (m_currentLine >= 0)
+      {
+        raycastCurrentLine();
+      }
+
+      if (m_currentLine >= 0)
+      {
+        raycastCurrentLine();
+      }
+
+      if (m_currentLine >= 0)
+      {
+        raycastCurrentLine();
       }
     }
 
@@ -43,38 +68,44 @@ namespace US
       Inherited::onDeath();
 
       m_texture->unload();
+      m_world.release();
+      m_currentLine = -1;
     }
 
     //------------------------------------------------------------------------------------------------
-    void RayTracer::raycast()
+    void RayTracer::startRaycast()
     {
-      World world(500, 500);
-      world.addObject(new Sphere(Point3D(0, 0, 0), 85, RGBColor(1, 0, 0)));
-      world.addObject(new Sphere(Point3D(100, 100, 0), 50, RGBColor(0, 1, 0)));
-      world.addObject(new Sphere(Point3D(-100, -100, 0), 50, RGBColor(0, 0, 1)));
-      world.addObject(new Sphere(Point3D(0, 0, -100), 200, RGBColor(1, 1, 1)));
-      world.build();
+      m_world.reset(new World(500, 500));
 
-      std::vector<float> worldData(world.vp.hres * world.vp.vres * 3);
-      world.render_scene(worldData);
+      Lua::LuaState::script(Path("Scripts", "World.lua"));
+      Lua::LuaState::instance()["build"](*this);
 
-      std::vector<unsigned char> textureImgData(world.vp.hres * world.vp.vres * 4);
-      for (int y = 0, yMax = world.vp.vres; y < yMax; ++y)
-      {
-        for (int x = 0, xMax = world.vp.hres; x < xMax; ++x)
-        {
-          textureImgData[y * xMax * 4 + x * 4] = worldData[y * xMax * 3 + x * 3] * 255;
-          textureImgData[y * xMax * 4 + x * 4 + 1] = worldData[y * xMax * 3 + x * 3 + 1] * 255;
-          textureImgData[y * xMax * 4 + x * 4 + 2] = worldData[y * xMax * 3 + x * 3 + 2] * 255;
-          textureImgData[y * xMax * 4 + x * 4 + 3] = 255;
-        }
-      }
+      m_world->addObject(new Sphere(Point3D(0, 0, 0), 85, RGBColor(1, 0, 0)));
+      m_world->addObject(new Sphere(Point3D(100, 100, 0), 50, RGBColor(0, 1, 0)));
+      m_world->addObject(new Sphere(Point3D(-100, -100, 0), 50, RGBColor(0, 0, 1)));
+      m_world->addObject(new Sphere(Point3D(0, 0, -100), 200, RGBColor(1, 1, 1)));
+      m_world->build();
 
       m_texture->unload();
-      m_texture->generate(world.vp.hres, world.vp.vres, textureImgData.data());
-
+      m_texture->generate(m_world->vp.hres, m_world->vp.vres, nullptr);
       getGameObject()->findComponent<Rendering::SpriteRenderer>()->setTexture(m_texture.handle());
       getGameObject()->findComponent<Rendering::SpriteRenderer>()->setDimensions(m_texture->getDimensions());
+
+      m_currentLine = 0;
+    }
+
+    //------------------------------------------------------------------------------------------------
+    void RayTracer::raycastCurrentLine()
+    {
+      if (m_currentLine < m_world->vp.vres)
+      {
+        m_world->renderLine(m_currentLine, m_texture.handle());
+        ++m_currentLine;
+      }
+      else
+      {
+        m_currentLine = -1;
+      }
     }
   }
 }

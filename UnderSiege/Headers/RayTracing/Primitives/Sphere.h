@@ -15,7 +15,7 @@ class Sphere : public GeometricObject
     double getRadius() const { return m_radius; }
     void setRadius(double radius) { m_radius = radius; }
 
-    bool hit(const Ray& ray, double& tMin, ShadeRec& shadeRect) const override;
+    bool hit(const US::RayTracing::Ray& ray, double& tMin, ShadeRec& shadeRect) const override;
 
   private:
 

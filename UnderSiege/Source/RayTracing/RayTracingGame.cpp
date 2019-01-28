@@ -2,6 +2,7 @@
 
 #include "RayTracing/RayTracingGame.h"
 #include "Lua/LuaState.h"
+#include "Lua/ScriptCommands/RayTracing/RayTracerScriptCommands.h"
 
 
 namespace US
@@ -13,7 +14,8 @@ namespace US
     {
       Inherited::onInitialize();
 
-      Lua::LuaState::script(Path(Resources::getResourcesDirectory(), "Scripts", "RayTracer.lua"));
+      Lua::RayTracerScriptCommands::initialize();
+      CelesteEngine::Lua::LuaState::script(Path(Resources::getResourcesDirectory(), "Scripts", "RayTracer.lua"));
     }
   }
 }

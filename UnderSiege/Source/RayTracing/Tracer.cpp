@@ -26,7 +26,7 @@ Tracer::~Tracer(void) {
 // -------------------------------------------------------------------- trace_ray
 
 RGBColor	
-Tracer::trace_ray(const Ray& ray) const {
+Tracer::trace_ray(const US::RayTracing::Ray& ray) const {
 	return (black);
 }
 
@@ -34,7 +34,7 @@ Tracer::trace_ray(const Ray& ray) const {
 // -------------------------------------------------------------------- trace_ray
 
 RGBColor	
-Tracer::trace_ray(const Ray ray, const int depth) const {
+Tracer::trace_ray(const US::RayTracing::Ray ray, const int depth) const {
 	return (black);
 }
 

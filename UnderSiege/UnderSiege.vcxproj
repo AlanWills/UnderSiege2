@@ -229,6 +229,10 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="Resources\Scripts\World.lua">
+      <SubType>
+      </SubType>
+    </None>
     <None Include="Resources\Shaders\Model.frag" />
     <None Include="Resources\Shaders\Model.vert" />
   </ItemGroup>
@@ -347,6 +351,8 @@
     <ClInclude Include="Headers\RayTracing\ViewPlane.h" />
     <ClInclude Include="Headers\RayTracing\World.h" />
     <ClInclude Include="Headers\RayTracing\RayTracingGame.h" />
+    <ClInclude Include="Headers\Lua\ScriptCommands\RayTracing\RayTracerScriptCommands.h" />
+    <ClInclude Include="Source\Lua\ScriptCommands\RayTracing\RayTracerScriptCommands.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,6 +4,7 @@
 #include "RayTracing/RGBColor.h"
 #include "RayTracing/Tracer.h"
 #include "RayTracing/Primitives/Sphere.h"
+#include "Resources/2D/Texture2D.h"
 
 #include <vector>
 #include <memory>
@@ -23,7 +24,8 @@ class World
 		
     void addObject(GeometricObject* object);
 		void build();
-		void render_scene(std::vector<float>& imgdata) const;
+    void renderLine(int line, const Handle<CelesteEngine::Resources::Texture2D>& texture) const;
+    void render_scene(const Handle<CelesteEngine::Resources::Texture2D>& texture) const;
 
     WorldObjects::const_iterator begin() const { return m_objects.cbegin(); }
     WorldObjects::const_iterator end() const { return m_objects.cend(); }

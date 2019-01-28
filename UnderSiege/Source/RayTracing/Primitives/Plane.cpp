@@ -21,7 +21,7 @@ Plane::Plane(const Point3D& point, const Normal& normal, const RGBColor& colour)
 }
 
 //--------------------------------------------------------------------------------------------------
-bool Plane::hit(const Ray& ray, double& tMin, ShadeRec& shadeRect) const
+bool Plane::hit(const US::RayTracing::Ray& ray, double& tMin, ShadeRec& shadeRect) const
 {
   double t = (m_point - ray.getOrigin()) * m_normal / (ray.getDirection() * m_normal);
 

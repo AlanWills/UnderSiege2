@@ -18,7 +18,7 @@ ColourTracer::~ColourTracer()
 
 
 // --------------------------------------------------------------------
-RGBColor ColourTracer::trace_ray(const Ray& ray) const 
+RGBColor ColourTracer::trace_ray(const US::RayTracing::Ray& ray) const
 {
 	ShadeRec	sr(*world_ptr); 	// not used
 	double t = std::numeric_limits<double>::max();  				// not used

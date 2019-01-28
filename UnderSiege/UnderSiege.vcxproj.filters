@@ -92,6 +92,7 @@
     <None Include="Resources\Prefabs\Debugging\FPSCounter.prefab" />
     <None Include="Resources\Scripts\RayTracer.lua" />
     <None Include="Resources\Data\Screens\RayTracer.asset" />
+    <None Include="Resources\Scripts\World.lua" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />
@@ -313,6 +314,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Headers\RayTracing\ColourTracer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Lua\ScriptCommands\RayTracing\RayTracerScriptCommands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Lua\ScriptCommands\RayTracing\RayTracerScriptCommands.cpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -23,10 +23,10 @@ class Tracer {
 		~Tracer(void);									
 
 		virtual RGBColor	
-		trace_ray(const Ray& ray) const;
+		trace_ray(const US::RayTracing::Ray& ray) const;
 
 		virtual RGBColor	
-		trace_ray(const Ray ray, const int depth) const;
+		trace_ray(const US::RayTracing::Ray ray, const int depth) const;
 				
 	protected:
 	
