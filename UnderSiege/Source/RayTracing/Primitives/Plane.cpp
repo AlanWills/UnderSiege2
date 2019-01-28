@@ -27,9 +27,13 @@ bool Plane::hit(const Ray& ray, double& tMin, ShadeRec& shadeRect) const
 
   if (t > s_epsilon)
   {
-    tMin = t;
-    shadeRect.normal = m_normal;
-    shadeRect.local_hit_point = ray.getOrigin() + t * ray.getDirection();
+    if (t < tMin)
+    {
+      tMin = t;
+      shadeRect.normal = m_normal;
+      shadeRect.local_hit_point = ray.getOrigin() + t * ray.getDirection();
+      shadeRect.color = getColour();
+    }
 
     return true;
   }

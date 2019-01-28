@@ -8,6 +8,7 @@
 
 #include "RayTracing/Constants.h"
 #include "RayTracing/ShadeRec.h"
+#include "RayTracing/World.h"
 
 // ------------------------------------------------------------------ constructor
 
@@ -20,7 +21,8 @@ ShadeRec::ShadeRec(World& wr)
 		ray(),
 		depth(0),
 		t(0.0),
-		w(wr)
+		w(wr),
+  color(wr.background_color)
 {}
 
 

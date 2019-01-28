@@ -21,17 +21,14 @@ ColourTracer::~ColourTracer()
 RGBColor ColourTracer::trace_ray(const Ray& ray) const 
 {
 	ShadeRec	sr(*world_ptr); 	// not used
-	double    	t;  				// not used
+	double t = std::numeric_limits<double>::max();  				// not used
 	
   for (const auto& object : *world_ptr)
   {
-    if (object->hit(ray, t, sr))
-    {
-      return object->getColour();
-    }
+    object->hit(ray, t, sr);
   }
 	 
-  return world_ptr->background_color;
+  return sr.color;
 }
 
 
