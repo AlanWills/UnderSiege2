@@ -13,6 +13,7 @@ namespace US
     {
       namespace Internals
       {
+        void addPlane(RayTracing::RayTracer& tracer, sol::table& table);
         void addSphere(RayTracing::RayTracer& tracer, sol::table& table);
       }
 

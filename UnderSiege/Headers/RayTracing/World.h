@@ -3,7 +3,7 @@
 #include "RayTracing/ViewPlane.h"
 #include "RayTracing/RGBColor.h"
 #include "RayTracing/Tracer.h"
-#include "RayTracing/Primitives/Sphere.h"
+#include "Primitives/GeometricObject.h"
 #include "Resources/2D/Texture2D.h"
 
 #include <vector>
