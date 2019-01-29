@@ -12,14 +12,14 @@ namespace US
       namespace Internals
       {
         //------------------------------------------------------------------------------------------------
-        void addSphere(RayTracing::RayTracer& tracer, sol::table& table)
+        /*void addSphere(RayTracing::RayTracer& tracer, sol::table& table)
         {
 
-        }
+        }*/
       }
 
       //------------------------------------------------------------------------------------------------
-      void initialize()
+      /*void initialize()
       {
         sol::state& state = CelesteEngine::Lua::LuaState::instance();
 
@@ -27,7 +27,7 @@ namespace US
           "RayTracer",
           "allocate", sol::factories(&RayTracing::RayTracer::allocate),
           "addSphere", &Internals::addSphere);
-      }
+      }*/
     }
   }
 }

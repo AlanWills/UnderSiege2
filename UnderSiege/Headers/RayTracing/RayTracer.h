@@ -13,6 +13,10 @@ namespace US
     {
       DECLARE_SCRIPT(RayTracer)
 
+      public:
+        World* getWorld() { return m_world.get(); }
+        const World* getWorld() const { return m_world.get(); }
+
       protected:
         void onHandleInput() override;
         void onUpdate(float elapsedGameTime) override;

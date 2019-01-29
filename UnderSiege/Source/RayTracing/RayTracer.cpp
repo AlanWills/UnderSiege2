@@ -5,6 +5,7 @@
 #include "Input/InputUtils.h"
 #include "Rendering/SpriteRenderer.h"
 #include "Lua/LuaState.h"
+#include "Resources/ResourceManager.h"
 
 using namespace CelesteEngine;
 using Texture2D = CelesteEngine::Resources::Texture2D;
@@ -77,13 +78,13 @@ namespace US
     {
       m_world.reset(new World(500, 500));
 
-      Lua::LuaState::script(Path("Scripts", "World.lua"));
+      Lua::LuaState::script(Path(CelesteEngine::Resources::getResourcesDirectory(), "Scripts", "World.lua"));
       Lua::LuaState::instance()["build"](*this);
 
-      m_world->addObject(new Sphere(Point3D(0, 0, 0), 85, RGBColor(1, 0, 0)));
+     /* m_world->addObject(new Sphere(Point3D(0, 0, 0), 85, RGBColor(1, 0, 0)));
       m_world->addObject(new Sphere(Point3D(100, 100, 0), 50, RGBColor(0, 1, 0)));
       m_world->addObject(new Sphere(Point3D(-100, -100, 0), 50, RGBColor(0, 0, 1)));
-      m_world->addObject(new Sphere(Point3D(0, 0, -100), 200, RGBColor(1, 1, 1)));
+      m_world->addObject(new Sphere(Point3D(0, 0, -100), 200, RGBColor(1, 1, 1)));*/
       m_world->build();
 
       m_texture->unload();
