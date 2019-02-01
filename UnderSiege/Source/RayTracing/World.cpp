@@ -50,13 +50,70 @@ void World::renderLine(int line, const Handle<CelesteEngine::Resources::Texture2
   std::unique_ptr<unsigned char> data(new unsigned char[4]);
 
   for (int c = 0; c < hres; c++)
-  {	// across 					
-    ray.setOrigin(Point3D(s * (c - hres / 2.0 + 0.5), s * (line - vres / 2.0 + 0.5), zw));
-    pixel_color = tracer_ptr->trace_ray(ray);
+  {
+    float r = 0;
+    float g = 0;
+    float b = 0;
 
-    data.get()[0] = static_cast<unsigned char>(pixel_color.r * 255);
-    data.get()[1] = static_cast<unsigned char>(pixel_color.g * 255);
-    data.get()[2] = static_cast<unsigned char>(pixel_color.b * 255);
+    // Current pixel
+    {
+      ray.setOrigin(Point3D(s * (c - hres / 2.0 + 0.5), s * (line - vres / 2.0 + 0.5), zw));
+      pixel_color = tracer_ptr->trace_ray(ray);
+
+      r += pixel_color.r;
+      g += pixel_color.g;
+      b += pixel_color.b;
+    }
+
+    // Pixel to left
+    {
+      ray.setOrigin(Point3D(s * ((c - 1) - hres / 2.0 + 0.5), s * (line - vres / 2.0 + 0.5), zw));
+      pixel_color = tracer_ptr->trace_ray(ray);
+
+      r += pixel_color.r;
+      g += pixel_color.g;
+      b += pixel_color.b;
+    }
+
+    // Pixel to right
+    {
+      ray.setOrigin(Point3D(s * ((c + 1) - hres / 2.0 + 0.5), s * (line - vres / 2.0 + 0.5), zw));
+      pixel_color = tracer_ptr->trace_ray(ray);
+
+      r += pixel_color.r;
+      g += pixel_color.g;
+      b += pixel_color.b;
+    }
+
+    // Pixel above
+    {
+      ray.setOrigin(Point3D(s * ((c - 1) - hres / 2.0 + 0.5), s * ((line + 1) - vres / 2.0 + 0.5), zw));
+      pixel_color = tracer_ptr->trace_ray(ray);
+
+      r += pixel_color.r;
+      g += pixel_color.g;
+      b += pixel_color.b;
+    }
+
+    // Pixel below
+    {
+      ray.setOrigin(Point3D(s * ((c - 1) - hres / 2.0 + 0.5), s * ((line - 1) - vres / 2.0 + 0.5), zw));
+      pixel_color = tracer_ptr->trace_ray(ray);
+
+      r += pixel_color.r;
+      g += pixel_color.g;
+      b += pixel_color.b;
+    }
+
+    // Average
+    const int numSamples = 5;
+    r /= numSamples;
+    g /= numSamples;
+    b /= numSamples;
+
+    data.get()[0] = static_cast<unsigned char>(r * 255);
+    data.get()[1] = static_cast<unsigned char>(g * 255);
+    data.get()[2] = static_cast<unsigned char>(b * 255);
     data.get()[3] = 255;
 
     texture->setPixel(c, line, data.get());
