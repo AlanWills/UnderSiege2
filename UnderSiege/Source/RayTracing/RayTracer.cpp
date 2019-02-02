@@ -76,15 +76,13 @@ namespace US
     //------------------------------------------------------------------------------------------------
     void RayTracer::startRaycast()
     {
-      m_world.reset(new World(500, 500));
-
       Lua::LuaState::script(Path(CelesteEngine::Resources::getResourcesDirectory(), "Scripts", "World.lua"));
+      
+      glm::vec2 worldDimensions(500);
+      CelesteEngine::deserialize<glm::vec2>(Lua::LuaState::instance()["dimensions"].get_or<std::string>("500,500"), worldDimensions);
+      m_world.reset(new World(worldDimensions.x, worldDimensions.y));
+      
       Lua::LuaState::instance()["build"](*this);
-
-     /* m_world->addObject(new Sphere(Point3D(0, 0, 0), 85, RGBColor(1, 0, 0)));
-      m_world->addObject(new Sphere(Point3D(100, 100, 0), 50, RGBColor(0, 1, 0)));
-      m_world->addObject(new Sphere(Point3D(-100, -100, 0), 50, RGBColor(0, 0, 1)));
-      m_world->addObject(new Sphere(Point3D(0, 0, -100), 200, RGBColor(1, 1, 1)));*/
       m_world->build();
 
       m_texture->unload();

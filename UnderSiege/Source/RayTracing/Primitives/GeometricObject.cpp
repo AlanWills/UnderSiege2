@@ -3,13 +3,19 @@
 #include "RayTracing/Primitives/GeometricObject.h"
 
 
-//------------------------------------------------------------------------------------------------
-GeometricObject::GeometricObject(const RGBColor& colour) :
-  m_colour(colour)
+namespace US
 {
-}
+  namespace RayTracing
+  {
+    //------------------------------------------------------------------------------------------------
+    GeometricObject::GeometricObject(const glm::vec3& colour) :
+      m_colour(colour)
+    {
+    }
 
-//------------------------------------------------------------------------------------------------
-GeometricObject::~GeometricObject()
-{
+    //------------------------------------------------------------------------------------------------
+    GeometricObject::~GeometricObject()
+    {
+    }
+  }
 }

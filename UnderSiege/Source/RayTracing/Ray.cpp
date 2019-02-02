@@ -13,7 +13,7 @@ namespace US
     }
 
     //--------------------------------------------------------------------------------------------------
-    Ray::Ray(const Point3D& origin, const Vector3D& direction) :
+    Ray::Ray(const glm::vec3& origin, const glm::vec3& direction) :
       m_origin(origin),
       m_direction(direction)
     {

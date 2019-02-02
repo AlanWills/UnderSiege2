@@ -3,19 +3,25 @@
 #include "GeometricObject.h"
 
 
-class Plane : public GeometricObject
+namespace US
 {
-  public:
-    Plane(const RGBColor& colour);
-    Plane(const Point3D& point, const Normal& normal, const RGBColor& colour);
+  namespace RayTracing
+  {
+    class Plane : public GeometricObject
+    {
+      public:
+        Plane(const glm::vec3& colour);
+        Plane(const glm::vec3& point, const glm::vec3& normal, const glm::vec3& colour);
 
-    bool hit(const US::RayTracing::Ray& ray, double& tMin, ShadeRec& shadeRect) const override;
+        bool hit(const US::RayTracing::Ray& ray, float& tMin, ShadeRec& shadeRect) const override;
 
-  private:
-    using Inherited = GeometricObject;
+      private:
+        using Inherited = GeometricObject;
 
-    static const double s_epsilon;
+        static const double s_epsilon;
 
-    Point3D m_point;
-    Normal m_normal;
-};
+        glm::vec3 m_point;
+        glm::vec3 m_normal;
+    };
+  }
+}

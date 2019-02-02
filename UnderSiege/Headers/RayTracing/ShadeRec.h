@@ -1,35 +1,33 @@
 #pragma once
 
-// this file contains the declaration of the class ShadeRec
+#include "glm/glm.hpp"
+#include "Ray.h"
 
 #include <vector>
 
-class Material;
-class World;
 
-// We need the following as #includes instead of forward class declarations,
-// because we have the objects themselves, not pointers or references
+namespace US
+{
+  namespace RayTracing
+  {
+    class Material;
+    class World;
 
-#include "RayTracing/Point3D.h"
-#include "RayTracing/Normal.h"
-#include "RayTracing/Ray.h"
-#include "RayTracing/RGBColor.h"
+    class ShadeRec 
+    {
+      public:
+        bool				hit_an_object;		// Did the ray hit an object?
+        Material* 			material_ptr;		// Pointer to the nearest object's material
+        glm::vec3 			hit_point;			// World coordinates of intersection
+        glm::vec3				local_hit_point;	// World coordinates of hit point on generic object (used for texture transformations)
+        glm::vec3				normal;				// Normal at hit point
+        Ray					ray;				// Required for specular highlights and area lights
+        int					depth;				// recursion depth
+        float				t;					// ray parameter
+        World&				w;					// World reference
+        glm::vec3            color;
 
-class ShadeRec {
-	public:
-	
-		bool				hit_an_object;		// Did the ray hit an object?
-		Material* 			material_ptr;		// Pointer to the nearest object's material
-		Point3D 			hit_point;			// World coordinates of intersection
-		Point3D				local_hit_point;	// World coordinates of hit point on generic object (used for texture transformations)
-		Normal				normal;				// Normal at hit point
-    US::RayTracing::Ray					ray;				// Required for specular highlights and area lights
-		int					depth;				// recursion depth
-		float				t;					// ray parameter
-		World&				w;					// World reference
-		RGBColor            color;
-				
-		ShadeRec(World& wr);					// constructor
-		
-		ShadeRec(const ShadeRec& sr);			// copy constructor
-};
+        ShadeRec(World& wr);					// constructor
+    };
+  }
+}

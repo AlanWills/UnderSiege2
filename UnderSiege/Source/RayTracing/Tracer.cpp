@@ -1,42 +1,48 @@
+#include "stdafx.h"
+
 #include "RayTracing/Tracer.h"
 
-// -------------------------------------------------------------------- default constructor
 
-Tracer::Tracer(void)
-	: world_ptr(NULL)
-{}
+namespace US
+{
+  namespace RayTracing
+  {
+    // -------------------------------------------------------------------- default constructor
 
-
-// -------------------------------------------------------------------- constructor
-
-Tracer::Tracer(World* _worldPtr)
-	: world_ptr(_worldPtr)
-{}
+    Tracer::Tracer(void)
+      : world_ptr(NULL)
+    {}
 
 
+    // -------------------------------------------------------------------- constructor
 
-// -------------------------------------------------------------------- destructor
+    Tracer::Tracer(World* _worldPtr)
+      : world_ptr(_worldPtr)
+    {}
 
-Tracer::~Tracer(void) {
-	if (world_ptr)
-		world_ptr = NULL;
+
+
+    // -------------------------------------------------------------------- destructor
+
+    Tracer::~Tracer(void) {
+      if (world_ptr)
+        world_ptr = NULL;
+    }
+
+
+    // -------------------------------------------------------------------- trace_ray
+
+    glm::vec3 Tracer::trace_ray(const US::RayTracing::Ray& ray) const 
+    {
+      return (black);
+    }
+
+
+    // -------------------------------------------------------------------- trace_ray
+
+    glm::vec3 Tracer::trace_ray(const US::RayTracing::Ray& ray, const int depth) const
+    {
+      return (black);
+    }
+  }
 }
-
-
-// -------------------------------------------------------------------- trace_ray
-
-RGBColor	
-Tracer::trace_ray(const US::RayTracing::Ray& ray) const {
-	return (black);
-}
-
-
-// -------------------------------------------------------------------- trace_ray
-
-RGBColor	
-Tracer::trace_ray(const US::RayTracing::Ray ray, const int depth) const {
-	return (black);
-}
-
-
-

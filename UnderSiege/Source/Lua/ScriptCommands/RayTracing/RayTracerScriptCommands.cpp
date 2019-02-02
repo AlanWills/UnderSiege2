@@ -24,12 +24,7 @@ namespace US
 
           glm::vec3 colour;
           CelesteEngine::deserialize<glm::vec3>(table.get_or<std::string>("colour", "1"), colour);
-
-          tracer.getWorld()->addObject(
-            new Plane(
-              Point3D(position.x, position.y, position.z),
-              Normal(normal.x, normal.y, normal.z), 
-              RGBColor(colour.r, colour.g, colour.b)));
+          tracer.getWorld()->addObject(new RayTracing::Plane(position, normal, colour));
         }
 
         //------------------------------------------------------------------------------------------------
@@ -42,12 +37,7 @@ namespace US
 
           glm::vec3 colour;
           CelesteEngine::deserialize<glm::vec3>(table.get_or<std::string>("colour", "1"), colour);
-
-          tracer.getWorld()->addObject(
-            new Sphere(
-              Point3D(position.x, position.y, position.z), 
-              radius, 
-              RGBColor(colour.r, colour.g, colour.b)));
+          tracer.getWorld()->addObject(new RayTracing::Sphere(position, radius, colour));
         }
       }
 

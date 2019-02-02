@@ -3,11 +3,17 @@
 #include "Tracer.h"
 
 
-class ColourTracer : public Tracer 
+namespace US
 {
-	public:
-    ColourTracer(World* _worldPtr);
-		virtual	~ColourTracer(void);
-		
-		virtual RGBColor trace_ray(const US::RayTracing::Ray& ray) const;
-};
+  namespace RayTracing
+  {
+    class ColourTracer : public Tracer
+    {
+      public:
+        ColourTracer(World* _worldPtr);
+        virtual	~ColourTracer(void);
+
+        virtual glm::vec3 trace_ray(const US::RayTracing::Ray& ray) const;
+    };
+  }
+}

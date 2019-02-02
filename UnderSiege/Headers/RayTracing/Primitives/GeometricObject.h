@@ -4,17 +4,23 @@
 #include "RayTracing/ShadeRec.h"
 
 
-class GeometricObject
+namespace US
 {
-  public:
-    GeometricObject(const RGBColor& colour);
-    virtual ~GeometricObject();
+  namespace RayTracing
+  {
+    class GeometricObject
+    {
+      public:
+        GeometricObject(const glm::vec3& colour);
+        virtual ~GeometricObject();
 
-    const RGBColor& getColour() const { return m_colour; }
-    void setColour(const RGBColor& colour) { m_colour = colour; }
+        const glm::vec3& getColour() const { return m_colour; }
+        void setColour(const glm::vec3& colour) { m_colour = colour; }
 
-    virtual bool hit(const US::RayTracing::Ray& rau, double& tmin, ShadeRec& shadeRec) const = 0;
+        virtual bool hit(const US::RayTracing::Ray& ray, float& tmin, ShadeRec& shadeRec) const = 0;
 
-  private:
-    RGBColor m_colour;
-};
+      private:
+        glm::vec3 m_colour;
+    };
+  }
+}
