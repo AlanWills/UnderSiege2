@@ -1,4 +1,4 @@
-dimensions = "0.5%,0.5%"
+dimensions = "1%,1%"
 ray_z_position = 1000
 
 build = function(raycaster)
