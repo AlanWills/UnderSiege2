@@ -50,7 +50,6 @@ namespace US
       int 		hres = vp.hres;
       int 		vres = vp.vres;
       float		s = vp.s;
-      float		zw = 100.0;				// hardwired in
 
       ray.setDirection(glm::vec3(0, 0, -1));
 
@@ -64,7 +63,7 @@ namespace US
 
         // Current pixel
         {
-          ray.setOrigin(glm::vec3(s * (c - hres / 2.0 + 0.5), s * (line - vres / 2.0 + 0.5), zw));
+          ray.setOrigin(glm::vec3(s * (c - hres / 2.0 + 0.5), s * (line - vres / 2.0 + 0.5), m_rayZPosition));
           pixel_color = tracer_ptr->trace_ray(ray);
 
           r += pixel_color.r;
@@ -74,7 +73,7 @@ namespace US
 
         // Pixel to left
         {
-          ray.setOrigin(glm::vec3(s * ((c - 1) - hres / 2.0 + 0.5), s * (line - vres / 2.0 + 0.5), zw));
+          ray.setOrigin(glm::vec3(s * ((c - 1) - hres / 2.0 + 0.5), s * (line - vres / 2.0 + 0.5), m_rayZPosition));
           pixel_color = tracer_ptr->trace_ray(ray);
 
           r += pixel_color.r;
@@ -84,7 +83,7 @@ namespace US
 
         // Pixel to right
         {
-          ray.setOrigin(glm::vec3(s * ((c + 1) - hres / 2.0 + 0.5), s * (line - vres / 2.0 + 0.5), zw));
+          ray.setOrigin(glm::vec3(s * ((c + 1) - hres / 2.0 + 0.5), s * (line - vres / 2.0 + 0.5), m_rayZPosition));
           pixel_color = tracer_ptr->trace_ray(ray);
 
           r += pixel_color.r;
@@ -94,7 +93,7 @@ namespace US
 
         // Pixel above
         {
-          ray.setOrigin(glm::vec3(s * ((c - 1) - hres / 2.0 + 0.5), s * ((line + 1) - vres / 2.0 + 0.5), zw));
+          ray.setOrigin(glm::vec3(s * ((c - 1) - hres / 2.0 + 0.5), s * ((line + 1) - vres / 2.0 + 0.5), m_rayZPosition));
           pixel_color = tracer_ptr->trace_ray(ray);
 
           r += pixel_color.r;
@@ -104,7 +103,7 @@ namespace US
 
         // Pixel below
         {
-          ray.setOrigin(glm::vec3(s * ((c - 1) - hres / 2.0 + 0.5), s * ((line - 1) - vres / 2.0 + 0.5), zw));
+          ray.setOrigin(glm::vec3(s * ((c - 1) - hres / 2.0 + 0.5), s * ((line - 1) - vres / 2.0 + 0.5), m_rayZPosition));
           pixel_color = tracer_ptr->trace_ray(ray);
 
           r += pixel_color.r;

@@ -1,4 +1,5 @@
 dimensions = "0.5%,0.5%"
+ray_z_position = 1000
 
 build = function(raycaster)
 	raycaster:addSphere(

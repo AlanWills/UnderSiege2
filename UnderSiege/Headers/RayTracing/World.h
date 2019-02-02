@@ -25,6 +25,9 @@ namespace US
 
         World(int width, int height);
 
+        float getRayZPosition() const { return m_rayZPosition; }
+        void setRayZPosition(float rayZPosition) { m_rayZPosition = rayZPosition; }
+
         void addObject(GeometricObject* object);
         void build();
         void renderLine(int line, const Handle<CelesteEngine::Resources::Texture2D>& texture) const;
@@ -35,6 +38,8 @@ namespace US
 
       private:
         WorldObjects m_objects;
+
+        float m_rayZPosition;
     };
   }
 }

@@ -81,6 +81,7 @@ namespace US
       glm::vec2 worldDimensions(500);
       CelesteEngine::deserialize<glm::vec2>(Lua::LuaState::instance()["dimensions"].get_or<std::string>("500,500"), worldDimensions);
       m_world.reset(new World(worldDimensions.x, worldDimensions.y));
+      m_world->setRayZPosition(Lua::LuaState::instance()["ray_z_position"].get_or(100.0f));
       
       Lua::LuaState::instance()["build"](*this);
       m_world->build();
