@@ -25,6 +25,15 @@ build = function(raycaster)
 		    ["colour"] = "0,0,1"
 	    }
     )
+    
+    raycaster:addTriangle(
+	    {
+		    ["v0"] = "-100,-100,200",
+		    ["v1"] = "0,-100,200",
+			["v2"] = "0,0,200",
+		    ["colour"] = "0,0,1"
+	    }
+    )
 
     raycaster:addPlane(
         {

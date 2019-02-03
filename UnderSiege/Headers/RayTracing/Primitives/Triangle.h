@@ -19,9 +19,9 @@ namespace US
 
         static const double s_epsilon;
 
-        glm::vec3 m_p1;
-        glm::vec3 m_p2;
-        glm::vec3 m_p3;
+        glm::vec3 m_v0;
+        glm::vec3 m_v1;
+        glm::vec3 m_v2;
     };
   }
 }
