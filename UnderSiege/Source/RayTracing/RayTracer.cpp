@@ -35,8 +35,7 @@ namespace US
     {
       Inherited::onHandleInput();
 
-      if (Input::isKeyPressed(GLFW_KEY_R) && 
-          m_currentLine < 0)
+      if (Input::isKeyPressed(GLFW_KEY_R))
       {
         startRaycast();
       }

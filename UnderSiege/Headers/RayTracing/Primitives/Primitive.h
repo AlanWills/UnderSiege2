@@ -2,17 +2,19 @@
 
 #include "RayTracing/Ray.h"
 #include "RayTracing/ShadeRec.h"
+#include "sol.hpp"
 
 
 namespace US
 {
   namespace RayTracing
   {
-    class GeometricObject
+    class Primitive
     {
       public:
-        GeometricObject(const glm::vec3& colour);
-        virtual ~GeometricObject();
+        Primitive(const glm::vec3& colour);
+        Primitive(const sol::table& table);
+        virtual ~Primitive();
 
         const glm::vec3& getColour() const { return m_colour; }
         void setColour(const glm::vec3& colour) { m_colour = colour; }

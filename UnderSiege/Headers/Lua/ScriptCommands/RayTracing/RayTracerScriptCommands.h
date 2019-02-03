@@ -13,8 +13,11 @@ namespace US
     {
       namespace Internals
       {
-        void addPlane(RayTracing::RayTracer& tracer, sol::table& table);
-        void addSphere(RayTracing::RayTracer& tracer, sol::table& table);
+        template <typename T>
+        void add(RayTracing::RayTracer& tracer, const sol::table& table)
+        {
+          tracer.getWorld()->addObject(new T(table));
+        }
       }
 
       void initialize();

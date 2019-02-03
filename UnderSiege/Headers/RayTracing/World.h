@@ -2,7 +2,7 @@
 
 #include "RayTracing/ViewPlane.h"
 #include "RayTracing/Tracer.h"
-#include "Primitives/GeometricObject.h"
+#include "Primitives/Primitive.h"
 #include "Resources/2D/Texture2D.h"
 
 #include <vector>
@@ -16,7 +16,7 @@ namespace US
     class World
     {
       private:
-        using WorldObjects = std::vector<std::shared_ptr<GeometricObject>>;
+        using WorldObjects = std::vector<std::shared_ptr<Primitive>>;
 
       public:
         ViewPlane	vp;
@@ -28,7 +28,7 @@ namespace US
         float getRayZPosition() const { return m_rayZPosition; }
         void setRayZPosition(float rayZPosition) { m_rayZPosition = rayZPosition; }
 
-        void addObject(GeometricObject* object);
+        void addObject(Primitive* object);
         void build();
         void renderLine(int line, const Handle<CelesteEngine::Resources::Texture2D>& texture) const;
         void render_scene(const Handle<CelesteEngine::Resources::Texture2D>& texture) const;

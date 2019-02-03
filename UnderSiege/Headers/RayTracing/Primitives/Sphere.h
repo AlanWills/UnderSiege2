@@ -1,17 +1,18 @@
 #pragma once
 
-#include "GeometricObject.h"
+#include "Primitive.h"
 
 
 namespace US
 {
   namespace RayTracing
   {
-    class Sphere : public GeometricObject
+    class Sphere : public Primitive
     {
       public:
         Sphere(const glm::vec3& colour);
         Sphere(const glm::vec3& centre, double radius, const glm::vec3& colour);
+        Sphere(const sol::table& table);
 
         const glm::vec3& getCentre() const { return m_centre; }
         void setCentre(const glm::vec3& centre) { m_centre = centre; }
@@ -23,7 +24,7 @@ namespace US
 
       private:
 
-        using Inherited = GeometricObject;
+        using Inherited = Primitive;
 
         static const double s_epsilon;
 

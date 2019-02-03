@@ -54,11 +54,14 @@
     <ClCompile Include="Source\RayTracing\ColourTracer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\RayTracing\Primitives\GeometricObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Lua\ScriptCommands\RayTracing\RayTracerScriptCommands.cpp">
       <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RayTracing\Primitives\Primitive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RayTracing\Primitives\Triangle.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -253,9 +256,6 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Headers\RayTracing\Primitives\GeometricObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Headers\RayTracing\Primitives\Plane.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -296,6 +296,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Lua\ScriptCommands\RayTracing\RayTracerScriptCommands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\RayTracing\Primitives\Primitive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\RayTracing\Primitives\Triangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

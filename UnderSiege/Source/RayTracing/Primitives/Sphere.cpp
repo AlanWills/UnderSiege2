@@ -1,6 +1,7 @@
 #include "stdafx.h"
 
 #include "RayTracing/Primitives/Sphere.h"
+#include "Deserialization/MathsDeserializers.h"
 
 
 namespace US
@@ -24,6 +25,16 @@ namespace US
       m_centre(centre),
       m_radius(radius)
     {
+    }
+
+    //--------------------------------------------------------------------------------------------------
+    Sphere::Sphere(const sol::table& table) :
+      Inherited(table),
+      m_centre(),
+      m_radius(1)
+    {
+      CelesteEngine::deserialize<glm::vec3>(table.get_or<std::string>("centre", "0,0,0"), m_centre);
+      m_radius = table.get_or("radius", 1.0f);
     }
 
     //--------------------------------------------------------------------------------------------------

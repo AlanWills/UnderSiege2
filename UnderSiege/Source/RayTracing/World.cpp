@@ -159,9 +159,9 @@ namespace US
     }
 
     //------------------------------------------------------------------------------------------------
-    void World::addObject(GeometricObject* object)
+    void World::addObject(Primitive* object)
     {
-      m_objects.push_back(std::shared_ptr<GeometricObject>(object));
+      m_objects.push_back(std::shared_ptr<Primitive>(object));
     }
   }
 }
