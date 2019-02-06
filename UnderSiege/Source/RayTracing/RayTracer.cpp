@@ -86,6 +86,8 @@ namespace US
       m_world->build();
 
       m_texture->unload();
+      m_texture->setWrapS(GL_CLAMP_TO_EDGE);
+      m_texture->setWrapT(GL_CLAMP_TO_EDGE);
       m_texture->generate(m_world->vp.hres, m_world->vp.vres, nullptr);
       getGameObject()->findComponent<Rendering::SpriteRenderer>()->setTexture(m_texture.handle());
       getGameObject()->findComponent<Rendering::SpriteRenderer>()->setDimensions(m_texture->getDimensions());
