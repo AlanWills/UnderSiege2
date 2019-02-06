@@ -182,6 +182,8 @@
     <ClInclude Include="Headers\GraphicalFX\AsteroidSpawner.h" />
     <ClInclude Include="Headers\Ships\ShipEnums.h" />
     <ClInclude Include="Headers\Ships\ShipManager.h" />
+    <ClInclude Include="Headers\TileMap\Tile.h" />
+    <ClInclude Include="Headers\TileMap\TileMap.h" />
     <ClInclude Include="Headers\Turrets\AimControl\AimController.h" />
     <ClInclude Include="Headers\Turrets\AimControl\AutomaticAimController.h" />
     <ClInclude Include="Headers\Turrets\AimControl\ManualAimController.h" />
@@ -213,6 +215,8 @@
     <ClCompile Include="Source\Debugging\FPSCounter.cpp" />
     <ClCompile Include="Source\GraphicalFX\AsteroidSpawner.cpp" />
     <ClCompile Include="Source\Ships\ShipManager.cpp" />
+    <ClCompile Include="Source\TileMap\Tile.cpp" />
+    <ClCompile Include="Source\TileMap\TileMap.cpp" />
     <ClCompile Include="Source\Turrets\AimControl\AimController.cpp" />
     <ClCompile Include="Source\Turrets\AimControl\AutomaticAimController.cpp" />
     <ClCompile Include="Source\Turrets\AimControl\ManualAimController.cpp" />
