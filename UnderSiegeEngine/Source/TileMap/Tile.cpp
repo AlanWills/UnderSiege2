@@ -11,6 +11,7 @@ namespace US
   //------------------------------------------------------------------------------------------------
   Tile::Tile() :
     m_sprite(createReferenceField<std::string>("sprite")),
+    m_traversable(createValueField<bool>("traversable")),
     m_position()
   {
   }

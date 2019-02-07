@@ -36,6 +36,7 @@ namespace US
         const char* elementText = tileElement->GetText();
         if (elementText != nullptr)
         {
+          // Change this to use flyweight - only load in one copy of each unique tile
           Tile* tile = ScriptableObject::load<Tile>(elementText);
           if (tile != nullptr)
           {
