@@ -1,51 +1,26 @@
 #pragma once
 
 #include "UnderSiegeEngineDllExport.h"
-#include "FileSystem/Path.h"
-#include "Ships/PlayerShip.h"
-#include "Ships/ShipManager.h"
+#include "Objects/ScriptableObject.h"
+#include "Screens/Screen.h"
 
-
-namespace CelesteEngine
-{
-  namespace Bindings
-  {
-    class BindingsGenerator;
-  }
-}
 
 namespace US
 {
-  class UnderSiegeEngineDllExport Level : public ScriptableObject
+  class UnderSiegeEngineDllExport Level : public CelesteEngine::ScriptableObject
   {
     DECLARE_SCRIPTABLE_OBJECT(Level)
 
     public:
-      static Level* current() { return m_current.get(); }
-      void makeCurrent();
+      const Path& getScreenPath() const { return m_screenPath->getValue(); }
+      const Path& getTileMapPath() const { return m_tileMapPath->getValue(); }
 
-      ShipManager* getShipManager() const { return m_shipManager; }
-      const Handle<Screen>& getScreen() const { return m_screen; }
-      Ship* getPlayerShip() const { return m_playerShip.get(); }
-      const Path& getScreenFilePath() const { return m_screenFilePath->getValue(); }
-      const Path& getBackgroundFilePath() const { return m_backgroundFilePath->getValue(); }
-
-      void loadScreen();
-      void loadGUI();
-      void loadPlayer();
-      void loadEnemies();
+      Handle<Screen> initialize();
 
     private:
-      typedef ScriptableObject Inherited;
+      using Inherited = CelesteEngine::ScriptableObject;
 
-      static std::unique_ptr<Level> m_current;
-
-      ShipManager* m_shipManager;
-      Handle<Screen> m_screen;
-      std::unique_ptr<PlayerShip> m_playerShip;
-
-      ReferenceField<Path>* m_screenFilePath;
-      ReferenceField<Path>* m_backgroundFilePath;
-      ReferenceField<glm::vec2>* m_playerSpawnPosition;
+      ReferenceField<Path>* m_screenPath;
+      ReferenceField<Path>* m_tileMapPath;
   };
 }
