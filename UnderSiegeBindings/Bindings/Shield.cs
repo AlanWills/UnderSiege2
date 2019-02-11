@@ -14,11 +14,11 @@ namespace US
 	{
 		[Serialize, DisplayPriority(1)]
 		[XmlAttribute("strength"), DisplayName("Strength")]
-		public int Strength { get; set; } = 100;
+		public float Strength { get; set; } = 100.000000f;
 
 		[Serialize, DisplayPriority(2)]
 		[XmlAttribute("recharge_per_second"), DisplayName("Recharge Per Second")]
-		public int RechargePerSecond { get; set; } = 1;
+		public float RechargePerSecond { get; set; } = 1.000000f;
 
 		[Serialize, DisplayPriority(3)]
 		[XmlAttribute("texture"), DisplayName("Texture")]

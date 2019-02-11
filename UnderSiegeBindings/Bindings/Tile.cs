@@ -10,14 +10,14 @@ using BindingsKernel;
 
 namespace US
 {
-	public class Level : ScriptableObject
+	public class Tile : ScriptableObject
 	{
 		[Serialize, DisplayPriority(1)]
-		[XmlAttribute("screen"), DisplayName("Screen")]
-		public Path Screen { get; set; } = new Path(@"");
+		[XmlAttribute("texture"), DisplayName("Texture")]
+		public Texture2D Texture { get; set; }
 
 		[Serialize, DisplayPriority(2)]
-		[XmlAttribute("tile_map"), DisplayName("Tile Map")]
-		public Path TileMap { get; set; } = new Path(@"");
+		[XmlAttribute("traversable"), DisplayName("Traversable")]
+		public bool Traversable { get; set; } = false;
 	}
 }

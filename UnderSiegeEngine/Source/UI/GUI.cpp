@@ -35,7 +35,7 @@ namespace US
         return;
       }
 
-      m_turretGUIs->setup(prefab->instantiate(level->getScreen()), level->getPlayerShip()->getTurrets());
+      //m_turretGUIs->setup(prefab->instantiate(level->getScreen()), level->getPlayerShip()->getTurrets());
     }
 
     //------------------------------------------------------------------------------------------------

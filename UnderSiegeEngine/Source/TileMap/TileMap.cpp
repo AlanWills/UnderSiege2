@@ -3,6 +3,7 @@
 #include "TileMap/TileMap.h"
 #include "Registries/ScriptableObjectRegistry.h"
 #include "Deserialization/MathsDeserializers.h"
+#include "Serialization/MathsSerializers.h"
 
 
 namespace US
@@ -46,8 +47,8 @@ namespace US
 
             if (attribute != nullptr)
             {
-              glm::ivec2 position;
-              CelesteEngine::deserialize<glm::ivec2>(attribute->Value(), position);
+              glm::uvec2 position;
+              CelesteEngine::deserialize<glm::uvec2>(attribute->Value(), position);
               tile->setPosition(position);
 
               m_tiles.push_back(tile);

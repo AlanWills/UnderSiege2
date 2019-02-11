@@ -87,6 +87,7 @@
     <None Include="Resources\Scripts\RayTracer.lua" />
     <None Include="Resources\Data\Screens\RayTracer.asset" />
     <None Include="Resources\Scripts\World.lua" />
+    <None Include="Resources\Data\Tiles\RegularSpace.asset" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />
@@ -247,6 +248,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Textures\Weapons\Shredder\Shredder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Tiles\RegularSpace.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

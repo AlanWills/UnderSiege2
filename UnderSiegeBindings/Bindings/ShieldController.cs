@@ -10,7 +10,7 @@ using BindingsKernel;
 
 namespace US
 {
-	public class TurretController : Component
+	public class ShieldController : Component
 	{
 		[Serialize, DisplayPriority(1)]
 		[XmlAttribute("active"), DisplayName("Active")]

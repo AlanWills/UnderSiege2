@@ -27,7 +27,7 @@ namespace US
   {
     Inherited::onUpdate(elapsedGameTime);
 
-    if (m_targetShip.is_null())
+    /*if (m_targetShip.is_null())
     {
       std::vector<Ship*> targetShips;
       Level::current()->getShipManager()->getShipsOfType(m_targetType, targetShips);
@@ -40,6 +40,6 @@ namespace US
     else
     {
       getTransform()->setWorldRotation(Maths::lookAt(getTransform()->getWorldTranslation(), m_targetShip->getTransform()->getWorldTranslation()));
-    }
+    }*/
   }
 }

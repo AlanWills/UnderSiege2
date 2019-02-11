@@ -10,7 +10,7 @@ using BindingsKernel;
 
 namespace US
 {
-	public class Ship : ScriptableObject
+	public class EnemyShip : ScriptableObject
 	{
 		[Serialize, DisplayPriority(1)]
 		[XmlAttribute("texture"), DisplayName("Texture")]
@@ -27,5 +27,9 @@ namespace US
 		[Serialize, DisplayPriority(4)]
 		[XmlAttribute("ship_prefab"), DisplayName("Ship Prefab")]
 		public Path ShipPrefab { get; set; } = new Path(@"");
+
+		[Serialize, DisplayPriority(5)]
+		[XmlAttribute("death_animation_prefab"), DisplayName("Death Animation Prefab")]
+		public Path DeathAnimationPrefab { get; set; } = new Path(@"");
 	}
 }

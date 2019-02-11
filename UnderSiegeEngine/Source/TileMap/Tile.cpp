@@ -10,7 +10,7 @@ namespace US
 
   //------------------------------------------------------------------------------------------------
   Tile::Tile() :
-    m_sprite(createReferenceField<Path>("sprite")),
+    m_texture(createHandleField<CelesteEngine::Resources::Texture2D>("texture")),
     m_traversable(createValueField<bool>("traversable")),
     m_position()
   {

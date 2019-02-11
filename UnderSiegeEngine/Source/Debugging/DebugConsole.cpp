@@ -46,23 +46,23 @@ namespace US
     void DebugConsole::reloadScreen()
     {
       // Kill current screen
-      Level::current()->getScreen()->die();
+      //Level::current()->getScreen()->die();
 
       // Reload screen
-      Level::current()->loadScreen();
+      //Level::current()->loadScreen();
     }
 
     //------------------------------------------------------------------------------------------------
     void DebugConsole::reloadPlayer()
     {
-      if (Level::current()->getPlayerShip() != nullptr)
-      {
-        // Cleanup player ship if it already exists
-        Level::current()->getShipManager()->removeShip(Level::current()->getPlayerShip());
-        Level::current()->getPlayerShip()->getGameObject()->die();
-      }
+      //if (Level::current()->getPlayerShip() != nullptr)
+      //{
+      //  // Cleanup player ship if it already exists
+      //  Level::current()->getShipManager()->removeShip(Level::current()->getPlayerShip());
+      //  Level::current()->getPlayerShip()->getGameObject()->die();
+      //}
 
-      Level::current()->loadPlayer();
+      //Level::current()->loadPlayer();
     }
 
     //------------------------------------------------------------------------------------------------
@@ -78,7 +78,7 @@ namespace US
       Resources::getResourceManager()->unloadAll<Resources::Data>();
 
       UI::GUI::instance().cleanup();
-      Level::current()->loadGUI();
+      //Level::current()->loadGUI();
     }
   }
 }

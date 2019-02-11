@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Tile texture="Textures\Tiles\RegularSpace.png" traversable="False" name="Regular Space" />
+</Root>
