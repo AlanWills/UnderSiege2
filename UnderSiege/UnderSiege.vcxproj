@@ -300,6 +300,8 @@
     <Image Include="Resources\Textures\Backgrounds\Level1Background.jpg" />
     <Image Include="Resources\Textures\Backgrounds\MainMenuScreen.jpg" />
     <Image Include="Resources\Textures\Bullets\shell_small.png" />
+    <Image Include="Resources\Textures\Debris\CargoPodSheet1.png" />
+    <Image Include="Resources\Textures\Debris\CargoPodSheet2.png" />
     <Image Include="Resources\Textures\FX\Explosions\Explosion.png" />
     <Image Include="Resources\Textures\Shields\Shield.png" />
     <Image Include="Resources\Textures\Ships\Fiirkan.png" />

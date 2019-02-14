@@ -263,6 +263,12 @@
     <Image Include="Resources\Textures\Tiles\PurpleSpace.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Textures\Debris\CargoPodSheet1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Debris\CargoPodSheet2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Build Events\CopyDependencyDLLs.bat">
