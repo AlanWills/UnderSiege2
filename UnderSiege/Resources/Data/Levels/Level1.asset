@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Root>
-  <Level screen="Data\Screens\GameplayScreen.asset" tile_map="Data\TileMaps\Level1TileMap.asset" name="Level1" />
+  <Level screen_path="Data\Screens\GameplayScreen.asset" tile_map_path="Data\TileMaps\Level1TileMap.asset" name="Level1" />
 </Root>

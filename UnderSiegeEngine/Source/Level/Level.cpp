@@ -13,8 +13,8 @@ namespace US
   //------------------------------------------------------------------------------------------------
   Level::Level() :
     Inherited(),
-    m_screenPath(createReferenceField<Path>("screen")),
-    m_tileMapPath(createReferenceField<Path>("tile_map"))
+    m_screenPath(createReferenceField<Path>("screen_path")),
+    m_tileMapPath(createReferenceField<Path>("tile_map_path"))
   {
   }
 

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Root>
-  <TileMap name="Level1TileMap" tile_prefab="Prefabs\Tiles\Tile.prefab" tile_dimensions="64,64">
+  <TileMap name="Level1TileMap" tile_prefab_path="Prefabs\Tiles\Tile.prefab" tile_dimensions="64,64">
     <Tiles>
       <Tile position="1,1">Data\Tiles\RegularSpace.asset</Tile>
       <Tile position="2,1">Data\Tiles\RegularSpace.asset</Tile>

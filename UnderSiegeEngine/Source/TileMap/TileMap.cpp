@@ -12,7 +12,7 @@ namespace US
 
   //------------------------------------------------------------------------------------------------
   TileMap::TileMap() :
-    m_tilePrefab(createReferenceField<Path>("tile_prefab")),
+    m_tilePrefab(createReferenceField<Path>("tile_prefab_path")),
     m_tileDimensions(createReferenceField<glm::uvec2>("tile_dimensions")),
     m_tiles()
   {

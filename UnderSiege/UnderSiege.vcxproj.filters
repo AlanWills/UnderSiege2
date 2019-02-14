@@ -91,6 +91,8 @@
     <None Include="Resources\Data\Levels\Level1.asset" />
     <None Include="Resources\Data\TileMaps\Level1TileMap.asset" />
     <None Include="Resources\Prefabs\Tiles\Tile.prefab" />
+    <None Include="Resources\Data\Tiles\BlueSpace.asset" />
+    <None Include="Resources\Data\Tiles\PurpleSpace.asset" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />
@@ -253,6 +255,12 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Textures\Tiles\RegularSpace.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Tiles\BlueSpace.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Tiles\PurpleSpace.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
