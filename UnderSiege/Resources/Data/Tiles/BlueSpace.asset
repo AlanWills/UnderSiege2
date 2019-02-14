@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Root>
-  <Tile texture="Textures\Tiles\BlueSpace.png" traversable="False" name="BlueSpace" />
+  <Tile texture="Textures\Tiles\BlueSpace.png" traversable="True" name="BlueSpace" />
 </Root>
