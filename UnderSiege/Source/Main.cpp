@@ -11,8 +11,7 @@
 int main()
 {
   // Don't need to use unique_ptr as it will be deleted through 'current' unique_ptr
-  //US::UnderSiegeGame* game = new US::UnderSiegeGame();
-  US::RayTracing::RayTracingGame* game = new US::RayTracing::RayTracingGame();
+  US::UnderSiegeGame* game = new US::UnderSiegeGame();
   game->run();
 
   return 0;

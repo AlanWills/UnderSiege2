@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Prefab name="Tile" guid="af47166c-39c8-4867-8543-2fb5990be3e2">
+    <GameObjects>
+      <GameObject name="Background">
+        <Components>
+          <SpriteRenderer/>
+        </Components>
+      </GameObject>
+    </GameObjects>
+  </Prefab>
+</Root>

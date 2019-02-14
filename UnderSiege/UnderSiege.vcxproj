@@ -192,6 +192,7 @@
     <None Include="Resources\Audio\Music\TheSwarmApproaches.wma" />
     <None Include="Resources\Data\Bullets\SmallBullet.asset" />
     <None Include="Resources\Data\Enemies\Fiirkan.asset" />
+    <None Include="Resources\Data\Levels\Level1.asset" />
     <None Include="Resources\Data\Screens\DebugTools.asset">
       <SubType>
       </SubType>
@@ -201,6 +202,7 @@
       </SubType>
     </None>
     <None Include="Resources\Data\Shields\BasicShield.asset" />
+    <None Include="Resources\Data\TileMaps\Level1TileMap.asset" />
     <None Include="Resources\Data\Tiles\RegularSpace.asset" />
     <None Include="Resources\Data\Turrets\BasicTurret.asset" />
     <None Include="Resources\Prefabs\Debugging\DebugConsole.prefab">
@@ -217,6 +219,10 @@
       </SubType>
     </None>
     <None Include="Resources\Prefabs\Ships\EnemyShip.prefab" />
+    <None Include="Resources\Prefabs\Tiles\Tile.prefab">
+      <SubType>
+      </SubType>
+    </None>
     <None Include="Resources\Prefabs\Turrets\BasicTurret.prefab" />
     <None Include="Resources\Prefabs\UI\TurretGUI.prefab" />
     <None Include="Resources\Prefabs\UI\TurretGUIManager.prefab" />
@@ -257,9 +263,6 @@
     <Media Include="Resources\Audio\SFX\MissileLaunch.wav" />
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="Resources\Data\Levels\Level1.asset">
-      <SubType>Designer</SubType>
-    </Xml>
     <Xml Include="Resources\Data\Player\PlayerShip.asset">
       <SubType>Designer</SubType>
     </Xml>

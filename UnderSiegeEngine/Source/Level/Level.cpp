@@ -3,6 +3,7 @@
 #include "Level/Level.h"
 #include "Screens/Loading/ScreenLoader.h"
 #include "Registries/ScriptableObjectRegistry.h"
+#include "TileMap/TileMap.h"
 
 
 namespace US
@@ -22,6 +23,11 @@ namespace US
   {
     Handle<Screen> screen = ScreenLoader::load(getScreenPath());
     ASSERT(!screen.is_null());
+
+    TileMap* tileMap = ScriptableObject::load<TileMap>(m_tileMapPath->getValue());
+    ASSERT(tileMap != nullptr);
+
+    tileMap->instantiate(screen->findGameObjectWithName("TileMap"));
 
     return screen;
   }

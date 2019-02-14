@@ -88,6 +88,9 @@
     <None Include="Resources\Data\Screens\RayTracer.asset" />
     <None Include="Resources\Scripts\World.lua" />
     <None Include="Resources\Data\Tiles\RegularSpace.asset" />
+    <None Include="Resources\Data\Levels\Level1.asset" />
+    <None Include="Resources\Data\TileMaps\Level1TileMap.asset" />
+    <None Include="Resources\Prefabs\Tiles\Tile.prefab" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\Audio\Music\Assimilator.mp3" />
@@ -132,7 +135,6 @@
     </Media>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="Resources\Data\Levels\Level1.asset" />
     <Xml Include="Resources\Data\Settings\GameSettings.asset" />
     <Xml Include="Resources\Data\Player\PlayerShip.asset" />
     <Xml Include="Resources\Data\Screens\GameplayScreen.asset" />

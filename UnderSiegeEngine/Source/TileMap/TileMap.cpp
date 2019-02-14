@@ -3,7 +3,7 @@
 #include "TileMap/TileMap.h"
 #include "Registries/ScriptableObjectRegistry.h"
 #include "Deserialization/MathsDeserializers.h"
-#include "Serialization/MathsSerializers.h"
+#include "Rendering/SpriteRenderer.h"
 
 
 namespace US
@@ -12,7 +12,8 @@ namespace US
 
   //------------------------------------------------------------------------------------------------
   TileMap::TileMap() :
-    m_dimensions(createReferenceField<glm::vec2>("dimensions")),
+    m_tilePrefab(createReferenceField<Path>("tile_prefab")),
+    m_tileDimensions(createReferenceField<glm::uvec2>("tile_dimensions")),
     m_tiles()
   {
   }
@@ -59,5 +60,26 @@ namespace US
     }
 
     return deserializedCorrectly;
+  }
+
+  //------------------------------------------------------------------------------------------------
+  void TileMap::instantiate(const Handle<GameObject>& parentGameObject) const
+  {
+    const Handle<Resources::Prefab>& prefab = Resources::getResourceManager()->load<Resources::Prefab>(getTilePrefab());
+    ASSERT(!prefab.is_null());
+
+    for (const auto& tile : m_tiles)
+    {
+      // Create a new tile from the prefab
+      const Handle<GameObject>& tileGameObject = prefab->instantiate(parentGameObject->getOwnerScreen());
+
+      // Set up transform hierarcy, position and dimensions
+      tileGameObject->setParent(parentGameObject);
+      tileGameObject->getTransform()->setTranslation(tile->getPosition() * getTileDimensions());
+      tileGameObject->findComponent<Rendering::SpriteRenderer>()->setDimensions(getTileDimensions());
+
+      // Then populate with tile data
+      tile->instantiate(tileGameObject);
+    }
   }
 }

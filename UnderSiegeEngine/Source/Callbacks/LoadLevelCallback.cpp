@@ -31,6 +31,6 @@ namespace US
     }
 
     Level* level = ScriptableObject::load<Level>(levelFile);
-    //level->makeCurrent();
+    level->initialize();
   }
 }

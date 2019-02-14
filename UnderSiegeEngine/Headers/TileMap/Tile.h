@@ -17,6 +17,8 @@ namespace US
       const Handle<CelesteEngine::Resources::Texture2D>& getTexture() const { return m_texture->getValue(); }
       bool getTraversable() const { return m_traversable->getValue(); }
 
+      void instantiate(const Handle<GameObject>& tileGameObject) const;
+
     private:
       using Inherited = CelesteEngine::ScriptableObject;
 

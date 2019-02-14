@@ -2,6 +2,7 @@
 
 #include "TileMap/Tile.h"
 #include "Registries/ScriptableObjectRegistry.h"
+#include "Rendering/SpriteRenderer.h"
 
 
 namespace US
@@ -14,5 +15,11 @@ namespace US
     m_traversable(createValueField<bool>("traversable")),
     m_position()
   {
+  }
+
+  //------------------------------------------------------------------------------------------------
+  void Tile::instantiate(const Handle<GameObject>& tileGameObject) const
+  {
+    tileGameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(getTexture());
   }
 }
