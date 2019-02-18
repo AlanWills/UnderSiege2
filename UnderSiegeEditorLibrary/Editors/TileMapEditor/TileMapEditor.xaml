@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UnderSiegeEngineLibrary.Editors"
              xmlns:editor="clr-namespace:CelesteEngineEditor.Editors;assembly=CelesteEngineEditorLibrary"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d"
              d:DesignWidth="800" d:DesignHeight="800">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
@@ -16,7 +17,7 @@
                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                       MouseLeftButtonDown="Canvas_MouseLeftButtonDown" 
                       MouseLeftButtonUp="Canvas_MouseLeftButtonUp" 
-                      MouseMove="Canvas_MouseMove" Background="Red">
+                      MouseMove="Canvas_MouseMove">
             <Canvas x:Name="Canvas"
                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             </Canvas>
@@ -30,15 +31,22 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="5" Stretch="None" Source="{Binding SelectedTilePreview}"
                        HorizontalAlignment="Center" VerticalAlignment="Top" MaxWidth="96" MaxHeight="96"/>
             <TextBlock Grid.Column="0" Grid.Row="1" Text="Selected Tile" Margin="5,5,10,5" 
                            Style="{StaticResource LightText}" VerticalAlignment="Center"/>
-            <ComboBox Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Tiles}" Margin="0,5,5,5" 
+            <ComboBox Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Tiles}" Margin="0,5,5,5"
                           DisplayMemberPath="Name" SelectedItem="{Binding SelectedTile}"/>
-            <TextBlock x:Name="Debug" Grid.Column="0" Grid.Row="2" Text="Debug" Margin="5,5,10,5" 
-                           Style="{StaticResource LightText}" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="0" Grid.Row="2" Text="Tile X Dimension" Margin="5,0,5,0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Style="{StaticResource LightText}" />
+            <xctk:IntegerUpDown Grid.Column="1" Grid.Row="2"  Value="{Binding TileXDimension, UpdateSourceTrigger=PropertyChanged}"
+                                 Style="{DynamicResource IntegerNumericUpDownBox}" Margin="0,5,5,5" Minimum="1"/>
+            <TextBlock Grid.Column="0" Grid.Row="3" Text="Tile Y Dimension" Margin="5,0,5,0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Style="{StaticResource LightText}" />
+            <xctk:IntegerUpDown Grid.Column="1" Grid.Row="3" Value="{Binding TileYDimension, UpdateSourceTrigger=PropertyChanged}"
+                                 Style="{DynamicResource IntegerNumericUpDownBox}" Margin="0,5,5,5" Minimum="1"/>
         </Grid>
     </Grid>
 </editor:Editor>

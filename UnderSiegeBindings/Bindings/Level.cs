@@ -13,11 +13,11 @@ namespace US
 	public class Level : ScriptableObject
 	{
 		[Serialize, DisplayPriority(1)]
-		[XmlAttribute("screen"), DisplayName("Screen")]
-		public Path Screen { get; set; } = new Path(@"");
+		[XmlAttribute("screen_path"), DisplayName("Screen Path")]
+		public Path ScreenPath { get; set; } = new Path(@"");
 
 		[Serialize, DisplayPriority(2)]
-		[XmlAttribute("tile_map"), DisplayName("Tile Map")]
-		public Path TileMap { get; set; } = new Path(@"");
+		[XmlAttribute("tile_map_path"), DisplayName("Tile Map Path")]
+		public Path TileMapPath { get; set; } = new Path(@"");
 	}
 }

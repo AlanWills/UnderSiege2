@@ -13,7 +13,11 @@ namespace US
 	public class TileMap : ScriptableObject
 	{
 		[Serialize, DisplayPriority(1)]
-		[XmlAttribute("dimensions"), DisplayName("Dimensions")]
-		public Vector2 Dimensions { get; set; } = new Vector2(0.000000f, 0.000000f);
+		[XmlAttribute("tile_prefab_path"), DisplayName("Tile Prefab Path")]
+		public Path TilePrefabPath { get; set; } = new Path(@"");
+
+		[Serialize, DisplayPriority(2)]
+		[XmlAttribute("tile_dimensions"), DisplayName("Tile Dimensions")]
+		public UnsignedVector2 TileDimensions { get; set; } = new UnsignedVector2(0, 0);
 	}
 }

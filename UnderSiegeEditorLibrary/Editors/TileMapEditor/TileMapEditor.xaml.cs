@@ -85,8 +85,6 @@ namespace UnderSiegeEngineLibrary.Editors
                     Y = child.RenderTransform.Value.OffsetY + diff.Y
                 };
             }
-
-            Debug.Text = diff.ToString();
         }
 
         private void Canvas_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)

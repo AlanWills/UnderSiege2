@@ -1,11 +1,14 @@
-﻿using CelesteEngineEditor;
+﻿using BindingsKernel;
+using CelesteEngineEditor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace UnderSiegeEngineLibrary.Editors
@@ -27,12 +30,17 @@ namespace UnderSiegeEngineLibrary.Editors
         {
             TileMapEditor tileMapEditor = parameter as TileMapEditor;
 
+            UnsignedVector2 tileDimensions = tileMapEditor.TileMapEditorViewModel.TileMap.TileDimensions;
             Image image = new Image()
             {
                 Source = tileMapEditor.TileMapEditorViewModel.SelectedTile.Texture.ToImageSource(),
-                Width = 96,
-                Height = 96
+                Width = tileDimensions.X,
+                Height = tileDimensions.Y,
+                RenderTransformOrigin = new Point(tileDimensions.X * 0.5, tileDimensions.Y * 0.5)
             };
+
+            Point point = Mouse.GetPosition(tileMapEditor.Canvas);
+            image.RenderTransform = new TranslateTransform(point.X, point.Y);
             tileMapEditor.Canvas.Children.Add(image);
         }
     }

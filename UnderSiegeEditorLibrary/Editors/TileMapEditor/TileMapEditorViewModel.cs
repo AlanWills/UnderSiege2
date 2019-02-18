@@ -17,6 +17,11 @@ namespace UnderSiegeEngineLibrary.Editors
     {
         #region Properties and Fields
 
+        public TileMap TileMap
+        {
+            get { return TargetObject as TileMap; }
+        }
+
         public ObservableCollection<Tile> Tiles { get; private set; } = new ObservableCollection<Tile>();
 
         private Tile selectedTile;
@@ -42,7 +47,19 @@ namespace UnderSiegeEngineLibrary.Editors
                 NotifyOnPropertyChanged(nameof(SelectedTilePreview));
             }
         }
-        
+
+        public uint TileXDimension
+        {
+            get { return TileMap != null ? TileMap.TileDimensions.X : 0; }
+            set { TileMap.TileDimensions.X = value; }
+        }
+
+        public uint TileYDimension
+        {
+            get { return TileMap != null ? TileMap.TileDimensions.Y : 0; }
+            set { TileMap.TileDimensions.Y = value; }
+        }
+
         #endregion
 
         public TileMapEditorViewModel()
