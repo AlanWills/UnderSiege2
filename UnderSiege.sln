@@ -23,6 +23,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GuidGenerator", "CelesteEngine\GuidGenerator\GuidGenerator.vcxproj", "{436C70CD-BE9B-4511-83A6-CA2197493182}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelesteEngineEditor", "CelesteEngine\CelesteEngineEditor\CelesteEngineEditor.csproj", "{525AC921-E6CB-473F-AC93-45E5E732C97E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6AC8E06D-5DE4-4D3F-B7AE-ED3BBA32971A} = {6AC8E06D-5DE4-4D3F-B7AE-ED3BBA32971A}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CelesteEngineBindingsGenerator", "CelesteEngine\CelesteEngineBindingsGenerator\CelesteEngineBindingsGenerator.vcxproj", "{D4115E49-BB86-4AEA-B112-E83EB954B224}"
 	ProjectSection(ProjectDependencies) = postProject
