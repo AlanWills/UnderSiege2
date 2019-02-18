@@ -35,15 +35,15 @@ namespace UnderSiegeEngineLibrary.Editors
 
         #endregion
 
-        public TileMapEditor() :
-            base(new TileMapEditorViewModel())
+        public TileMapEditor(object targetObject) :
+            base(new TileMapEditorViewModel(targetObject as TileMap))
         {
             TileMapEditorViewModel = ViewModel as TileMapEditorViewModel;
 
             InitializeComponent();
 
-            Canvas.Width = ActualWidth;
-            Canvas.Height = ActualHeight;
+            //Canvas.Width = ActualWidth;
+            //Canvas.Height = ActualHeight;
 
             KeyBinding kb = new KeyBinding()
             {

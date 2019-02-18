@@ -50,19 +50,20 @@ namespace UnderSiegeEngineLibrary.Editors
 
         public uint TileXDimension
         {
-            get { return TileMap != null ? TileMap.TileDimensions.X : 0; }
+            get { return TileMap.TileDimensions.X; }
             set { TileMap.TileDimensions.X = value; }
         }
 
         public uint TileYDimension
         {
-            get { return TileMap != null ? TileMap.TileDimensions.Y : 0; }
+            get { return TileMap.TileDimensions.Y; }
             set { TileMap.TileDimensions.Y = value; }
         }
 
         #endregion
 
-        public TileMapEditorViewModel()
+        public TileMapEditorViewModel(TileMap tileMap) :
+            base(tileMap)
         {
             foreach (Tile asset in Project.Current.FindAssets<Tile>())
             {
