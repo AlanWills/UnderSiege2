@@ -42,8 +42,8 @@ namespace UnderSiegeEngineLibrary.Editors
 
             InitializeComponent();
 
-            //Canvas.Width = ActualWidth;
-            //Canvas.Height = ActualHeight;
+            Canvas.Width = ActualWidth;
+            Canvas.Height = ActualHeight;
 
             KeyBinding kb = new KeyBinding()
             {
