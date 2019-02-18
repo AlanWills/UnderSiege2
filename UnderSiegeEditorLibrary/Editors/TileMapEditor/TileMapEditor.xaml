@@ -8,20 +8,16 @@
              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d"
              d:DesignWidth="800" d:DesignHeight="800">
-    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="ScrollViewer" Grid.Column="0" Orientation="Horizontal"
-                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                      MouseLeftButtonDown="Canvas_MouseLeftButtonDown" 
-                      MouseLeftButtonUp="Canvas_MouseLeftButtonUp" 
-                      MouseMove="Canvas_MouseMove">
-            <Canvas x:Name="Canvas"
-                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            </Canvas>
-        </StackPanel>
+        <Canvas x:Name="Canvas" Grid.Column="0"
+                MouseLeftButtonDown="Canvas_MouseLeftButtonDown" 
+                MouseLeftButtonUp="Canvas_MouseLeftButtonUp" 
+                MouseMove="Canvas_MouseMove">
+        </Canvas>
         <Grid Grid.Column="1" Background="Gray" Width="200" VerticalAlignment="Stretch">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
