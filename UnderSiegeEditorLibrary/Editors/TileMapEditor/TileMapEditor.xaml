@@ -16,7 +16,7 @@
         <Canvas x:Name="Canvas" Grid.Column="0"
                 MouseLeftButtonDown="Canvas_MouseLeftButtonDown" 
                 MouseLeftButtonUp="Canvas_MouseLeftButtonUp" 
-                MouseMove="Canvas_MouseMove">
+                MouseMove="Canvas_MouseMove" Background="Transparent">
         </Canvas>
         <Grid Grid.Column="1" Background="Gray" Width="200" VerticalAlignment="Stretch">
             <Grid.ColumnDefinitions>

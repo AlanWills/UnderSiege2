@@ -74,6 +74,7 @@ namespace UnderSiegeEngineLibrary.Editors
             var now = e.GetPosition(uiElement);
             var diff = now - dragStart;
             dragStart = now;
+            
             foreach (UIElement child in Canvas.Children)
             {
                 child.RenderTransform = new TranslateTransform()
