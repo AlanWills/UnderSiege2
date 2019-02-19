@@ -18,6 +18,6 @@ namespace US
 
 		[Serialize, DisplayPriority(2)]
 		[XmlAttribute("tile_dimensions"), DisplayName("Tile Dimensions")]
-		public UnsignedVector2 TileDimensions { get; set; } = new UnsignedVector2(0, 0);
+		public UnsignedIntVector2 TileDimensions { get; set; } = new UnsignedIntVector2(0, 0);
 	}
 }

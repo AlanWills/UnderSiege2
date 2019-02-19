@@ -30,7 +30,7 @@ namespace UnderSiegeEngineLibrary.Editors
         {
             TileMapEditor tileMapEditor = parameter as TileMapEditor;
 
-            UnsignedVector2 tileDimensions = tileMapEditor.TileMapEditorViewModel.TileMap.TileDimensions;
+            UnsignedIntVector2 tileDimensions = tileMapEditor.TileMapEditorViewModel.TileMap.TileDimensions;
             Image image = new Image()
             {
                 Source = tileMapEditor.TileMapEditorViewModel.SelectedTile.Texture.ToImageSource(),

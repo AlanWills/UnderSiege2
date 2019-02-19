@@ -26,7 +26,7 @@ namespace US
 
 		[Serialize, DisplayPriority(4)]
 		[XmlAttribute("turret_sprite_sheet_dimensions"), DisplayName("Turret Sprite Sheet Dimensions")]
-		public UnsignedVector2 TurretSpriteSheetDimensions { get; set; } = new UnsignedVector2(0, 0);
+		public UnsignedIntVector2 TurretSpriteSheetDimensions { get; set; } = new UnsignedIntVector2(0, 0);
 
 		[Serialize, DisplayPriority(5)]
 		[XmlAttribute("turret_prefab"), DisplayName("Turret Prefab")]
