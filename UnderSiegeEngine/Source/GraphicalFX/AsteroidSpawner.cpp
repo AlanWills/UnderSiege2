@@ -10,6 +10,7 @@
 #include "Maths/RandomGenerator.h"
 #include "Time/TimeUtils.h"
 #include "DataConverters/Objects/GameObjectDataConverter.h"
+#include "DataConverters/Objects/ComponentDataConverter.h"
 
 using namespace CelesteEngine::Physics;
 using namespace CelesteEngine::Resources;
