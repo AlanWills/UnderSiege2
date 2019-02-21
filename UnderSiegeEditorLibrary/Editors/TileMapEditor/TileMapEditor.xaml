@@ -29,7 +29,6 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="5" Stretch="None" Source="{Binding SelectedTilePreview}"
                        HorizontalAlignment="Center" VerticalAlignment="Top" MaxWidth="96" MaxHeight="96"/>
@@ -45,9 +44,6 @@
                        Style="{StaticResource LightText}" />
             <xctk:IntegerUpDown Grid.Column="1" Grid.Row="3" Value="{Binding TileYDimension, UpdateSourceTrigger=PropertyChanged}"
                                  Style="{DynamicResource IntegerNumericUpDownBox}" Margin="0,5,5,5" Minimum="1"/>
-            <unsigned_int_vector:UnsignedIntVector2Control Grid.Column="1" Grid.Row="4"  
-                X="{Binding TileXDimension, UpdateSourceTrigger=PropertyChanged}"
-                Y="{Binding TileYDimension, UpdateSourceTrigger=PropertyChanged}" />
         </Grid>
     </Grid>
 </editor:Editor>
