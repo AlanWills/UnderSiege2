@@ -76,6 +76,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnderSiegeEditorLibrary", "UnderSiegeEditorLibrary\UnderSiegeEditorLibrary.csproj", "{6AC8E06D-5DE4-4D3F-B7AE-ED3BBA32971A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCelesteEngineRuntime", "CelesteEngine\TestCelesteEngineRuntime\TestCelesteEngineRuntime.vcxproj", "{FB7BDD57-ECC2-447F-8ED3-ED6FD70DF7E1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BB04BA24-E88D-4697-B55C-7C518AFD6BF8} = {BB04BA24-E88D-4697-B55C-7C518AFD6BF8}
+		{7F06E53E-178C-4E7E-8F24-061F18AA402A} = {7F06E53E-178C-4E7E-8F24-061F18AA402A}
+		{E9980A8D-828E-44F0-978E-A57ABC348F47} = {E9980A8D-828E-44F0-978E-A57ABC348F47}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

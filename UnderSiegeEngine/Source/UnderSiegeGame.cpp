@@ -1,10 +1,7 @@
 #include "stdafx.h"
 
 #include "UnderSiegeGame.h"
-#include "Settings/GameSettings.h"
-#include "Screens/Loading/ScreenLoader.h"
 #include "Lua/LuaState.h"
-#include "Lua/Components/LuaComponentManifestRegistry.h"
 
 
 namespace US

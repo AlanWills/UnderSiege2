@@ -5,7 +5,7 @@
 
 namespace US
 {
-  class UnderSiegeGame : public Game
+  class UnderSiegeGame : public CelesteEngine::Game
   {
     public:
       UnderSiegeGame() { }
@@ -14,6 +14,6 @@ namespace US
       void onInitialize() override;
 
     private:
-      typedef Game Inherited;
+      using Inherited = CelesteEngine::Game;
   };
 }
