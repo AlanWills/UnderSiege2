@@ -1,5 +1,5 @@
-package.path = getResourcesDirectory() .. "\\..\\..\\CelesteEngine\\CelesteEngine\\Resources\\Scripts\\?.lua;" .. package.path
+package.path = Resources.getResourcesDirectory() .. "\\..\\..\\CelesteEngine\\CelesteEngine\\Resources\\Scripts\\?.lua;" .. package.path
 
 require "Engine"
 
-loadScreen(path.combine(getResourcesDirectory(), "Data", "Screens", "RayTracer.asset"))
+loadScreen(path.combine(Resources.getResourcesDirectory(), "Data", "Screens", "RayTracer.asset"))
