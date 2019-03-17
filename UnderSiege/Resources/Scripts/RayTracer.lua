@@ -2,4 +2,4 @@ package.path = Resources.getResourcesDirectory() .. "\\..\\..\\CelesteEngine\\Ce
 
 require "Engine"
 
-loadScreen(path.combine(Resources.getResourcesDirectory(), "Data", "Screens", "RayTracer.asset"))
+Screen.load(path.combine(Resources.getResourcesDirectory(), "Data", "Screens", "RayTracer.asset"))
