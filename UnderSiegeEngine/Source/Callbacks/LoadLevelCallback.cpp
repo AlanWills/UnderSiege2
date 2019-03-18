@@ -16,7 +16,7 @@ namespace US
   void LoadLevel::operator()(const Handle<GameObject>& gameObject, const std::string& arg)
   {
     if (gameObject.is_null() ||
-        gameObject->getOwnerScreen().is_null() ||
+        gameObject->getScreen().is_null() ||
         arg.empty())
     {
       ASSERT_FAIL();

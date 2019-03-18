@@ -64,7 +64,7 @@ namespace US
     {
       m_turretAnimation->play();
 
-      const Handle<GameObject>& bullet = m_turret->getBullet()->create(getGameObject()->getOwnerScreen());
+      const Handle<GameObject>& bullet = m_turret->getBullet()->create(getGameObject()->getScreen());
       bullet->getTransform()->setTranslation(getTransform()->getWorldTranslation());
 
       float worldRotation = getTransform()->getWorldRotation();

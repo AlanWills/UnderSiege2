@@ -38,7 +38,7 @@ namespace US
 
       for (const Turret* turret : turrets)
       {
-        const Handle<GameObject>& turretGameObject = prefab->instantiate(m_gameObject->getOwnerScreen());
+        const Handle<GameObject>& turretGameObject = prefab->instantiate(m_gameObject->getScreen());
         turretGameObject->setParent(m_gameObject);
 
         TurretGUI* turretGUI = ScriptableObject::create<TurretGUI>(turret->getName() + "GUI");

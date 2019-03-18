@@ -36,7 +36,7 @@ namespace US
       const Handle<ShipController>& shipController = collider->getGameObject()->findComponent<ShipController>();
       if (shipController->getShip() != m_bullet->getTurret()->getShip())
       {
-        const Handle<GameObject>& gameObject = m_bullet->createExplosion(getGameObject()->getOwnerScreen());
+        const Handle<GameObject>& gameObject = m_bullet->createExplosion(getGameObject()->getScreen());
         gameObject->getTransform()->setWorldTranslation(getGameObject()->getTransform()->getWorldTranslation());
 
         // Damage the ship we have just hit
@@ -51,7 +51,7 @@ namespace US
       const Handle<ShieldController>& shieldController = collider->getGameObject()->findComponent<ShieldController>();
       if (shieldController->getShield()->getShip() != m_bullet->getTurret()->getShip())
       {
-        const Handle<GameObject>& gameObject = m_bullet->createExplosion(getGameObject()->getOwnerScreen());
+        const Handle<GameObject>& gameObject = m_bullet->createExplosion(getGameObject()->getScreen());
         gameObject->getTransform()->setWorldTranslation(getGameObject()->getTransform()->getWorldTranslation());
 
         // Damage the ship we have just hit

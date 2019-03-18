@@ -34,7 +34,7 @@ namespace US
   {
     Inherited::onSetGameObject(gameObject);
 
-    const Handle<Screen>& screen = gameObject->getOwnerScreen();
+    const Handle<Screen>& screen = gameObject->getScreen();
     if (screen.is_null())
     {
       ASSERT_FAIL();

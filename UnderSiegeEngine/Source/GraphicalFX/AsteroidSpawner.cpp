@@ -111,7 +111,7 @@ namespace US
     for (size_t count = 0; count < numberToSpawn; ++count)
     {
       // Update the dimensions of the asteroid sprite renderer
-      const Handle<GameObject>& asteroid = prefab->instantiate(getGameObject()->getOwnerScreen());
+      const Handle<GameObject>& asteroid = prefab->instantiate(getGameObject()->getScreen());
       asteroid->findComponent<RectangleCollider>()->setDimensions(asteroid->findComponent<Rendering::SpriteRenderer>()->getDimensions());
       
       // Randomize the speed and spin of the asteroid

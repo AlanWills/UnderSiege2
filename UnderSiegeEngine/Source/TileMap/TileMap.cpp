@@ -71,7 +71,7 @@ namespace US
     for (const auto& tile : m_tiles)
     {
       // Create a new tile from the prefab
-      const Handle<GameObject>& tileGameObject = prefab->instantiate(parentGameObject->getOwnerScreen());
+      const Handle<GameObject>& tileGameObject = prefab->instantiate(parentGameObject->getScreen());
 
       // Set up transform hierarcy, position and dimensions
       tileGameObject->setParent(parentGameObject);
