@@ -15,7 +15,7 @@ namespace US
       Inherited::onInitialize();
 
       Lua::RayTracerScriptCommands::initialize();
-      CelesteEngine::Lua::LuaState::script(Path(Resources::getResourcesDirectory(), "Scripts", "RayTracer.lua"));
+      CelesteEngine::Lua::LuaState::scriptFile(Path(Resources::getResourcesDirectory(), "Scripts", "RayTracer.lua"));
     }
   }
 }

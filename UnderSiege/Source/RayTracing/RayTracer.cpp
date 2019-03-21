@@ -75,7 +75,7 @@ namespace US
     //------------------------------------------------------------------------------------------------
     void RayTracer::startRaycast()
     {
-      Lua::LuaState::script(Path(CelesteEngine::Resources::getResourcesDirectory(), "Scripts", "World.lua"));
+      Lua::LuaState::scriptFile(Path(CelesteEngine::Resources::getResourcesDirectory(), "Scripts", "World.lua"));
       
       glm::vec2 worldDimensions(500);
       CelesteEngine::deserialize<glm::vec2>(Lua::LuaState::instance()["dimensions"].get_or<std::string>("500,500"), worldDimensions);

@@ -11,6 +11,6 @@ namespace US
   {
     Inherited::onInitialize();
 
-    Lua::LuaState::script(Path(Resources::getResourcesDirectory(), "Scripts", "Game.lua"));
+    Lua::LuaState::scriptFile(Path(Resources::getResourcesDirectory(), "Scripts", "Game.lua"));
   }
 }
