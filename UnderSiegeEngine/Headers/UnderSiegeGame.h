@@ -10,9 +10,6 @@ namespace US
     public:
       UnderSiegeGame() { }
 
-    protected:
-      void onInitialize() override;
-
     private:
       using Inherited = CelesteEngine::Game;
   };

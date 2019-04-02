@@ -142,9 +142,6 @@
     <ClCompile Include="Source\Turrets\Turret.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\UnderSiegeGame.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Bullets\Bullet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
