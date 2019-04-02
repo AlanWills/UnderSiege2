@@ -235,7 +235,6 @@
     <ClCompile Include="Source\UI\OptionsScreenUIManager.cpp" />
     <ClCompile Include="Source\UI\TurretGUI.cpp" />
     <ClCompile Include="Source\UI\TurretGUIs.cpp" />
-    <ClCompile Include="Source\UnderSiegeGame.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
