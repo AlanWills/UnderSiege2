@@ -27,7 +27,7 @@ namespace US
     TileMap* tileMap = ScriptableObject::load<TileMap>(m_tileMapPath->getValue());
     ASSERT(tileMap != nullptr);
 
-    tileMap->instantiate(screen->findGameObjectWithName("TileMap"));
+    tileMap->instantiate(screen->findGameObject("TileMap"));
 
     return screen;
   }

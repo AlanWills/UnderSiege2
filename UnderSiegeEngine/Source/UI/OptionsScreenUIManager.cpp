@@ -50,7 +50,7 @@ namespace US
   //------------------------------------------------------------------------------------------------
   void OptionsScreenUIManager::initializeMasterVolumeSlider(const Handle<Screen>& screen)
   {
-    const Handle<Slider>& slider = screen->findGameObjectWithName("MasterVolumeSlider")->findComponent<Slider>();
+    const Handle<Slider>& slider = screen->findGameObject("MasterVolumeSlider")->findComponent<Slider>();
     slider->subscribeValueChangedCallback([](EventArgs& e, const Handle<GameObject>& go, float newValue) -> void
     {
       const Handle<GameObject>& sliderLabel = go->findChildGameObject("MasterVolumeValueText");
@@ -63,7 +63,7 @@ namespace US
   //------------------------------------------------------------------------------------------------
   void OptionsScreenUIManager::initializeMusicVolumeSlider(const Handle<Screen>& screen)
   {
-    const Handle<Slider>& slider = screen->findGameObjectWithName("MusicVolumeSlider")->findComponent<Slider>();
+    const Handle<Slider>& slider = screen->findGameObject("MusicVolumeSlider")->findComponent<Slider>();
     slider->subscribeValueChangedCallback([](EventArgs& e, const Handle<GameObject>& go, float newValue) -> void
     {
       const Handle<GameObject>& sliderLabel = go->findChildGameObject("MusicVolumeValueText");
@@ -76,7 +76,7 @@ namespace US
   //------------------------------------------------------------------------------------------------
   void OptionsScreenUIManager::initializeSFXVolumeSlider(const Handle<Screen>& screen)
   {
-    const Handle<Slider>& slider = screen->findGameObjectWithName("SFXVolumeSlider")->findComponent<Slider>();
+    const Handle<Slider>& slider = screen->findGameObject("SFXVolumeSlider")->findComponent<Slider>();
     slider->subscribeValueChangedCallback([](EventArgs& e, const Handle<GameObject>& go, float newValue) -> void
     {
       const Handle<GameObject>& sliderLabel = go->findChildGameObject("SFXVolumeValueText");
@@ -89,7 +89,7 @@ namespace US
   //------------------------------------------------------------------------------------------------
   void OptionsScreenUIManager::initializeCloseButton(const Handle<Screen>& screen)
   {
-    const Handle<Button>& button = screen->findGameObjectWithName("CloseButton")->findComponent<Button>();
+    const Handle<Button>& button = screen->findGameObject("CloseButton")->findComponent<Button>();
     button->subscribeLeftClickCallback([](EventArgs& e, const Handle<GameObject>& gameObject) -> void
     {
       // Save changes

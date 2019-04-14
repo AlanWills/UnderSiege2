@@ -76,7 +76,7 @@ namespace US
     }
 
     m_gameObject = prefab->instantiate(screen);
-    m_gameObject->setParent(screen->findGameObjectWithName("Canvas"));
+    m_gameObject->setParent(screen->findGameObject("Canvas"));
     m_gameObject->findComponent<Physics::RectangleCollider>()->setDimensions(getTexture()->getDimensions());
     m_gameObject->findComponent<Rendering::SpriteRenderer>()->setTexture(getTexture());
     m_gameObject->findComponent<ShipController>()->setShip(this);
